@@ -1,0 +1,19 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Example of point regression versus interval regression}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Example of converting Interval Regression into Standard Regression}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Visualization of the AFT XGBoost Loss (negative log-likelihood) for 3 distributions}}{8}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Visualization of the Loss Functions: Error values relative to predictions and targets}}{9}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Changepoint detection using Deep Learning}}{12}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces The challenge of using OPART is predicting the value for penalty}}{13}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Different penalty result in varied sets of changepoints}}{14}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces The process involves a labeled sequences train set and a unlabeled sequences test set}}{15}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Comprehensive Diagram: Review and Contributions}}{18}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Model Diagram - Previous Methods versus Our Proposal}}{19}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Graphs showing the relationship between four features and target intervals}}{20}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Median test accuracy and interquartile across 6 folds for each method}}{23}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Median test F1 score and interquartile across 6 folds for each method.}}{24}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Average validation accuracies for different MLP configurations}}{26}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Example: features vs. targets from the dataset detailed}}{32}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces The accuracies for each fold are presented for datasets without any pooling}}{33}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces The fold accuracies on some ChIP-seq datasets}}{35}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Log of the loss validation across different numbers of extracted hidden layers}}{36}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces The mean and standard deviation of the test squared hinge errors in simulated datasets}}{39}{figure.19}%

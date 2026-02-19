@@ -1,0 +1,439 @@
+\begin{thebibliography}{76}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abbara and Zevallos(2018)]{example_econ}
+O.~Abbara and M.~Zevallos.
+\newblock Modeling and forecasting intraday var of an exchange rate portfolio.
+\newblock \emph{Journal of Forecasting}, 37\penalty0 (7):\penalty0 729–738, Aug. 2018.
+\newblock ISSN 1099-131X.
+\newblock \doi{10.1002/for.2540}.
+\newblock URL \url{http://dx.doi.org/10.1002/for.2540}.
+
+\bibitem[Akaike(1974)]{aic}
+H.~Akaike.
+\newblock A new look at the statistical model identification.
+\newblock \emph{IEEE transactions on automatic control}, 19\penalty0 (6):\penalty0 716--723, 1974.
+
+\bibitem[Auger and Lawrence(1989{\natexlab{a}})]{auger1989algorithms}
+I.~E. Auger and C.~E. Lawrence.
+\newblock Algorithms for the optimal identification of segment neighborhoods.
+\newblock \emph{Bulletin of mathematical biology}, 51\penalty0 (1):\penalty0 39--54, 1989{\natexlab{a}}.
+
+\bibitem[Auger and Lawrence(1989{\natexlab{b}})]{review:binseg}
+I.~E. Auger and C.~E. Lawrence.
+\newblock Algorithms for the optimal identification of segment neighborhoods.
+\newblock \emph{Bulletin of mathematical biology}, 51\penalty0 (1):\penalty0 39--54, 1989{\natexlab{b}}.
+
+\bibitem[Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio]{attention}
+D.~Bahdanau, K.~Cho, and Y.~Bengio.
+\newblock Neural machine translation by jointly learning to align and translate.
+\newblock \emph{CoRR}, abs/1409.0473, 2014.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:11212020}.
+
+\bibitem[Bai and Perron(2003{\natexlab{a}})]{bai2003computation}
+J.~Bai and P.~Perron.
+\newblock Computation and analysis of multiple structural change models.
+\newblock \emph{Journal of applied econometrics}, 18\penalty0 (1):\penalty0 1--22, 2003{\natexlab{a}}.
+
+\bibitem[Bai and Perron(2003{\natexlab{b}})]{review:bai2003computation}
+J.~Bai and P.~Perron.
+\newblock Computation and analysis of multiple structural change models.
+\newblock \emph{Journal of applied econometrics}, 18\penalty0 (1):\penalty0 1--22, 2003{\natexlab{b}}.
+
+\bibitem[Barnwal et~al.(2022{\natexlab{a}})Barnwal, Cho, and Hocking]{aft_xgboost}
+A.~Barnwal, H.~Cho, and T.~Hocking.
+\newblock Survival regression with accelerated failure time model in xgboost.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 31\penalty0 (4):\penalty0 1292--1302, 2022{\natexlab{a}}.
+
+\bibitem[Barnwal et~al.(2022{\natexlab{b}})Barnwal, Cho, and Hocking]{barnwal2022survival}
+A.~Barnwal, H.~Cho, and T.~Hocking.
+\newblock Survival regression with accelerated failure time model in xgboost.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 31\penalty0 (4):\penalty0 1292--1302, 2022{\natexlab{b}}.
+
+\bibitem[Beck and Teboulle(2009)]{fista}
+A.~Beck and M.~Teboulle.
+\newblock A fast iterative shrinkage-thresholding algorithm for linear inverse problems.
+\newblock \emph{SIAM journal on imaging sciences}, 2\penalty0 (1):\penalty0 183--202, 2009.
+
+\bibitem[Binder and Schumacher(2008)]{binder2008allowing}
+H.~Binder and M.~Schumacher.
+\newblock Allowing for mandatory covariates in boosting estimation of sparse high-dimensional survival models.
+\newblock \emph{BMC bioinformatics}, 9:\penalty0 1--10, 2008.
+
+\bibitem[Breiman(2001)]{rf}
+L.~Breiman.
+\newblock Random forests.
+\newblock \emph{Machine learning}, 45:\penalty0 5--32, 2001.
+
+\bibitem[Breiman(2017)]{breiman2017classification}
+L.~Breiman.
+\newblock \emph{Classification and regression trees}.
+\newblock Routledge, 2017.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Olshen, and Stone]{cart}
+L.~Breiman, J.~H. Friedman, R.~A. Olshen, and C.~Stone.
+\newblock Classification and regression trees (cart).
+\newblock \emph{Biometrics}, 40\penalty0 (3):\penalty0 358, 1984.
+
+\bibitem[Cai et~al.(2009)Cai, Huang, and Tian]{cai2009regularized}
+T.~Cai, J.~Huang, and L.~Tian.
+\newblock Regularized estimation for the accelerated failure time model.
+\newblock \emph{Biometrics}, 65\penalty0 (2):\penalty0 394--404, 2009.
+
+\bibitem[Chen and Guestrin(2016)]{xgb_package}
+T.~Chen and C.~Guestrin.
+\newblock Xgboost: A scalable tree boosting system.
+\newblock In \emph{KDD}, 2016.
+
+\bibitem[Cheng et~al.(2023)Cheng, Cao, Li, An, and Feng]{rit}
+X.~Cheng, Y.~Cao, X.~Li, B.~An, and L.~Feng.
+\newblock Weakly supervised regression with interval targets.
+\newblock In \emph{International Conference on Machine Learning}, pages 5428--5448. PMLR, 2023.
+
+\bibitem[Chung et~al.(2014)Chung, Gulcehre, Cho, and Bengio]{gru}
+J.~Chung, C.~Gulcehre, K.~Cho, and Y.~Bengio.
+\newblock Empirical evaluation of gated recurrent neural networks on sequence modeling.
+\newblock \emph{arXiv preprint arXiv:1412.3555}, 2014.
+
+\bibitem[Drouin(2017)]{mmit_package}
+Drouin.
+\newblock \emph{Maximum Margin Interval Trees}, 2017.
+\newblock URL \url{https://github.com/aldro61/mmit}.
+
+\bibitem[Drouin et~al.(2017)Drouin, Hocking, and Laviolette]{mmit}
+A.~Drouin, T.~D. Hocking, and F.~Laviolette.
+\newblock Maximum margin interval trees.
+\newblock In \emph{Proceedings of the 31st International Conference on Neural Information Processing Systems}, NIPS'17, page 4954–4963, Red Hook, NY, USA, 2017. Curran Associates Inc.
+\newblock ISBN 9781510860964.
+
+\bibitem[Ellison et~al.(2014)Ellison, Lundblad, and Petersson]{example_environmental}
+D.~Ellison, M.~Lundblad, and H.~Petersson.
+\newblock Reforming the eu approach to lulucf and the climate policy framework.
+\newblock \emph{Environmental Science and amp; Policy}, 40:\penalty0 1–15, June 2014.
+\newblock ISSN 1462-9011.
+\newblock \doi{10.1016/j.envsci.2014.03.004}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.envsci.2014.03.004}.
+
+\bibitem[Ermshaus et~al.(2023)Ermshaus, Sch{\"a}fer, and Leser]{review:ermshaus2023clasp}
+A.~Ermshaus, P.~Sch{\"a}fer, and U.~Leser.
+\newblock Clasp: parameter-free time series segmentation.
+\newblock \emph{Data Mining and Knowledge Discovery}, 37\penalty0 (3):\penalty0 1262--1300, 2023.
+
+\bibitem[Fazil~Baksh et~al.(2006)Fazil~Baksh, Haars, Todd, Van~Noord, and Whitehead]{example_medical}
+M.~Fazil~Baksh, G.~Haars, S.~Todd, P.~A.~H. Van~Noord, and J.~Whitehead.
+\newblock Comparing correlations of continuous observations from two independent populations using a sequential approach.
+\newblock \emph{Statistics in Medicine}, 25\penalty0 (24):\penalty0 4293–4310, Aug. 2006.
+\newblock ISSN 1097-0258.
+\newblock \doi{10.1002/sim.2676}.
+\newblock URL \url{http://dx.doi.org/10.1002/sim.2676}.
+
+\bibitem[Fix and Hodges(1985)]{knn}
+E.~Fix and J.~L. Hodges.
+\newblock \emph{Discriminatory Analysis: Nonparametric Discrimination and Consistency Properties}, volume~1.
+\newblock USAF School of Aviation Medicine, Randolph Air Force Base, TX, 1985.
+
+\bibitem[Friedman(1991)]{friedman1991multivariate}
+J.~H. Friedman.
+\newblock Multivariate adaptive regression splines.
+\newblock \emph{The annals of statistics}, 19\penalty0 (1):\penalty0 1--67, 1991.
+
+\bibitem[Friedman(2001)]{gradient_boosting}
+J.~H. Friedman.
+\newblock Greedy function approximation: A gradient boosting machine.
+\newblock \emph{The Annals of Statistics}, 29\penalty0 (5):\penalty0 1189--1232, 2001.
+\newblock ISSN 00905364, 21688966.
+\newblock URL \url{http://www.jstor.org/stable/2699986}.
+
+\bibitem[Hamed et~al.(2012)Hamed, Serrurier, and Durand]{knn_interval}
+M.~G. Hamed, M.~Serrurier, and N.~Durand.
+\newblock Possibilistic knn regression using tolerance intervals.
+\newblock In S.~Greco, B.~Bouchon-Meunier, G.~Coletti, M.~Fedrizzi, B.~Matarazzo, and R.~R. Yager, editors, \emph{Advances in Computational Intelligence}, pages 410--419, Berlin, Heidelberg, 2012. Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-31718-7.
+
+\bibitem[Hastie(2017)]{hastie2017generalized}
+T.~J. Hastie.
+\newblock Generalized additive models.
+\newblock In \emph{Statistical models in S}, pages 249--307. Routledge, 2017.
+
+\bibitem[Hawkins(2004)]{hawkins2004survival}
+K.~Hawkins.
+\newblock Survival analysis: Techniques for censored and truncated data klein jp, moeschberger ml (2003) isbn 038795399x; 536 pages;{\pounds} 69.00; 89.95; 94.00 springer-verlag; http://www. springer-ny. com/detail. tpl? isbn= 038795399x, 2004.
+
+\bibitem[Hinkley(1971)]{review:cusum}
+D.~V. Hinkley.
+\newblock Inference about the change-point from cumulative sum tests.
+\newblock \emph{Biometrika}, 58\penalty0 (3):\penalty0 509--523, 1971.
+
+\bibitem[Hochreiter(1997)]{lstm}
+S.~Hochreiter.
+\newblock Long short-term memory.
+\newblock \emph{Neural Computation MIT-Press}, 1997.
+
+\bibitem[Hocking(2024)]{penaltyLearning}
+T.~D. Hocking.
+\newblock \emph{penaltyLearning: Penalty Learning}, 2024.
+\newblock URL \url{https://github.com/tdhock/penaltylearning}.
+\newblock R package version 2024.1.25.
+
+\bibitem[Hocking and Srivastava(2023{\natexlab{a}})]{hocking:20}
+T.~D. Hocking and A.~Srivastava.
+\newblock {Labeled optimal partitioning}.
+\newblock \emph{Computational Statistics}, 38\penalty0 (1):\penalty0 461--480, 2023{\natexlab{a}}.
+\newblock ISSN 0943-4062.
+\newblock \doi{10.1007/s00180-022-01238-z}.
+
+\bibitem[Hocking and Srivastava(2023{\natexlab{b}})]{review:lopart}
+T.~D. Hocking and A.~Srivastava.
+\newblock {Labeled optimal partitioning}.
+\newblock \emph{Computational Statistics}, 38\penalty0 (1):\penalty0 461--480, 2023{\natexlab{b}}.
+\newblock ISSN 0943-4062.
+\newblock \doi{10.1007/s00180-022-01238-z}.
+
+\bibitem[Hornik et~al.(1989{\natexlab{a}})Hornik, Stinchcombe, and White]{mlp}
+K.~Hornik, M.~Stinchcombe, and H.~White.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock \emph{Neural networks}, 2\penalty0 (5):\penalty0 359--366, 1989{\natexlab{a}}.
+
+\bibitem[Hornik et~al.(1989{\natexlab{b}})Hornik, Stinchcombe, and White]{uni_approximator}
+K.~Hornik, M.~Stinchcombe, and H.~White.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock \emph{Neural networks}, 2\penalty0 (5):\penalty0 359--366, 1989{\natexlab{b}}.
+
+\bibitem[Hothorn et~al.(2004)Hothorn, Lausen, Benner, and Radespiel-Tr{\"o}ger]{hothorn2004bagging}
+T.~Hothorn, B.~Lausen, A.~Benner, and M.~Radespiel-Tr{\"o}ger.
+\newblock Bagging survival trees.
+\newblock \emph{Statistics in medicine}, 23\penalty0 (1):\penalty0 77--91, 2004.
+
+\bibitem[Huang et~al.(2006{\natexlab{a}})Huang, Ma, and Xie]{aft_huang2006regularized}
+J.~Huang, S.~Ma, and H.~Xie.
+\newblock Regularized estimation in the accelerated failure time model with high-dimensional covariates.
+\newblock \emph{Biometrics}, 62\penalty0 (3):\penalty0 813--820, 2006{\natexlab{a}}.
+
+\bibitem[Huang et~al.(2006{\natexlab{b}})Huang, Ma, and Xie]{huang2006regularized}
+J.~Huang, S.~Ma, and H.~Xie.
+\newblock Regularized estimation in the accelerated failure time model with high-dimensional covariates.
+\newblock \emph{Biometrics}, 62\penalty0 (3):\penalty0 813--820, 2006{\natexlab{b}}.
+
+\bibitem[Ishwaran et~al.(2008)Ishwaran, Kogalur, Blackstone, and Lauer]{ishwaran2008random}
+H.~Ishwaran, U.~B. Kogalur, E.~H. Blackstone, and M.~S. Lauer.
+\newblock Random survival forests.
+\newblock \emph{BMC bioinformatics}, 2008.
+
+\bibitem[Jackson et~al.(2005{\natexlab{a}})Jackson, Scargle, Barnes, Arabhi, Alt, Gioumousis, Gwin, Sangtrakulcharoen, Tan, and Tsai]{jackson:05}
+B.~Jackson, J.~D. Scargle, D.~Barnes, S.~Arabhi, A.~Alt, P.~Gioumousis, E.~Gwin, P.~Sangtrakulcharoen, L.~Tan, and T.~T. Tsai.
+\newblock An algorithm for optimal partitioning of data on an interval.
+\newblock \emph{IEEE Signal Processing Letters}, 12\penalty0 (2):\penalty0 105--108, 2005{\natexlab{a}}.
+
+\bibitem[Jackson et~al.(2005{\natexlab{b}})Jackson, Scargle, Barnes, Arabhi, Alt, Gioumousis, Gwin, Sangtrakulcharoen, Tan, and Tsai]{review:opart}
+B.~Jackson, J.~D. Scargle, D.~Barnes, S.~Arabhi, A.~Alt, P.~Gioumousis, E.~Gwin, P.~Sangtrakulcharoen, L.~Tan, and T.~T. Tsai.
+\newblock An algorithm for optimal partitioning of data on an interval.
+\newblock \emph{IEEE Signal Processing Letters}, 12\penalty0 (2):\penalty0 105--108, 2005{\natexlab{b}}.
+
+\bibitem[James et~al.(1987)James, James, and Siegmund]{review:james1987tests}
+B.~James, K.~L. James, and D.~Siegmund.
+\newblock Tests for a change-point.
+\newblock \emph{Biometrika}, 74\penalty0 (1):\penalty0 71--83, 1987.
+
+\bibitem[Jeng et~al.(2003)Jeng, Chuang, and Su]{interval_regression_analysis_2}
+J.-T. Jeng, C.-C. Chuang, and S.-F. Su.
+\newblock Support vector interval regression networks for interval regression analysis.
+\newblock \emph{Fuzzy Sets and Systems}, 138\penalty0 (2):\penalty0 283--300, 2003.
+\newblock ISSN 0165-0114.
+\newblock \doi{https://doi.org/10.1016/S0165-0114(02)00570-5}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0165011402005705}.
+
+\bibitem[Killick et~al.(2012{\natexlab{a}})Killick, Fearnhead, and Eckley]{killick2012optimal}
+R.~Killick, P.~Fearnhead, and I.~A. Eckley.
+\newblock Optimal detection of changepoints with a linear computational cost.
+\newblock \emph{Journal of the American Statistical Association}, 107\penalty0 (500):\penalty0 1590--1598, 2012{\natexlab{a}}.
+
+\bibitem[Killick et~al.(2012{\natexlab{b}})Killick, Fearnhead, and Eckley]{review:pelt}
+R.~Killick, P.~Fearnhead, and I.~A. Eckley.
+\newblock Optimal detection of changepoints with a linear computational cost.
+\newblock \emph{Journal of the American Statistical Association}, 107\penalty0 (500):\penalty0 1590--1598, 2012{\natexlab{b}}.
+
+\bibitem[Lattanzi and Leonelli(2021)]{app:finance}
+C.~Lattanzi and M.~Leonelli.
+\newblock A change-point approach for the identification of financial extreme regimes.
+\newblock \emph{Brazilian Journal of Probability and Statistics}, 35\penalty0 (4), Nov. 2021.
+\newblock ISSN 0103-0752.
+\newblock \doi{10.1214/21-bjps509}.
+\newblock URL \url{http://dx.doi.org/10.1214/21-BJPS509}.
+
+\bibitem[Lavielle(2005)]{lavielle05}
+M.~Lavielle.
+\newblock Using penalized contrasts for the change-point problem.
+\newblock \emph{Signal Processing}, 85\penalty0 (8):\penalty0 1501--1510, 2005.
+\newblock ISSN 0165-1684.
+\newblock \doi{https://doi.org/10.1016/j.sigpro.2005.01.012}.
+
+\bibitem[LeCun et~al.(1998)LeCun, Bottou, Bengio, and Haffner]{cnn}
+Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+
+\bibitem[Lee et~al.(2023)Lee, Xie, and Cheng]{review:lee2023}
+J.~Lee, Y.~Xie, and X.~Cheng.
+\newblock Training neural networks for sequential change-point detection.
+\newblock In \emph{ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pages 1--5. IEEE, 2023.
+
+\bibitem[Legendre(1805)]{linear}
+A.-M. Legendre.
+\newblock \emph{{Nouvelles m{\'e}thodes pour la d{\'e}termination des orbites des com{\`e}tes}, avec un suppl{\'e}ment contenant divers perfectionnements de ces m{\'e}thodes et leur application aux deux com{\`e}tes de 1805}.
+\newblock book, 1805.
+\newblock URL \url{https://books.google.com/books?id=5nJUAAAAcAAJ}.
+\newblock Courcier.
+
+\bibitem[Levitin et~al.(2011)Levitin, Xing, Ben-Haim, and Dai]{example_engineering}
+G.~Levitin, L.~Xing, H.~Ben-Haim, and Y.~Dai.
+\newblock Multi-state systems with selective propagated failures and imperfect individual and group protections.
+\newblock \emph{Reliability Engineering amp; System Safety}, 96\penalty0 (12):\penalty0 1657–1666, Dec. 2011.
+\newblock ISSN 0951-8320.
+\newblock \doi{10.1016/j.ress.2011.08.002}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.ress.2011.08.002}.
+
+\bibitem[Li et~al.(2024)Li, Fearnhead, Fryzlewicz, and Wang]{review:li24automatic}
+J.~Li, P.~Fearnhead, P.~Fryzlewicz, and T.~Wang.
+\newblock Automatic change-point detection in time series via deep learning.
+\newblock \emph{Journal of the Royal Statistical Society Series B: Statistical Methodology}, 86\penalty0 (2):\penalty0 273--285, 2024.
+
+\bibitem[Londschien et~al.(2023)Londschien, B{\"u}hlmann, and Kov{\'a}cs]{review:londschien2023randomforest}
+M.~Londschien, P.~B{\"u}hlmann, and S.~Kov{\'a}cs.
+\newblock Random forests for change point detection.
+\newblock \emph{Journal of Machine Learning Research}, 24\penalty0 (216):\penalty0 1--45, 2023.
+
+\bibitem[Lundberg et~al.(2018)Lundberg, Erion, and Lee]{lundberg2018consistent}
+S.~M. Lundberg, G.~G. Erion, and S.-I. Lee.
+\newblock Consistent individualized feature attribution for tree ensembles.
+\newblock \emph{arXiv preprint arXiv:1802.03888}, 2018.
+
+\bibitem[Maidstone et~al.(2016{\natexlab{a}})Maidstone, Hocking, Rigaill, and Fearnhead]{Maidstone:16}
+R.~Maidstone, T.~Hocking, G.~Rigaill, and P.~Fearnhead.
+\newblock On optimal multiple changepoint algorithms for large data.
+\newblock \emph{Statistics and Computing}, 27\penalty0 (2):\penalty0 519–533, Feb. 2016{\natexlab{a}}.
+\newblock ISSN 1573-1375.
+\newblock \doi{10.1007/s11222-016-9636-3}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11222-016-9636-3}.
+
+\bibitem[Maidstone et~al.(2016{\natexlab{b}})Maidstone, Hocking, Rigaill, and Fearnhead]{review:fpop}
+R.~Maidstone, T.~Hocking, G.~Rigaill, and P.~Fearnhead.
+\newblock On optimal multiple changepoint algorithms for large data.
+\newblock \emph{Statistics and Computing}, 27\penalty0 (2):\penalty0 519–533, Feb. 2016{\natexlab{b}}.
+\newblock ISSN 1573-1375.
+\newblock \doi{10.1007/s11222-016-9636-3}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11222-016-9636-3}.
+
+\bibitem[Montufar et~al.(2014)Montufar, Pascanu, Cho, and Bengio]{montufar2014number}
+G.~F. Montufar, R.~Pascanu, K.~Cho, and Y.~Bengio.
+\newblock On the number of linear regions of deep neural networks.
+\newblock \emph{Advances in neural information processing systems}, 27, 2014.
+
+\bibitem[Muggeo and Adelfio(2010)]{cancer}
+V.~M.~R. Muggeo and G.~Adelfio.
+\newblock {Efficient change point detection for genomic sequences of continuous measurements}.
+\newblock \emph{Bioinformatics}, 27\penalty0 (2):\penalty0 161--166, 11 2010.
+\newblock ISSN 1367-4803.
+\newblock \doi{10.1093/bioinformatics/btq647}.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btq647}.
+
+\bibitem[P{\"o}lsterl(2020)]{polsterl2020scikit}
+S.~P{\"o}lsterl.
+\newblock scikit-survival: A library for time-to-event analysis built on top of scikit-learn.
+\newblock \emph{Journal of Machine Learning Research}, 21\penalty0 (212):\penalty0 1--6, 2020.
+
+\bibitem[P{\"o}lsterl et~al.(2016)P{\"o}lsterl, Navab, and Katouzian]{svm}
+S.~P{\"o}lsterl, N.~Navab, and A.~Katouzian.
+\newblock An efficient training algorithm for kernel survival support vector machines.
+\newblock \emph{arXiv preprint arXiv:1611.07054}, 2016.
+
+\bibitem[Reeves et~al.(2007)Reeves, Chen, Wang, Lund, and Lu]{app:climate}
+J.~Reeves, J.~Chen, X.~L. Wang, R.~Lund, and Q.~Q. Lu.
+\newblock A review and comparison of changepoint detection techniques for climate data.
+\newblock \emph{Journal of Applied Meteorology and Climatology}, 46\penalty0 (6):\penalty0 900–915, June 2007.
+\newblock ISSN 1558-8424.
+\newblock \doi{10.1175/jam2493.1}.
+\newblock URL \url{http://dx.doi.org/10.1175/JAM2493.1}.
+
+\bibitem[Rigaill(2015)]{rigaill2015pruned}
+G.~Rigaill.
+\newblock A pruned dynamic programming algorithm to recover the best segmentations with $1 $ to $ k\_ $\{$max$\}$ $ change-points.
+\newblock \emph{Journal de la Soci{\'e}t{\'e} Fran{\c{c}}aise de Statistique}, 156\penalty0 (4):\penalty0 180--205, 2015.
+
+\bibitem[Rigaill et~al.(2013{\natexlab{a}})Rigaill, Hocking, Bach, and Vert]{rigaill2013penalty}
+G.~Rigaill, T.~D. Hocking, F.~Bach, and J.-P. Vert.
+\newblock Learning {Sparse} {Penalties} for {Change}-{Point} {Detection} using {Max} {Margin} {Interval} {Regression}, June 2013{\natexlab{a}}.
+\newblock URL \url{https://inria.hal.science/hal-00824075}.
+
+\bibitem[Rigaill et~al.(2013{\natexlab{b}})Rigaill, Hocking, Bach, and Vert]{rigaill:13}
+G.~Rigaill, T.~D. Hocking, F.~Bach, and J.-P. Vert.
+\newblock Learning {Sparse} {Penalties} for {Change}-{Point} {Detection} using {Max} {Margin} {Interval} {Regression}, June 2013{\natexlab{b}}.
+\newblock URL \url{https://inria.hal.science/hal-00824075}.
+
+\bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{rnn}
+D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock \emph{nature}, 323\penalty0 (6088):\penalty0 533--536, 1986.
+
+\bibitem[Schuster and Paliwal(1997)]{bidirectional}
+M.~Schuster and K.~K. Paliwal.
+\newblock Bidirectional recurrent neural networks.
+\newblock \emph{IEEE transactions on Signal Processing}, 45\penalty0 (11):\penalty0 2673--2681, 1997.
+
+\bibitem[Schwarz(1978)]{bic}
+G.~Schwarz.
+\newblock {Estimating the Dimension of a Model}.
+\newblock \emph{The Annals of Statistics}, 6\penalty0 (2):\penalty0 461 -- 464, 1978.
+\newblock \doi{10.1214/aos/1176344136}.
+\newblock URL \url{https://doi.org/10.1214/aos/1176344136}.
+
+\bibitem[Sill(1997)]{monotonic}
+J.~Sill.
+\newblock Monotonic networks.
+\newblock \emph{Advances in neural information processing systems}, 10, 1997.
+
+\bibitem[Tanaka and Lee(1998)]{interval_regression_analysis_1}
+H.~Tanaka and H.~Lee.
+\newblock Interval regression analysis by quadratic programming approach.
+\newblock \emph{IEEE Transactions on Fuzzy Systems}, 6\penalty0 (4):\penalty0 473--481, 1998.
+\newblock \doi{10.1109/91.728436}.
+
+\bibitem[Tartakovsky et~al.(2013)Tartakovsky, Polunchenko, and Sokolov]{app:network}
+A.~G. Tartakovsky, A.~S. Polunchenko, and G.~Sokolov.
+\newblock Efficient computer network anomaly detection by changepoint detection methods.
+\newblock \emph{IEEE Journal of Selected Topics in Signal Processing}, 7\penalty0 (1):\penalty0 4--11, 2013.
+\newblock \doi{10.1109/JSTSP.2012.2233713}.
+
+\bibitem[Truong et~al.(2017)Truong, Gudre, and Vayatis]{truong17}
+C.~Truong, L.~Gudre, and N.~Vayatis.
+\newblock Penalty learning for changepoint detection.
+\newblock In \emph{2017 25th European Signal Processing Conference (EUSIPCO)}, pages 1569--1573, 2017.
+\newblock \doi{10.23919/EUSIPCO.2017.8081473}.
+
+\bibitem[Wang et~al.(2015)Wang, Li, and Denœux]{linear_output_interval}
+X.~Wang, S.~Li, and T.~Denœux.
+\newblock Interval-valued linear model.
+\newblock \emph{International Journal of Computational Intelligence Systems}, 8\penalty0 (1):\penalty0 114, 2015.
+\newblock ISSN 1875-6883.
+\newblock \doi{10.2991/ijcis.2015.8.1.10}.
+\newblock URL \url{http://dx.doi.org/10.2991/ijcis.2015.8.1.10}.
+
+\bibitem[Wei(1992{\natexlab{a}})]{aft}
+L.-J. Wei.
+\newblock The accelerated failure time model: a useful alternative to the cox regression model in survival analysis.
+\newblock \emph{Statistics in medicine}, 11\penalty0 (14-15):\penalty0 1871--1879, 1992{\natexlab{a}}.
+
+\bibitem[Wei(1992{\natexlab{b}})]{wei1992accelerated}
+L.-J. Wei.
+\newblock The accelerated failure time model: a useful alternative to the cox regression model in survival analysis.
+\newblock \emph{Statistics in medicine}, 11\penalty0 (14-15):\penalty0 1871--1879, 1992{\natexlab{b}}.
+
+\bibitem[You et~al.(2017)You, Ding, Canini, Pfeifer, and Gupta]{lattice}
+S.~You, D.~Ding, K.~Canini, J.~Pfeifer, and M.~Gupta.
+\newblock Deep lattice networks and partial monotonic functions.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus, S.~Vishwanathan, and R.~Garnett, editors, \emph{Advances in Neural Information Processing Systems}, volume~30. Curran Associates, Inc., 2017.
+
+\end{thebibliography}
