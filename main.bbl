@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{89}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,12 @@ O.~Abbara and M.~Zevallos.
 \newblock ISSN 1099-131X.
 \newblock \doi{10.1002/for.2540}.
 \newblock URL \url{http://dx.doi.org/10.1002/for.2540}.
+
+\bibitem[Ak et~al.(2015)Ak, Vitelli, and Zio]{mlp_interval_input}
+R.~Ak, V.~Vitelli, and E.~Zio.
+\newblock An interval-valued neural network approach for uncertainty quantification in short-term wind speed prediction.
+\newblock \emph{IEEE Transactions on Neural Networks and Learning Systems}, 26\penalty0 (11):\penalty0 2787--2800, 2015.
+\newblock \doi{10.1109/TNNLS.2015.2396933}.
 
 \bibitem[Akaike(1974)]{aic}
 H.~Akaike.
@@ -59,6 +65,12 @@ A.~Beck and M.~Teboulle.
 \newblock A fast iterative shrinkage-thresholding algorithm for linear inverse problems.
 \newblock \emph{SIAM journal on imaging sciences}, 2\penalty0 (1):\penalty0 183--202, 2009.
 
+\bibitem[Billard and Diday(2000)]{interval_regression_analysis_3}
+L.~Billard and E.~Diday.
+\newblock Regression analysis for interval-valued data.
+\newblock In H.~A.~L. Kiers, J.-P. Rasson, P.~J.~F. Groenen, and M.~Schader, editors, \emph{Data Analysis, Classification, and Related Methods}, pages 369--374, Berlin, Heidelberg, 2000. Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-59789-3.
+
 \bibitem[Binder and Schumacher(2008)]{binder2008allowing}
 H.~Binder and M.~Schumacher.
 \newblock Allowing for mandatory covariates in boosting estimation of sparse high-dimensional survival models.
@@ -79,10 +91,23 @@ L.~Breiman, J.~H. Friedman, R.~A. Olshen, and C.~Stone.
 \newblock Classification and regression trees (cart).
 \newblock \emph{Biometrics}, 40\penalty0 (3):\penalty0 358, 1984.
 
-\bibitem[Cai et~al.(2009)Cai, Huang, and Tian]{cai2009regularized}
+\bibitem[Buckley and James(1979)]{aft_semi}
+J.~Buckley and I.~James.
+\newblock Linear regression with censored data.
+\newblock \emph{Biometrika}, 66\penalty0 (3):\penalty0 429--436, 12 1979.
+\newblock ISSN 0006-3444.
+\newblock \doi{10.1093/biomet/66.3.429}.
+\newblock URL \url{https://doi.org/10.1093/biomet/66.3.429}.
+
+\bibitem[Cai et~al.(2009{\natexlab{a}})Cai, Huang, and Tian]{aft_cai2009regularized}
 T.~Cai, J.~Huang, and L.~Tian.
 \newblock Regularized estimation for the accelerated failure time model.
-\newblock \emph{Biometrics}, 65\penalty0 (2):\penalty0 394--404, 2009.
+\newblock \emph{Biometrics}, 65\penalty0 (2):\penalty0 394--404, 2009{\natexlab{a}}.
+
+\bibitem[Cai et~al.(2009{\natexlab{b}})Cai, Huang, and Tian]{cai2009regularized}
+T.~Cai, J.~Huang, and L.~Tian.
+\newblock Regularized estimation for the accelerated failure time model.
+\newblock \emph{Biometrics}, 65\penalty0 (2):\penalty0 394--404, 2009{\natexlab{b}}.
 
 \bibitem[Chen and Guestrin(2016)]{xgb_package}
 T.~Chen and C.~Guestrin.
@@ -99,9 +124,22 @@ J.~Chung, C.~Gulcehre, K.~Cho, and Y.~Bengio.
 \newblock Empirical evaluation of gated recurrent neural networks on sequence modeling.
 \newblock \emph{arXiv preprint arXiv:1412.3555}, 2014.
 
-\bibitem[Drouin(2017)]{mmit_package}
+\bibitem[de~A.~{Lima Neto} and de~A.T.~{de Carvalho}(2010)]{linear_input_interval}
+E.~de~A.~{Lima Neto} and F.~de~A.T.~{de Carvalho}.
+\newblock Constrained linear regression models for symbolic interval-valued variables.
+\newblock \emph{Computational Statistics \& Data Analysis}, 54\penalty0 (2):\penalty0 333--347, 2010.
+\newblock ISSN 0167-9473.
+\newblock \doi{https://doi.org/10.1016/j.csda.2009.08.010}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0167947309003065}.
+
+\bibitem[Drouin(2017{\natexlab{a}})]{mmit_R}
 Drouin.
-\newblock \emph{Maximum Margin Interval Trees}, 2017.
+\newblock \emph{Maximum Margin Interval Trees}, 2017{\natexlab{a}}.
+\newblock URL \url{https://github.com/aldro61/mmit}.
+
+\bibitem[Drouin(2017{\natexlab{b}})]{mmit_package}
+Drouin.
+\newblock \emph{Maximum Margin Interval Trees}, 2017{\natexlab{b}}.
 \newblock URL \url{https://github.com/aldro61/mmit}.
 
 \bibitem[Drouin et~al.(2017)Drouin, Hocking, and Laviolette]{mmit}
@@ -154,6 +192,15 @@ M.~G. Hamed, M.~Serrurier, and N.~Durand.
 \newblock In S.~Greco, B.~Bouchon-Meunier, G.~Coletti, M.~Fedrizzi, B.~Matarazzo, and R.~R. Yager, editors, \emph{Advances in Computational Intelligence}, pages 410--419, Berlin, Heidelberg, 2012. Springer Berlin Heidelberg.
 \newblock ISBN 978-3-642-31718-7.
 
+\bibitem[Hao(2009)]{interval_regression_analysis_4}
+P.-Y. Hao.
+\newblock Interval regression analysis using support vector networks.
+\newblock \emph{Fuzzy Sets and Systems}, 160\penalty0 (17):\penalty0 2466--2485, 2009.
+\newblock ISSN 0165-0114.
+\newblock \doi{https://doi.org/10.1016/j.fss.2008.10.012}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0165011408005022}.
+\newblock Theme: Learning.
+
 \bibitem[Hastie(2017)]{hastie2017generalized}
 T.~J. Hastie.
 \newblock Generalized additive models.
@@ -192,6 +239,14 @@ T.~D. Hocking and A.~Srivastava.
 \newblock \emph{Computational Statistics}, 38\penalty0 (1):\penalty0 461--480, 2023{\natexlab{b}}.
 \newblock ISSN 0943-4062.
 \newblock \doi{10.1007/s00180-022-01238-z}.
+
+\bibitem[Hocking et~al.(2016)Hocking, Goerner-Potvin, Morin, Shao, Pastinen, and Bourque]{hocking_peak16}
+T.~D. Hocking, P.~Goerner-Potvin, A.~Morin, X.~Shao, T.~Pastinen, and G.~Bourque.
+\newblock {Optimizing ChIP-seq peak detectors using visual labels and supervised machine learning}.
+\newblock \emph{Bioinformatics}, 33\penalty0 (4):\penalty0 491--499, 11 2016.
+\newblock ISSN 1367-4803.
+\newblock \doi{10.1093/bioinformatics/btw672}.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btw672}.
 
 \bibitem[Hornik et~al.(1989{\natexlab{a}})Hornik, Stinchcombe, and White]{mlp}
 K.~Hornik, M.~Stinchcombe, and H.~White.
@@ -301,6 +356,11 @@ J.~Li, P.~Fearnhead, P.~Fryzlewicz, and T.~Wang.
 \newblock Automatic change-point detection in time series via deep learning.
 \newblock \emph{Journal of the Royal Statistical Society Series B: Statistical Methodology}, 86\penalty0 (2):\penalty0 273--285, 2024.
 
+\bibitem[Lichman(2013)]{uci}
+M.~Lichman.
+\newblock Uci machine learning repository, 2013.
+\newblock URL \url{https://archive.ics.uci.edu/ml}.
+
 \bibitem[Londschien et~al.(2023)Londschien, B{\"u}hlmann, and Kov{\'a}cs]{review:londschien2023randomforest}
 M.~Londschien, P.~B{\"u}hlmann, and S.~Kov{\'a}cs.
 \newblock Random forests for change point detection.
@@ -340,6 +400,19 @@ V.~M.~R. Muggeo and G.~Adelfio.
 \newblock \doi{10.1093/bioinformatics/btq647}.
 \newblock URL \url{https://doi.org/10.1093/bioinformatics/btq647}.
 
+\bibitem[Nguyen and Hocking(2025{\natexlab{a}})]{meRNN}
+T.~L. Nguyen and T.~Hocking.
+\newblock Learning penalty for optimal partitioning via automatic feature extraction.
+\newblock https://arxiv.org/abs/2505.07413, 2025{\natexlab{a}}.
+
+\bibitem[Nguyen and Hocking(2025{\natexlab{b}})]{meMLP}
+T.~L. Nguyen and T.~D. Hocking.
+\newblock Penalty learning for optimal partitioning using multilayer perceptron.
+\newblock \emph{Statistics and Computing}, 35\penalty0 (5), July 2025{\natexlab{b}}.
+\newblock ISSN 1573-1375.
+\newblock \doi{10.1007/s11222-025-10680-0}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11222-025-10680-0}.
+
 \bibitem[P{\"o}lsterl(2020)]{polsterl2020scikit}
 S.~P{\"o}lsterl.
 \newblock scikit-survival: A library for time-to-event analysis built on top of scikit-learn.
@@ -349,6 +422,11 @@ S.~P{\"o}lsterl.
 S.~P{\"o}lsterl, N.~Navab, and A.~Katouzian.
 \newblock An efficient training algorithm for kernel survival support vector machines.
 \newblock \emph{arXiv preprint arXiv:1611.07054}, 2016.
+
+\bibitem[Quinlan(1986)]{quinlan1986induction}
+J.~R. Quinlan.
+\newblock Induction of decision trees.
+\newblock \emph{Machine learning}, 1:\penalty0 81--106, 1986.
 
 \bibitem[Reeves et~al.(2007)Reeves, Chen, Wang, Lund, and Lu]{app:climate}
 J.~Reeves, J.~Chen, X.~L. Wang, R.~Lund, and Q.~Q. Lu.
@@ -372,6 +450,11 @@ G.~Rigaill, T.~D. Hocking, F.~Bach, and J.-P. Vert.
 G.~Rigaill, T.~D. Hocking, F.~Bach, and J.-P. Vert.
 \newblock Learning {Sparse} {Penalties} for {Change}-{Point} {Detection} using {Max} {Margin} {Interval} {Regression}, June 2013{\natexlab{b}}.
 \newblock URL \url{https://inria.hal.science/hal-00824075}.
+
+\bibitem[Roque et~al.(2007)Roque, Mat{\'e}, Arroyo, and Sarabia]{mlp_input_interval}
+A.~M.~S. Roque, C.~Mat{\'e}, J.~Arroyo, and {\'A}.~Sarabia.
+\newblock {IMLP}: Applying multi-layer perceptrons to interval-valued data.
+\newblock \emph{Neural Process. Lett.}, 25\penalty0 (2):\penalty0 157--169, Feb. 2007.
 
 \bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{rnn}
 D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams.

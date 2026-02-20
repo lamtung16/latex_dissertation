@@ -18,6 +18,7 @@
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{utfsym}
+\usepackage{rotating}
 
 \usepackage{times}
 \usepackage[cm]{fullpage}
@@ -126,7 +127,7 @@ ii
 \addcontentsline{toc}{section}{TABLE OF CONTENTS}
 
 \thispagestyle{empty}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 
 \begingroup
 \singlespacing      % or \onehalfspacing, \doublespacing
@@ -334,7 +335,7 @@ where:
     \item $T_i$ is the survival time (non-negative) for the $i$-th individual,
     \item $\mathbf{x}_i$ is the vector of covariates for the $i$-th individual,
     \item $\boldsymbol{\beta}$ is the vector of regression coefficients,
-    \item $\epsilon_i$ is a random error term following a specified distribution (e.g., normal, log-normal, Weibull).
+    \item $\epsilon_i$ is a random error term following a specified distribution.
 \end{itemize}
 
 
@@ -449,7 +450,7 @@ mmif                   &\href{https://github.com/lamtung16/ML_IntervalRegression
 \bottomrule
 \end{tabular}
 \caption{List of the regression models in this with corresponding source.}
-\label{tab:models}
+\label{tab:models_list_rnn}
 \end{table}
 
 \subsubsection{AFT Model in XGBoost}
@@ -471,7 +472,7 @@ After making a prediction $y_p$ in the exponential space, the result is mapped b
 
 Training this model is based on minimizing the negative log-likelihood function (loss function), which incorporates all training survival instances:
 
-\begin{equation} \label{eq:aft_loss}
+\begin{equation}
     l_{AFT}\Big(\hat{y}, (y_l, y_u)\Big) = -\log \Big[ F_Z\big( \frac{y_u - \hat{y}}{\sigma} \big) - F_Z\big(\frac{y_l - \hat{y}}{\sigma}\big) \Big]
 \end{equation}
 
@@ -523,7 +524,7 @@ From this point forward in the study, the following notation will be used: $\tex
 \subsubsection{Linear}
 This linear model was introduced in the first time by \citet{rigaill2013penalty}, and its extended theoretical foundations were later studied by \citet{rit}.
 The prediction formula is given:
-\begin{equation} \label{eq:linear_prediction}
+\begin{equation}
     \hat{y} = \mathbf{x} \cdot \beta + \beta_0
 \end{equation}
 where $\beta \in \mathbf{R}^m$ and $\beta_0 \in \mathbf{R}$ are the parameters to be learned. To estimate these parameters, the authors extended the Standard Regression loss function—specifically, the Squared Error or Mean Squared Error (MSE)—into a generalized form called the \textit{Hinge Squared Error}.
@@ -550,13 +551,13 @@ $$l\Big(\hat{y}, (y_l, y_u)\Big) =
 
 \noindent The general Interval Regression loss function can be written in this short form:
 
-\begin{equation} \label{eq:lossfunction}
+\begin{equation}
     l\Big(\hat{y}, (y_l, y_u)\Big) = \Big( \text{ReLU}(y_l - \hat{y} + \epsilon)\Big)^p + \Big(\text{ReLU}(\hat{y} - y_u + \epsilon) \Big)^p
 \end{equation}
 
 \noindent where $p \in \{1, 2\}$. Refer to Figure \ref{fig:loss_func} for the visual comparison between hinge errors (Interval Regression Loss) and squared error (Standard Regression Loss).
 
-To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}, apply a gradient descent algorithm with respect to $\beta$ and $\beta_0$ to minimize the Hinge Error \eqref{eq:lossfunction} over the training dataset having $N$ instances $\{\mathbf{x}^i, (y_l^i, y_u^i)\}_{i=1}^N$:
+To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}, apply a gradient descent algorithm with respect to $\beta$ and $\beta_0$ to minimize the Hinge Error \eqref{eq:loss_func} over the training dataset having $N$ instances $\{\mathbf{x}^i, (y_l^i, y_u^i)\}_{i=1}^N$ given by:
 \begin{equation*}
     \sum_{i = 1}^N l\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i = 1}^N l\Big(\mathbf{x^i} \cdot \beta + \beta_0, (y_l^i, y_u^i)\Big)
 \end{equation*}
@@ -699,10 +700,6 @@ This type of problem, where the objective is to find values falling within an in
     \item Applying complex models for penalty prediction.
 \end{itemize}
 
-
-
-\newpage
-
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.99\textwidth]{figs/comprehensive}
@@ -710,9 +707,9 @@ This type of problem, where the objective is to find values falling within an in
 \label{fig:comprehensive}
 \end{figure}
 
-\section{My Contributions}
+\newpage
 
-\subsection{Optimal Partitioning Penalty Learning: MLP}
+\section{Paper: Optimal Partitioning Penalty Learning using MLP}
 Changepoint detection (or other words, partitioning and segmentation) is essential in many real-world applications, identifying significant data shifts in finance \citep{app:finance}, healthcare \citep{cancer}, network security \citep{app:network}, environmental monitoring \citep{app:climate}, and more.
 
 Detecting changepoints involves selecting the detection method and tuning hyperparameters to detect the changepoint locations.
@@ -763,6 +760,7 @@ For simplicity, we refer to the OP penalty as $\lambda$ hereafter.
 
 \begin{table}[!t]
 \centering
+\small
 \label{tab:list_models}%
 \begin{tabular}{@{}lllll@{}}
 \toprule
@@ -797,9 +795,32 @@ mlp.all & 118 &  &  & \\
 \caption{List of employed penalty prediction models}
 \end{table}
 
+\subsection{Previous Work}
+\paragraph{Noteworthy} Adaptive Linear Penalty INference (ALPIN) \citep{truong17} is a method for a special case of this supervision, where every point in the sequence is a label, equivalent to label regions having length 1.
+Since this study uses a more relaxed supervision with varying label region lengths, ALPIN is not applicable.
+Accelerated Failure Time (AFT) models, a class of models for censored outcomes, can be considered. 
+While changepoint detection datasets may include various interval types, traditional AFT models \citep{aft_cai2009regularized, aft_huang2006regularized, rf, svm} are limited to uncensored and right-censored intervals, making them inapplicable.
+
+\paragraph{Unsupervised}
+The Bayesian Information Criterion (BIC) \citep{bic} sets \(\lambda = \log N\), where \(N\) is the sequence length, while Akaike's Information Criterion (aic) \citep{aic} selects \(\lambda = 2p\), with \(p\) is a feature (e.g, variance). 
+\citet{lavielle05} does not specify a particular form but computes \(\lambda\) based on sequence length and variance.
 
 
-\subsubsection{Contribution}
+\paragraph{Supervised}
+The AFT in the XGBoost model \citep{aft_xgboost}, despite being an AFT model, can handle all non-negative target intervals, making it suitable for this study.
+
+Since \(\lambda\) is non-negative, to eliminate this constraint in models output, the following models predict \(\log \lambda\) instead of \(\lambda\): linear \citep{rigaill:13} and Maximum Margin Interval Trees (MMIT) \citep{mmit}. 
+Both are trained by using a specific loss function, the Hinge Error. 
+Using the ReLU function \big(\(f(x) = \max(0,x)\)\big), Hinge Error between prediction $\hat{y}$ and target interval $[y_l, y_u]$ is expressed as:
+
+\begin{equation}\label{loss_function}
+l(\hat{y}, [y_l, y_u]) = \big( \text{ReLU}(y_l - \hat{y} + \epsilon)\big)^p + \big(\text{ReLU}(\hat{y} - y_{u} + \epsilon) \big)^p
+\end{equation}
+
+\noindent Here, $\epsilon \geq 0$ is the margin length (with \citep{rigaill:13} using $\epsilon = 1$ and \citep{mmit} treating $\epsilon$ as a hyperparameter), and $p$ (1 or 2) defines the loss type.
+It is clear that if the prediction $\hat{y}$ falls within the interval $[y_l + \epsilon, y_u - \epsilon]$, the Hinge Error value is 0.
+
+\subsection{Contribution}
 \paragraph{Novelty: MLP for $\lambda$ prediction}
 A MLP with fully connected architecture is used.
 All hidden layers have the same number of neurons.
@@ -811,8 +832,8 @@ Features such as the mean, quartile values (min, Q1, Q2, Q3, max) and their tran
 For example, \([0,0,0,1,1,1]\) and \([1,1,1,2,2,2]\) are the same sequences.
 Sequence length and variance alone cannot fully represent a sequence, since some sequences may have the same length and variance but differ significantly in this context, so we introduce two additional sequence-related features: \textit{value range} and \textit{sum of absolute differences}.
 \begin{itemize}
-\item \textbf{Value range:} This feature ($r$ in Table \ref{tab:models}) is defined as the difference between the maximum and minimum values in the sequence.
-\item \textbf{Sum of absolute differences:} This feature ($s$ in Table \ref{tab:models}) is calculated as the sum of the absolute differences between two consecutive sequence points, denoted as $\sum_{i=1}^{N-1} |d_{i+1} - d_{i}|$, where $\textbf{d} = [d_1, d_2, \dots, d_N]$ is the sequence. This feature differentiates sequences with the same length, variance, or value range, such as [0,0,0,1,1,1] and [0,1,0,1,0,1], which are distinct in the context of changepoint detection.
+\item \textbf{Value range:} This feature ($r$ in Table \ref{tab:models_reg}) is defined as the difference between the maximum and minimum values in the sequence.
+\item \textbf{Sum of absolute differences:} This feature ($s$ in Table \ref{tab:models_reg}) is calculated as the sum of the absolute differences between two consecutive sequence points, denoted as $\sum_{i=1}^{N-1} |d_{i+1} - d_{i}|$, where $\textbf{d} = [d_1, d_2, \dots, d_N]$ is the sequence. This feature differentiates sequences with the same length, variance, or value range, such as [0,0,0,1,1,1] and [0,1,0,1,0,1], which are distinct in the context of changepoint detection.
 \end{itemize}
 Intuitively, as the value range or the sum of absolute differences increases, the sequence tends to show more fluctuations, indicating a need to increase $\lambda$.
 See Figure \ref{fig:features_targets} to see why these two features emerge as strong candidates.
@@ -821,13 +842,6 @@ I employed cross-validation to determine the appropriate MLP architecture, which
 My approach achieved improved accuracy rates in changepoint detection when applied to benchmark datasets (Figure \ref{fig:acc_comp}).
 I have uploaded my research to arXiv: \href{https://arxiv.org/abs/2408.00856}{link}.
 And it's published in Statistics and Computing journal: \href{https://link.springer.com/article/10.1007/s11222-025-10680-0}{Spring Nature link}.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=0.9\textwidth]{figs/fig.acc_compare}
-\caption{Median test accuracy and interquartile across 6 folds for each method}
-\label{fig:acc_comp}
-\end{figure}
 
 \begin{table}[!t]
 \centering
@@ -842,7 +856,9 @@ And it's published in Statistics and Computing journal: \href{https://link.sprin
 \caption{Datasets used in the study}
 \end{table}
 
-\subsubsection{Experiments and Results}
+
+
+\subsection{Experiments and Results}
 
 \paragraph{Features} Four sets of features are considered to evaluate their quality:
 \begin{itemize} 
@@ -851,6 +867,13 @@ And it's published in Statistics and Computing journal: \href{https://link.sprin
 \item \textbf{4 features}: Sequence length, variance, value range, sum of absolute differences. 
 \item \textbf{All features}: According to \cite{rigaill:13} and \cite{mmit}, up to 365 features are generated, with only those without of missing data, infinite values, or zero variance retained.
 \end{itemize}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\textwidth]{figs/fig.acc_compare}
+\caption{Median test accuracy and interquartile across 6 folds for each method}
+\label{fig:acc_comp}
+\end{figure}
 
 \paragraph{Models Configuration}
 All models employed 5-fold cross-validation to select the optimal hyperparameters.
@@ -878,7 +901,7 @@ In each iteration, 1 fold is designated as the test set, and the remaining 5 fol
 \label{fig:F1_comp}
 \end{figure}
 
-\subsubsection{Discussion and Conclusion}
+\subsection{Discussion and Conclusion}
 
 \paragraph{Performance Analysis and Overall Comparison}
 
@@ -931,7 +954,7 @@ To promote transparency and facilitate replication, all source code and experime
 
 \newpage
 
-\subsection{Optimal Partitioning Penalty Learning: Recurrent}
+\section{Paper: Optimal Partitioning Penalty Learning using RNN}
 
 Changepoint detection (other words, partitioning or segmentation) is important for identifying abrupt changes in data in various domains, including finance \citep{app:finance}, healthcare \citep{cancer}, network security \citep{app:network}, and environmental science \citep{app:climate}. This importance has driven the development of numerous methods over the past decades.
 
@@ -953,6 +976,7 @@ find the vector $\mathbf{m} \in \mathbb{R}^N$ that minimizes the following cost 
 \begin{equation*} \label{eq:opart_loss}
 C(\textbf{d}, \textbf{m}) + \lambda M
 \end{equation*}
+
 \noindent Here, $C(\textbf{d}, \textbf{m})$ represents the error between the sequence $\textbf{d}$ and the vector $\textbf{m}$ and $M$ is the number of changes in $\textbf{m}$.
 The formula of $C(\textbf{d}, \textbf{m})$ and $M$ depends on the type of change.
 If the type of change is mean, then $C(\textbf{d}, \textbf{m}) = \sum_{i=1}^{N}(m_i-d_i)^2$ and $M=\sum_{i=1}^{N-1} I[m_i \neq m_{i+1}]$, where $I[m_i \neq m_{i+1}]$ equals 1 if a changepoint occurs ($m_i \neq m_{i+1}$) and 0 otherwise.
@@ -967,13 +991,147 @@ From here on, that conceptual penalty will be referred to as $\lambda$.
 Various models exist for predicting $\lambda$, including unsupervised \citep{bic, aic, lavielle05} and supervised such as linear \citep{rigaill:13} and tree(s) \citep{mmit, barnwal2022survival}.
 But all of these models rely on a set of manually extracted sequence features, yet the number of possible features is infinite, this process can result in the inclusion of many irrelevant features, and the potential omission of useful ones.
 
-\paragraph{(iv) (v) Contribution.} This study proposes a novel method utilizing a recurrent network to automatically extract relevant features from sequences, which are then used to predict $\lambda$.
+\paragraph{Contribution.} This study proposes a novel method utilizing a recurrent network to automatically extract relevant features from sequences, which are then used to predict $\lambda$.
 Experiments on benchmark datasets show that the proposed method achieves higher partitioning accuracy than existing ones in most cases.
 
 \paragraph{Reproducibility.} To ensure transparency, the code used for this study is accessible at: \url{https://github.com/lamtung16/ML_Changepoint_Detection_epigenomic_rnn}.
 
+\subsection{Previous Work}
 
-\subsubsection{Contribution}
+This subsection focuses on the process of training supervised $\lambda$ prediction models.
+% From this point onward, the prediction of $\lambda$ is denoted by $\hat{\lambda}$ to distinguish it from the conceptual OPART penalty $\lambda$.
+Before going into the details, some noteworthy models are highlighted, which, although not applicable to this study, are still relevant. 
+Additionally, some unsupervised models, which have served as inspiration for supervised models, are mentioned.
+
+\paragraph{Noteworthy.} Adaptive Linear Penalty INference (ALPIN) \citep{truong17} is a method for this supervision special case, where every point is a label, equivalent to label regions having length 1.
+However, since this study uses a more relaxed supervision with varying label region lengths, ALPIN is not applicable.
+The Accelerated Failure Time (AFT) model \citep{aft} and its variants \citep{cai2009regularized, huang2006regularized, quinlan1986induction, svm}, which are designed for censored outcomes, can be considered.
+Supervised changepoint detection setups involve interval-censored targets, whereas traditional AFT models are restricted to uncensored or right-censored intervals, making them not directly applicable. 
+% An important distinction is that in AFT models, the left-censored interval is defined as $ (0 = \lambda_l < \lambda_u < \infty) $, which is different from this study's definition.
+
+\paragraph{Unsupervised.} These models predicts $\lambda$ based on some sequence features.
+Let $\hat{\lambda}$ denote a prediction of $\lambda$.
+Let $N$ denote the sequence length, and $\sigma$ its standard deviation, with examples such as Baysian Information Criterion (BIC) \citep{bic} predicts $\hat{\lambda} = \sigma^2 \log N$.
+Akaike's Information Criterion (AIC) \citep{aic} predicts $\hat{\lambda} = 2p$, where $ p $ represents a sequence feature (e.g., standard deviation, variance).
+\citet{lavielle05} does not provide a closed-form formula but considers $\hat{\lambda}$ to be dependent on both $ N $ and $ \sigma $.
+
+\paragraph{Supervised.} The rest of this section will detail the training process of three supervised machine learning models: Maximum Margin Interval Regression \citep{rigaill:13}, a linear model; Maximal Margin Interval Tree (MMIT) \citep{mmit}; and AFT in XGBoost \citep{barnwal2022survival}, which utilizes a tree-based framework (although AFT in XGBoost is an AFT model, it is applicable due to its ability to handle all types of non-negative intervals).
+These models divided the training process into 2 sequential independent steps:
+\begin{itemize}
+    \item Step 1: Extract features vector $\mathbf{x}$ from the sequence.
+    \item Step 2: Train a model $g(\cdot)$ takes into $\mathbf{x}$ to predict $\hat{\lambda} = g(\mathbf{x})$
+\end{itemize}
+
+\subsubsection{Step 1: Feature Extraction}
+The manual feature extraction process, detailed in \cite{rigaill:13}, involves the following steps:
+\begin{itemize}
+    \item Starting from the sequence $\mathbf{d} = [d_1, d_2, \dots, d_N]$ with the mean value $\bar{d} = \frac{1}{N} \sum_{i=1}^N d_i$, 2 additional sequences (residuals and differences) are generated:
+    \begin{align*}
+        \mathbf{d}_{\text{res}} &= [d_1 - \bar{d}, \dots, d_N - \bar{d}] \in \mathbb{R}^N \\
+        \mathbf{d}_{\text{diff}} &= [d_2 - d_1, \dots, d_N - d_{N-1}] \in \mathbb{R}^{N-1}
+    \end{align*}
+
+    \item Apply 3 transformations (identity, absolute, square) to each of 3 vectors, resulting in 9 transformed vectors.
+    \item Compute 8 statistics (sum, mean, standard deviation, and quantiles at 0\%, 25\%, 50\%, 75\%, 100\%) from each transformed vector, yielding a vector of length 72.
+    \item Include the sequence length as an additional feature, forming a vector of length 73.
+    \item Apply 5 transformations (identity, square root, log, log-log, square) to each feature, resulting in up to 365 features.
+\end{itemize}
+The values caused by invalid operations (e.g., log of a negative number), is ignored.
+
+\subsubsection{Step 2: Model Training}
+After obtaining the feature vector $\mathbf{x}$ (up to 365 features), each instance $\{\mathbf{d}, [\lambda_l, \lambda_u]\}$ becomes $\{\mathbf{x}, [\lambda_l, \lambda_u]\}$, a selected model $g$ is trained to predict $\hat{\lambda} = g(\mathbf{x})$.
+
+\paragraph{AFT in XGBoost.} The model is formulated as:
+\begin{equation*}
+    \hat{\lambda} = \mathbf{T}(\mathbf{x}) + \varepsilon
+\end{equation*}
+Here, $\mathbf{T}(\mathbf{x})$ denotes the ensemble of trees for feature vector $\mathbf{x}$, and $\varepsilon$ is a random error. 
+The model is trained by minimizing the negative log-likelihood over all train instances:
+\begin{equation} \label{eq:aft_loss}
+    l_{AFT}\Big(\hat{\lambda}, [\lambda_l, \lambda_u]\Big) = -\log \Big[ F_Z\big( \frac{\log\lambda_u - \log\hat{\lambda}}{\sigma} \big) - F_Z\big(\frac{\log\lambda_l - \log\hat{\lambda}}{\sigma}\big) \Big]
+\end{equation}
+
+\noindent where $\sigma > 0$ is the scale parameter.
+The cumulative distribution function $F_Z(z)$ depends on the chosen distribution of $\varepsilon$:
+\begin{itemize}
+    \item normal: \phantom{00}   $F_Z(z) = \frac{1}{2}\big( 1 + \text{erf}(\frac{z}{\sqrt{2}}) \big)$
+    \item logistic: \phantom{00} $F_Z(z) = \frac{e^z}{1+e^z}$
+    \item extreme: \phantom{0} $F_Z(z) = 1 - e^{-\exp z}$
+\end{itemize}
+The model is trained using the gradient boosting algorithm \citep{gradient_boosting} to minimize the loss value \eqref{eq:aft_loss} over the training dataset with $S$ instances $\{\mathbf{x}^i, [\lambda_l^i, \lambda_u^i]\}_{i=1}^S$ given the distribution of $\varepsilon$ and the scale parameter $\sigma$:
+\begin{equation*}
+    \sum_{i = 1}^S l_{AFT}\Big(\hat{\lambda}^i, [\lambda_l^i, \lambda_u^i]\Big) = -\sum_{i=1}^S \log \Big[ F_Z\big( \frac{\log\lambda_u^i - \log\mathbf{T}(\mathbf{x}^i)}{\sigma} \big) - F_Z\big(\frac{\log\lambda_l^i - \log\mathbf{T}(\mathbf{x}^i)}{\sigma}\big) \Big]
+\end{equation*}
+
+\paragraph{Linear.} This model, known as Maximum Margin Interval Regression, transforms the problem to predicting $\log \hat{\lambda}$ instead of $\hat{\lambda}$, as $\log \hat{\lambda}$ can be any real value, unlike the non-negative $\hat{\lambda}$. The model expresses the output as a linear combination of inputs:
+\begin{equation}
+    \log \hat{\lambda} = \mathbf{x} \cdot \beta + \beta_0
+\end{equation}
+where $\beta$ is the parameter vector, $\mathbf{x} \cdot \beta$ is the dot product of $\mathbf{x}$ and $\beta$, and $\beta_0$ is the bias term.
+Its simplified version, used in \cite{review:lopart}, predicts $\log \hat{\lambda} = \beta_1 \times \log \log N + \beta_0$, where $N$ is the sequence length.
+
+This model is trained by minimizing a loss function, the Hinge Error, defined by \citet{rigaill:13}, it achieves 0 loss when the prediction falls within the target interval.
+The error value between prediction $\log \hat{\lambda}$ and target interval $[\log \lambda_l, \log \lambda_u]$ is: 
+
+$$l\Big(\log \hat{\lambda}, [\log \lambda_l, \log \lambda_u]\Big) = 
+\begin{cases} 
+    (\log \lambda_l - \log \hat{\lambda} + \epsilon)^2 & \mbox{if } \log \hat{\lambda} < \log \lambda_l + \epsilon, \\
+    0 & \mbox{if } \log \lambda_l + \epsilon \leq \log \hat{\lambda} \leq \log \lambda_u - \epsilon, \\
+    (\log \hat{\lambda} - \log \lambda_u + \epsilon)^2 & \mbox{if } \log \hat{\lambda} > \log \lambda_u - \epsilon.
+\end{cases}$$
+
+\noindent where $\epsilon \geq 0$ is the margin length ($\epsilon=0$ by default).
+The Hinge Error becomes Square Error when $\lambda_l = \lambda_u$ and $\epsilon = 0$ (or $\epsilon = \frac{\log\lambda_l+\log\lambda_u}{2}$), or in other word, target interval becomes target point.
+\citet{mmit} proposed a similar loss function:
+$$l\Big(\log \hat{\lambda}, [\log \lambda_l, \log \lambda_u]\Big) = 
+\begin{cases} 
+    |\log \lambda_l - \log \hat{\lambda} + \epsilon| & \mbox{if } \log \hat{\lambda} < \log \lambda_l + \epsilon, \\
+    0 & \mbox{if } \log \lambda_l + \epsilon \leq \log \hat{\lambda} \leq \log \lambda_u - \epsilon, \\
+    |\log \hat{\lambda} - \log \lambda_u + \epsilon| & \mbox{if } \log \hat{\lambda} > \log \lambda_u - \epsilon.
+\end{cases}$$
+Using the ReLU function, the general loss function can be written in this short form:
+\begin{equation} \label{eq:loss_function}
+    l(\log \hat{\lambda}, [\log \lambda_l, \log \lambda_u]) = \Big( \text{ReLU}(\log \lambda_l - \log \hat{\lambda} + \epsilon)\Big)^p + \Big(\text{ReLU}(\log \hat{\lambda} - \log \lambda_u + \epsilon) \Big)^p,
+\end{equation}where $\epsilon \geq 0$ is the margin length and $p \in \{1, 2\}$ is the loss type.
+
+To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}, the Fast Iterative Shrinkage-Thresholding Algorithm (FISTA) \citep{fista} with respect to $\beta$ and $\beta_0$ is employed to minimize the Hinge Error \eqref{eq:loss_function} over the train dataset having $S$ instances $\{\mathbf{x}^i, [\log \lambda_l^i, \log \lambda_u^i]\}_{i=1}^S$:
+\begin{equation*}
+    \sum_{i = 1}^S l\Big(\log \hat{\lambda}^i, [\log \lambda_l^i, \log \lambda_u^i]\Big) = \sum_{i = 1}^S l\Big(\mathbf{x^i} \cdot \beta + \beta_0, [\log \lambda_l^i, \log \lambda_u^i]\Big)
+\end{equation*}
+
+\paragraph{Tree.} MMIT introduced by \citet{mmit} is applicable for $\lambda$ prediction as an interval regression model. 
+The MMIT model is:
+\[
+\log \hat{\lambda} = \mathcal{T}(\mathbf{x})
+\]
+The tree $\mathcal{T}$ architecture follows the same structure as CART (Classification And Regression Tree) \citep{cart}. 
+The only difference lies in the regression value for each leaf which is a set of $Q$ instances $\{\mathbf{x}^i, [\log \lambda_l^i,\log \lambda_u^i]\}_{i=1}^Q$. Instead of taking the mean of all targets like CART does, MMIT chooses a constant value $c$ that minimizes the mean Hinge Error \eqref{eq:loss_function} between this constant and the target intervals:
+\begin{equation*}
+    \argmin_c \frac{1}{Q} \sum_{i=1}^{Q} l\big(c, [\log \lambda_l^i, \log \lambda_u^i]\big), \quad c \in \mathbf{R}
+\end{equation*}
+\noindent A heuristic algorithm is used to speed up the estimation of the mean value for each leaf by considering a finite set of candidates, rather than solving for the optimal $c$:
+\begin{align*}
+    &\argmin_c \frac{1}{Q} \sum_{i=1}^{Q} l\big(c, [\log \lambda_l^i, \log \lambda_u^i]\big), 
+    \\
+    &\text{where }c \in \{\log \lambda_l^i, \log \lambda_u^i, \frac{\log \lambda_l^i + \log \lambda_u^i}{2}|\log \lambda_l^i > -\infty, \log \lambda_u^i < \infty\}_{i = 1}^Q
+\end{align*}
+
+\noindent The training procedure for determining the optimal tree architecture follows the same operations as in CART (binary optimization) to minimize the Hinge Error \eqref{eq:loss_function} over the train dataset having $S$ instances $\{\mathbf{x}^i, [\log \lambda_l^i, \log \lambda_u^i]\}_{i=1}^S$:
+\begin{equation*}
+    \sum_{i = 1}^S l\Big(\log \hat{\lambda}^i, [\log \lambda_l^i, \log \lambda_u^i]\Big) = \sum_{i = 1}^S l\Big(\mathcal{T}(\mathbf{x}^i), [\log \lambda_l^i, \log \lambda_u^i]\Big)
+\end{equation*}
+
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.75\textwidth]{figs/figure.3_proposed_plan_rnn}}
+\caption{Diagram of the proposed methods using RNN}
+\label{fig:proposed_method}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+\subsection{Contribution}
 \paragraph{Feature Extraction via Recurrent Networks.} In a Recurrent Network with input size \(k \geq 1\) and hidden size \(m \geq 1\), processing a sequence \(\mathbf{d} = [d_1, d_2, \dots, d_N] \in \mathbb{R}^N\), the hidden state at time \(t\), called $h_t$, is updated as:
 \[
 h_t = f(d_{[t:t+k-1]}; h_{t-1}) \in \mathbb{R}^m
@@ -993,7 +1151,7 @@ where \(\beta \in \mathbb{R}^m\) and \(\beta_0 \in \mathbb{R}\) are the paramete
 \begin{figure}[!t]
 \vskip 0.2in
 \begin{center}
-\centerline{\includegraphics[width=0.7\textwidth]{figs/figure.5_extracted_features.pdf}}
+\centerline{\includegraphics[width=0.75\textwidth]{figs/figure.5_extracted_features.pdf}}
 \caption{Example: features vs. targets from the dataset detailed}
 \label{fig:extracted_features}
 \end{center}
@@ -1004,6 +1162,38 @@ where \(\beta \in \mathbb{R}^m\) and \(\beta_0 \in \mathbb{R}\) are the paramete
 \paragraph{Automatic extracted features vs. Manual extracted features.} The novel method generates useful features without the need for a large number, unlike previous models.
 Figure \ref{fig:extracted_features} provides an example by comparing the ability to predict $\lambda$ using length (or variance) - as these manual extracted features are considered key for $\lambda$ prediction in unsupervised methods - versus automatic extracted features from recurrent networks.
 It demonstrates that the automatic extracted features probably provide a more accurate prediction of $\lambda$ than either length or variance.
+
+\begin{table}[!t]
+\centering
+\begin{tabular}{lccccc}
+\toprule
+\multicolumn{6}{c}{Recurrent core: $h_t = f(d_{[t-k+1:t]}; h_{t-1}) \in \mathbb{R}^m$} \\ \toprule
+\textbf{sequence feature} & $k$ & $m$ & $h_{k-1}$ & $h_t$
+\\
+\midrule
+length & $k \in \mathbf{N^+}$ & 1 & $k-1$ & $h_{t-1} + 1$ \\
+\cmidrule(lr){1-6}
+mean & 1 & 1 & 0 & $h_{t-1} + \frac{d_t - h_{t-1}}{t}$  \\
+\cmidrule(lr){1-6}
+min & 1 & 1 & $\infty$ & $\min(d_t, h_{t-1})$  \\
+\cmidrule(lr){1-6}
+max & 1 & 1 & $-\infty$ & $\max(d_t, h_{t-1})$  \\
+\cmidrule(lr){1-6}
+sum & 1 & 1 & 0 & $h_{t-1} + d_t$  \\
+\cmidrule(lr){1-6}
+cumulative absolute & 1 & 1 & 0 & $h_{t-1} + |d_t|$  \\
+\cmidrule(lr){1-6}
+cumulative squares & 1 & 1 & 0 & $h_{t-1} + d_t^2$  \\
+\cmidrule(lr){1-6}
+difference sum & 2 & 1 & $0$ & $|d_t-d_{t-1}| + h_{t-1}$ &  \\
+\cmidrule(lr){1-6}
+\multirow{2}{*}{value range} & \multirow{2}{*}{1} & \multirow{2}{*}{2} & $\infty$ & $\min(d_t, h_{t-1}^{(1)})$ & \multirow{2}{*}{} \\
+                             &   &   & $-\infty$  & $\max(d_t, h_{t-1}^{(2)})$ & \\
+\bottomrule
+\end{tabular}
+\caption{Formula of recurrent core for each feature approximation.}
+\label{tab:feature_approximation}
+\end{table}
 
 \paragraph{Feature Approximation Ability of Recurrent Networks.}
 Recurrent networks have the ability to approximate statistical sequence features. For example, if the core network is defined as \( h_t = h_{t-1} + 1 \) when \( h_0 = 0 \) and the input size $k = 1$, then \( h_N = N \), which represents the sequence length, a feature used in BIC. 
@@ -1016,6 +1206,160 @@ RNNs struggle with long-term dependencies due to the vanishing gradient problem.
 LSTMs address this by introducing memory cells and gating mechanisms that help retain information over longer sequences. 
 GRUs, a simplified version of LSTMs, combine the forget and input gates into a single update gate, offering a more efficient alternative while still capturing long-term dependencies.
 
+\begin{table}[t]
+\label{tab:datasets_rnn}
+\centering
+\begin{tabular}{@{}lll|l@{}}
+\toprule
+\textbf{Dataset} & \textbf{Seq. length} & \textbf{Size} & \textbf{Source} \\
+\midrule
+systematic & \phantom{0000}66 - 5937 & 3418 & \\
+detailed & \phantom{0000}25 - 5937 & 3730 & \href{https://github.com/tdhock/neuroblastoma-data/tree/master/data}{GitHub}\\ 
+cancer & \phantom{0000}39 - 43628 & \phantom{0}826 & \\
+\midrule
+ATAC\_JV\_adipose & 105716 - 11.50M & \phantom{0}465 \\
+CTCF\_TDH\_ENCODE & 166431 - 11.09M & \phantom{0}182 \\
+H3K27ac-H3K4me3\_TDHAM\_BP & \phantom{000}275 -\phantom{0} 4.33M & 2008 \\
+H3K27ac\_TDH\_some & \phantom{0}41053 -\phantom{0} 6.74M & \phantom{00}95 \\
+H3K27me3\_RL\_cancer & \phantom{00}5730 -\phantom{0} 1.89M & \phantom{0}171 \\
+H3K27me3\_TDH\_some & 113523 -\phantom{0} 3.00M & \phantom{00}43 \\
+H3K36me3\_AM\_immune & 184092 -\phantom{0} 7.14M & \phantom{0}420 \\
+H3K36me3\_TDH\_ENCODE & \phantom{0}68209 -\phantom{0} 2.74M & \phantom{00}78 \\
+H3K36me3\_TDH\_immune & 434882 -\phantom{0} 4.35M & \phantom{00}37 & \href{https://archive.ics.uci.edu/ml/machine-learning-databases/00439/peak-detection-data.tar.xz}{UCI Repo}\\
+H3K36me3\_TDH\_other & \phantom{0}49362 -\phantom{0} 7.15M & \phantom{00}40 \\
+H3K4me1\_TDH\_BP & 148275 -\phantom{0} 9.73M & \phantom{0}144 \\
+H3K4me3\_PGP\_immune & \phantom{0}24460 -\phantom{0} 6.62M & \phantom{0}297 \\
+H3K4me3\_TDH\_ENCODE & \phantom{0}18198 -\phantom{0} 7.21M & \phantom{00}75 \\
+H3K4me3\_TDH\_immune & \phantom{0}87557 -\phantom{0} 7.81M & \phantom{0}378 \\
+H3K4me3\_TDH\_other & \phantom{0}80674 -\phantom{0} 3.72M & \phantom{00}90 \\
+H3K4me3\_XJ\_immune & \phantom{0}52498 -\phantom{0} 5.50M & \phantom{0}270 \\
+H3K9me3\_TDH\_BP & 369654 - 10.29M & \phantom{0}120 \\
+\bottomrule
+\end{tabular}
+\caption{List of datasets with its number of sequences (Size)}
+\end{table}
+
+\subsection{Experiments and Results}
+In this section, the implementation of models is detailed. 
+Labeled sequences are first processed, with features manually extracted to replicate previous work, along with the corresponding target intervals. 
+Baseline models and the proposed models are then implemented. 
+For each test sequence, OPART is applied with the predicted $\lambda$ to detect changepoints. 
+Finally, accuracy rates are calculated based on the predicted changepoints and the test set labels.
+
+
+\paragraph{Raw Sequence Datasets.}  
+This study uses 20 datasets: two DNA copy number profiles from neuroblastoma tumors \citep{rigaill:13}, known for detailed and systematic dataset; one dataset cancer from \citep{review:lopart}; and 17 ChIP-seq datasets from \citep{hocking_peak16}, see Table \ref{tab:datasets} for all benchmark datasets, each sequence has a different length (number of datapoints), so the range of sequence lengths within each dataset is reported in the Table \ref{tab:datasets}.
+For each sequence in each dataset, biologist experts use their visual interpretation of important signal and noise patterns to label regions as having changes in mean value or not.
+
+\paragraph{Train/Test Setup.}  
+Each sequence is assigned a unique identifier (sequenceID), and datasets are split into folds based on these IDs. Fewer folds are used for smaller datasets to balance train and test data sizes, ensuring a sufficiently large test set for reliable evaluation. In each iteration, one fold serves as the test set, and the others form the train set.
+
+\paragraph{Evaluation Metrics.}
+The metric used is the accuracy rate on the test set:
+\[
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\]
+where
+\begin{itemize}
+    \item TP = \text{True Positives (The number of detected changepoints matches to the positive labels)}
+    \item TN = \text{True Negatives (No detected changepoints in the negative labels)}
+    \item FP = \text{False Positives (The number of detected changepoints exceeds that of the labels.)}
+    \item FN = \text{False Negatives (The number of detected changepoints is less than that of the labels.)}
+\end{itemize}
+
+\subsubsection{Model Implementation}
+Previous models were implemented as baselines, along with additional models and the proposed models for comparison. 
+Details of all models are provided in Table \ref{tab:models_reg}.
+
+\begin{table}[t]
+    \centering
+\caption{List of employed models}
+\label{tab:models_reg}
+\begin{small}
+% \begin{sc}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Model} & \textbf{Regularization} & \textbf{Language} & \textbf{Package} & \textbf{Paper} \\
+\midrule
+linear & L1 & R & \citep{penaltyLearning} & \cite{rigaill:13} \\
+\midrule
+MMIT & tree architecture & Python/Cpp &  \citep{mmit_R} & \cite{mmit} \\
+\midrule
+AFT\_XGboost & tree architecture & Python & \citep{xgb_package} & \cite{barnwal2022survival} \\
+\midrule
+constant & none & Python/Cpp &  \citep{mmit_R} & Baseline \\
+\midrule
+
+\begin{tabular}[c]{@{}l@{}}MLP\end{tabular} & \begin{tabular}[c]{@{}l@{}} layer number\\  layer sizes\end{tabular} & Python &  & Additional \\
+\midrule
+\begin{tabular}[c]{@{}l@{}}RNN\\LSTM\\GRU\end{tabular} & \begin{tabular}[c]{@{}l@{}} layer number\\  state sizes\end{tabular} & Python & & Proposed \\
+\bottomrule
+\end{tabular}
+% \end{sc}
+\end{small}
+\end{table}
+
+
+\subsubsection{Baseline Models}
+\paragraph{Linear.} This model uses L1 regularization. 
+The regularization parameter L1 starts at 0.001, geometrically increasing by a factor of 1.2 until no features remain, with cross-validation determining the optimal L1 regularization value.
+
+
+
+\paragraph{MMIT.}  The optimal hyperparameters are chosen through cross-validation on the training set, including:
+\begin{itemize}
+    \item \texttt{max\_depth}:  0, 1, 5, 10, 20, and $\infty$
+    \item \texttt{min\_sample}:  0, 1, 2, 4, 8, 16, and 20. 
+    \item \texttt{margin} ($\epsilon$ in Hinge Error \ref{eq:loss_function}):  0, 1, and 2
+    \item \texttt{loss\_type}:  \texttt{hinge} and \texttt{square} (equivalent to $p=1$ and $p=2$ in Hinge Error \ref{eq:loss_function});
+\end{itemize}
+
+\paragraph{AFT in XGBoost.} Following the same setup described in \citet{barnwal2022survival}, the optimal hyperparameters are chosen via cross-validation on the training set, including:
+\begin{itemize}
+    \item \texttt{learning\_rate}: 0.001, 0.01, 0.1, and 1.0
+    \item \texttt{max\_depth}: 2, 3, 4, 5, 6, 7, 8, 9, and 10
+    \item \texttt{min\_child\_weight}: 0.001, 0.1, 1.0, 10.0, and 100.0
+    \item \texttt{reg\_alpha}: 0.001, 0.01, 0.1, 1.0, 10.0, and 100.0
+    \item \texttt{reg\_lambda}: 0.001, 0.01, 0.1, 1.0, 10.0, and 100.0
+    \item \texttt{aft\_loss\_distribution\_scale}: 0.5, 0.8, 1.1, 1.4, 1.7, and 2.0
+\end{itemize}
+
+\paragraph{Constant (Featureless).} 
+This model predicts a single value $\hat{\lambda} = \exp{\log\hat{\lambda}}$ from the train set using only target intervals.
+The objective is to minimize the total Hinge Error \eqref{eq:loss_function} over $ S $ instances with target intervals $[\log\lambda_l^i, \log\lambda_u^i]_{i=1}^S$:  
+\begin{equation*}
+\log\hat{\lambda} = \argmin_{c} \sum_{i=1}^{S} l(c, [\log\lambda_l^i, \log\lambda_u^i]).
+\end{equation*}
+
+
+\subsubsection{Additional Model}
+\paragraph{MLP.}
+Using the same feature vector and loss function as the linear model, the MLP generalizes the linear model by incorporating ReLU activation in the hidden layers.
+Hyperparameters include the number of hidden layers (1, 2, or 3) and the size of each hidden layer (1, 2, 4, 8, 16, 32, 64, 128, 256, or 512).
+The best hyperparameters are chosen via cross-validation in the train set.
+Since the linear model uses L1 regularization and MMIT (or AFT in XGBoost) has a tree-based architecture, they can automatically select features. 
+However, MLP does not fully mitigate irrelevant features on its own (parameters associated with each feature are likely non-zero). 
+Feature selection for MLP in this interval regression setting could be explored in future work.
+
+\subsubsection{Proposed Models}
+\paragraph{Architecture.} There are three considered models: RNN, LSTM, and GRU. The hyperparameters include: the number of hidden layers (1 or 2) and the hidden state size (number of extracted features) (2, 4, 8 or 16).
+
+
+\paragraph{Preprocessing.} Based on the datasets sequence lengths, we handle them as follows:
+\begin{itemize}
+    \item For the 3 datasets—detailed, systematic, cancer—the sequence lengths range from 39 to 43628. 
+    These sequences are directly input into the $\lambda$ prediction models without further modification.
+    \item For the 17 ChIP-seq datasets, the sequence lengths can be over 11 million.
+    Training on these raw sequences can be computationally expensive and time-consuming.
+    So pooling operations are performed, where a single representative value is chosen for each non-overlapping sliding window. The window size options are 100, 1000, or 2000, and the representative value is either the window mean or the median. After shortening the sequences, a $\log(z+1)$ transformation is applied to all value $z$ in all shortened sequences to mitigate skewed distributions. Following this, all sequence values are normalized (mean 0, variance 1) for each dataset.
+\end{itemize}
+
+
+\subsubsection{Results}
+The comprehensive accuracy results of all 8 methods for each of 20 datasets are provided in the Appendix, as the table is too large to be included in the main paper.
+Figure \ref{fig:acc_no_pooling} presents the accuracy rates for three datasets using the original, unpooled sequences, while Figure \ref{fig:acc_chipseq} shows the results for various ChIP-seq datasets (pooled sequences).
+Each dataset is evaluated using seven different methods, producing multiple accuracy values depending on the number of folds used for that dataset.
+
 \begin{figure}[tb]
 \vskip 0.2in
 \begin{center}
@@ -1026,12 +1370,7 @@ GRUs, a simplified version of LSTMs, combine the forget and input gates into a s
 \vskip -0.2in
 \end{figure}
 
-\subsubsection{Experiments and Results}
-The comprehensive accuracy results of all 8 methods for each of 20 datasets are provided in the Appendix, as the table is too large to be included in the main paper.
-Figure \ref{fig:acc_no_pooling} presents the accuracy rates for three datasets using the original, unpooled sequences.
-Each dataset is evaluated using seven different methods, producing multiple accuracy values depending on the number of folds used for that dataset.
-
-\subsubsection{Discussion and Conclusion}
+\subsection{Discussion and Conclusion}
 \paragraph{Summary of Contributions.}
 Technically, these proposed models still perform two steps: (1) Feature extraction and (2) Predicting $\lambda$ based on the extracted features.
 However, instead of performing these steps separately, it combines them into a single operation, enhancing its robustness compared to previous models.
@@ -1093,7 +1432,15 @@ Therefore, in real-world scenarios where datasets contain only a few sequences b
 However, if the user’s priority is accuracy and the hardware requirements are met, the proposed models are a better choice.
 Although the training process is time-consuming, it only needs to be done once; afterwards, the trained models can be applied to unseen sequences, as their feed-forward process is sufficiently fast.
 
-
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.7\textwidth]{figs/figure.5_window_size}}
+\caption{Log of the loss validation across different window size}
+\label{fig:window_size}
+\end{center}
+\vskip -0.2in
+\end{figure}
 
 \paragraph{Future Directions.}
 For these particular datasets, it is assumed that $\lambda$ exhibits an increasingly monotonic behavior with respect to both sequence length and variance, which are employed in unsupervised methods. 
@@ -1109,30 +1456,280 @@ To build upon the initial concept of utilizing recurrent networks in this study,
     \item Bidirectional Recurrent Networks \citep{bidirectional}: The models implemented in this study are unidirectional, leading to challenges with long-term memory, since the later parts of the sequence tend to be more important than the earlier ones. Using a bidirectional recurrent network architecture can aim to address this limitation, enabling the model to better capture information from the sequence.
 \end{itemize}
 
+\begin{sidewaystable}
+\scriptsize
+\caption{Accuracy means and standard deviations (by method)} 
+\begin{tabular}{|lllllllll|}
+\hline
+\multicolumn{1}{|c}{\textbf{Dataset}} & \multicolumn{1}{c}{\textbf{constant}} & \multicolumn{1}{c}{\textbf{linear}} & \multicolumn{1}{c}{\textbf{mmit}} & \multicolumn{1}{c}{\textbf{AFT\_XGB}} & \multicolumn{1}{c}{\textbf{mlp}}   & \multicolumn{1}{c}{\textbf{rnn}}   & \multicolumn{1}{c}{\textbf{lstm}}  & \multicolumn{1}{c|}{\textbf{gru}}   \\ \hline
+\textbf{cancer}                        & 63.37 ± 14.93                          & 79.55 ± 0.70                         & 75.97 ± 2.90                       & 71.70 ± 4.10                               & 78.62 ± 0.04                        & 75.42 ± 2.12                        & 77.29 ± 0.52                        & {\color[HTML]{FE0000} 79.58 ± 1.96} \\ \hline
+\textbf{detailed}                      & 67.45 ± 6.42                           & 93.60 ± 1.07                         & 93.80 ± 1.47                       & 93.91 ± 1.20                               & 94.95 ± 0.49                        & 86.26 ± 4.64                        & 93.26 ± 0.91                        & {\color[HTML]{CB0000} 95.32 ± 0.53} \\ \hline
+\textbf{systematic}                    & 56.87 ± 9.87                           & 96.81 ± 0.46                         & 97.16 ± 0.72                       & 97.37 ± 0.75                               & 97.92 ± 0.80                        & 72.87 ± 29.01                       & 96.64 ± 0.32                        & {\color[HTML]{CB0000} 98.19 ± 0.47} \\ \hline
+\textbf{ATAC\_JV\_adipose}             & 75.05 ± 0.19                           & 80.75 ± 0.75                         & 78.74 ± 1.38                       & 79.78 ± 0.38                               & 81.55 ± 0.28                        & 80.46 ± 0.33                        & 81.16 ± 0.17                        & {\color[HTML]{CB0000} 81.91 ± 0.32} \\ \hline
+\textbf{CTCF\_TDH\_ENCODE}             & 75.47 ± 1.71                           & 84.15 ± 0.40                         & 87.65 ± 0.54                       & 93.32 ± 0.84                               & {\color[HTML]{CB0000} 93.96 ± 0.38} & 86.58 ± 0.23                        & 89.97 ± 2.50                        & 91.52 ± 7.80                        \\ \hline
+\textbf{H3K27ac-H3K4me3\_TDHAM\_BP}    & 74.93 ± 3.60                           & 78.00 ± 1.22                         & 85.06 ± 5.06                       & 91.95 ± 2.41                               & 91.76 ± 1.77                        & 85.94 ± 1.78                        & 89.33 ± 2.44                        & {\color[HTML]{CB0000} 93.65 ± 1.80} \\ \hline
+\textbf{H3K27ac\_TDH\_some}            & 58.69 ± 8.35                           & {\color[HTML]{CB0000} 80.23 ± 0.60}  & 76.51 ± 2.48                       & 72.06 ± 1.30                               & 79.21 ± 3.05                        & 75.63 ± 4.03                        & 77.77 ± 0.56                        & 78.76 ± 1.49                        \\ \hline
+\textbf{H3K27me3\_RL\_cancer}          & 54.86 ± 1.35                           & 64.52 ± 5.54                         & 65.90 ± 2.32                       & 65.23 ± 0.78                               & {\color[HTML]{CB0000} 67.58 ± 3.57} & 64.43 ± 3.32                        & 65.49 ± 3.24                        & 64.22 ± 4.08                        \\ \hline
+\textbf{H3K27me3\_TDH\_some}           & 62.19 ± 2.89                           & 85.48 ± 1.90                         & 77.19 ± 6.68                       & 85.40 ± 3.35                               & 77.83 ± 5.26                        & 85.43 ± 2.36                        & {\color[HTML]{CB0000} 87.21 ± 2.26} & 86.66 ± 2.01                        \\ \hline
+\textbf{H3K36me3\_AM\_immune}          & 91.85 ± 0.93                           & 92.75 ± 1.33                         & 88.29 ± 6.18                       & 92.61 ± 0.15                               & 91.72 ± 0.09                        & 90.60 ± 1.06                        & 93.44 ± 0.70                        & {\color[HTML]{CB0000} 93.89 ± 0.92} \\ \hline
+\textbf{H3K36me3\_TDH\_ENCODE}         & 56.10 ± 7.42                           & {\color[HTML]{CB0000} 77.51 ± 0.29}  & 75.57 ± 5.05                       & 75.61 ± 6.73                               & 73.16 ± 3.25                        & 72.43 ± 9.49                        & 73.28 ± 8.28                        & 73.00 ± 8.69                        \\ \hline
+\textbf{H3K36me3\_TDH\_immune}         & {\color[HTML]{CB0000} 96.39 ± 1.96}    & 87.78 ± 11.00                        & 87.63 ± 0.32                       & 90.13 ± 3.85                               & 88.62 ± 8.01                        & 95.67 ± 2.97                        & 95.67 ± 2.97                        & 95.67 ± 2.97                        \\ \hline
+\textbf{H3K36me3\_TDH\_other}          & 77.00 ± 2.83                           & 93.50 ± 2.12                         & 79.00 ± 15.56                      & 91.50 ± 0.71                               & 70.50 ± 17.68                       & 94.09 ± 2.28                        & {\color[HTML]{CB0000} 94.09 ± 2.28} & 88.74 ± 5.28                        \\ \hline
+\textbf{H3K4me1\_TDH\_BP}              & 78.63 ± 1.69                           & 89.10 ± 2.37                         & 87.02 ± 2.18                       & 85.20 ± 1.68                               & {\color[HTML]{CB0000} 89.43 ± 1.56} & 88.39 ± 1.63                        & 88.79 ± 1.07                        & 88.39 ± 1.63                        \\ \hline
+\textbf{H3K4me3\_PGP\_immune}          & 59.73 ± 5.00                           & 71.79 ± 3.04                         & 67.76 ± 3.35                       & 70.11 ± 1.27                               & 72.39 ± 0.45                        & 70.68 ± 2.95                        & 72.43 ± 1.89                        & {\color[HTML]{CB0000} 73.55 ± 0.18} \\ \hline
+\textbf{H3K4me3\_TDH\_ENCODE}          & 92.33 ± 1.83                           & 94.78 ± 1.04                         & 95.37 ± 1.74                       & {\color[HTML]{CB0000} 97.05 ± 1.25}        & 93.89 ± 2.79                        & 94.60 ± 1.62                        & 94.94 ± 1.14                        & 94.94 ± 1.14                        \\ \hline
+\textbf{H3K4me3\_TDH\_immune}          & 68.85 ± 1.39                           & 71.79 ± 3.04                         & 67.76 ± 3.35                       & 70.11 ± 1.27                               & 80.91 ± 3.16                        & 80.61 ± 1.50                        & 81.42 ± 1.50                        & {\color[HTML]{CB0000} 81.98 ± 1.29} \\ \hline
+\textbf{H3K4me3\_TDH\_other}           & 85.15 ± 4.73                           & 71.79 ± 3.04                         & 67.76 ± 3.35                       & 70.11 ± 1.27                               & {\color[HTML]{CB0000} 91.83 ± 0.65} & 89.74 ± 1.76                        & 90.16 ± 1.39                        & 89.90 ± 1.99                        \\ \hline
+\textbf{H3K4me3\_XJ\_immune}           & 67.13 ± 0.89                           & 69.44 ± 4.29                         & 71.89 ± 2.29                       & 74.00 ± 3.64                               & 71.98 ± 4.33                        & 70.98 ± 2.36                        & 72.29 ± 3.41                        & {\color[HTML]{CB0000} 75.06 ± 2.40} \\ \hline
+\textbf{H3K9me3\_TDH\_BP}              & 48.94 ± 1.50                           & 84.29 ± 1.75                         & 85.94 ± 0.11                       & 79.39 ± 6.81                               & 84.19 ± 2.81                        & {\color[HTML]{CB0000} 86.16 ± 1.43} & 85.04 ± 1.62                        & 86.08 ± 2.48                        \\ \hline
 
+\end{tabular}
+\label{tab:yourlabel}
+\end{sidewaystable}
 
 Conducting even a preliminary experiment would require substantial computing resources, since bidirectional networks and attention mechanisms are more computationally expensive than the proposed one. For this reason, we chose not to include such experiments as part of this work.
 
 \newpage
-\subsection{Interval Regression: Review}
-In addition to existing state-of-the-art models, this study proposes several alternative models, including common machine learning architectures such as KNN, Neural Networks, and Random Forests, to provide a more comprehensive comparison.
+\section{Paper: Interval Regression Review}
+Regression models are widely used in real-world applications. 
+However, due to some reasons (errors in measurement, data collection procedures, etc), the target value is \textit{not} a single value but rather an interval of acceptable values.
+For example, in economic forecasting \citep{example_econ}, environmental studies \citep{example_environmental}, biomedical \citep{meRNN}, precise measurements at a specific time period are unreliable, leading researchers to use the confidence interval of measurements over time.
+Similarly, in engineering \citep{example_engineering}, multiple measurements of a single statistic (temperature, velocity, etc) are taken, and the confidence interval is considered as the target. 
+In survival analysis \citep{example_medical}, the exact survival time of a patient is often uncertain, it is typically known that the patient has survived for at least a certain number of years.
+These uncertainties motivate the study of Interval Regression.
 
-\subsubsection{Contribution}
-\paragraph{K-Nearest Neighbors (KNN)} KNN is a classical model for Standard Regression, which motivates its consideration in the Interval Regression setting.
-The Interval Regression procedure follows the same steps as the standard KNN regression model \citep{knn}, with the key difference being how the regression value is determined from the \( k \) nearest neighbors.
+The term “regression” generally refers to standard regression, in which each instance corresponds to a single target value. Common models for this task include linear regression \citep{linear}, k-nearest neighbors (kNN) \citep{knn}, decision trees \citep{cart}, random forests \citep{rf}, and multilayer perceptrons \citep{uni_approximator}.
+This study focuses on Interval Regression setting, where each instance is associated with an interval of acceptable values, called \textit{target interval}.
+There are 4 types of target intervals $(y_l, y_u)$ based on the end values: uncensored ($-\infty < y_l = y_u < \infty$), right-censored ($-\infty < y_l < y_u = \infty$), left-censored ($-\infty = y_l < y_u < \infty$), and interval-censored ($-\infty < y_l < y_u < \infty$). 
+Many studies contained ``interval-valued" or ``interval regression" in the title, such as \citep{interval_regression_analysis_1, interval_regression_analysis_2, interval_regression_analysis_3, interval_regression_analysis_4, knn_interval, linear_output_interval, linear_input_interval, mlp_input_interval, mlp_interval_input}, the setting of these studies differs from this work since they focus on predicting an interval of real values for each instance, i.e., prediction $\hat{y} = (\hat{y}_l, \hat{y}_u) \in \mathbf{R}^2 \text{ where } \hat{y}_l \leq \hat{y}_u$ or using interval-valued inputs instead of outputs.
+Instead, in this study's Interval Regression setting, the model predicts a single value from a set of fixed value inputs for each instance, refer to Table \ref{tab:interval_vs_standard}.
+
+\begin{table}[!t] 
+\centering
+\footnotesize
+\begin{tabular}{l|c|c|c|c|c|r}
+\toprule
+\textbf{\shortstack{model\\name}} &
+\textbf{\shortstack{left-\\censored}} &
+\textbf{\shortstack{right-\\censored}} &
+\textbf{\shortstack{interval-\\censored}} &
+\textbf{\shortstack{scalar\\output}} &
+\textbf{\shortstack{base\\{learner}}} &
+\textbf{\shortstack{citation\\{ }}}
+\\ \midrule
+standard linear & \usym{2613} & \usym{2613} & \usym{2613} & \checkmark & Linear & \citep{linear} \\
+standard knn & \usym{2613} & \usym{2613} & \usym{2613} & \checkmark & kNN & \citep{knn} \\
+standard tree & \usym{2613} & \usym{2613} & \usym{2613} & \checkmark & Tree & \citep{cart} \\
+standard forest & \usym{2613} & \usym{2613} & \usym{2613} & \checkmark & Ensemble trees & \citep{rf} \\
+standard mlp & \usym{2613} & \usym{2613} & \usym{2613} & \checkmark & MLP & \citep{uni_approximator} \\ 
+\midrule
+interval-linear & \checkmark & \checkmark  & \checkmark & \usym{2613} & Linear & \citep{linear_output_interval} \\
+quadratic & \checkmark & \checkmark  & \checkmark & \usym{2613} & Linear & \citep{interval_regression_analysis_1} \\
+svm & \checkmark & \checkmark  & \checkmark & \usym{2613} & Linear & \citep{interval_regression_analysis_2} \\
+aft & \usym{2613} & \checkmark  & \usym{2613} & \checkmark & Linear & \citep{aft} \\
+reg-aft & \usym{2613}  & \checkmark & \usym{2613} & \checkmark & Linear & \citep{aft_huang2006regularized} \\
+middlemost & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Linear, MLP & \citep{rit}  \\
+interval-CART & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Tree & \citep{mmit} \\
+interval-knn & \checkmark & \checkmark  & \checkmark & \usym{2613} & kNN & \citep{knn_interval} \\
+\midrule
+linear & \checkmark & \checkmark  & \checkmark & \checkmark & Linear & \citep{rigaill2013penalty}  \\ 
+mmit & \checkmark & \checkmark  & \checkmark & \checkmark & Tree & \citep{mmit} \\ 
+aft\_xgb & \checkmark & \checkmark  & \checkmark & \checkmark & Ensemble trees & \citep{aft_xgboost} \\ \midrule
+constant & \checkmark & \checkmark  & \checkmark & \checkmark & Constant & baseline \\ \midrule
+knn & \checkmark & \checkmark & \checkmark & \checkmark & kNN & proposed \\ 
+mlp & \checkmark & \checkmark & \checkmark & \checkmark & MLP & proposed \\ 
+mmif & \checkmark & \checkmark & \checkmark & \checkmark & Ensemble trees & proposed \\ 
+\bottomrule
+\end{tabular}
+\caption{List of Regression models with compatible censored target intervals and output setting. Only fully compatible models (match the setting of Table \ref{tab:interval_vs_standard}) are employed.}
+\label{tab:models_reg_compare}
+\vspace{-0.5cm}
+\end{table}
+
+In some studies, Interval Regression models are trained by converting the problem into Standard Regression: instead of using intervals as targets, the target interval is represented by discrete points, which are then treated as Standard Regression targets.
+Using the same notations in Table \ref{tab:interval_vs_standard} for $\mathbf{x}$ as the features set and $(y_l, y_u)$ as the target interval,
+\citet{mmit} transform the instance $\big(\mathbf{x}, (y_l, y_u)\big)$ into two points, \((\mathbf{x}, y_l)\) and \((\mathbf{x}, y_u)\), called Interval-CART model whereas \citet{rit} convert it into its midpoint, \((\mathbf{x}, \frac{y_l + y_u}{2})\), called Middlemost -- Approach 1 and 2 in Figure \ref{fig:convert_interval_to_standard}.
+While these approaches are reasonable, it overlooks the interval information by representing intervals by finite values and fails to handle left-censored or right-censored intervals, resulting in wasted data.
+So the performance of these models is worse compared to the models specifically designed for interval targets, see the results in \citep{mmit, rit} and Figure \ref{fig:convert_interval_to_standard} example.
+
+Interval Regression encompasses Survival Analysis as a special case, where Accelerated Failure Time (AFT) models  are specifically designed for survival data.
+Survival analysis involves predicting the time until an event occurs, using censored data where the exact event time is unknown.
+However, a limitation of these models is that they can only handle uncensored and right-censored intervals, which makes them unsuitable for the general setting of Interval Regression.
+
+To date, existing Interval Regression models for this setting include Linear \citep{rigaill2013penalty, rit,meMLP}, Tree-based \citep{mmit, aft_xgboost} and Accelerated Failure Time (AFT) models family \citep{aft_semi, aft, aft_huang2006regularized, aft_cai2009regularized}.
+
+
+
+\subsection{Interval Regression Models} \label{sec:models}
+This section details Interval Regression models, including existing and proposed ones. 
+See Table \ref{tab:models_reg} for all of the employed models in this study.
+The notation used hereafter follows Table \ref{tab:interval_vs_standard}, where $\mathbf{x} \in \mathbf{R}^m$ is the model input (a vector of $m$ features), $(y_l, y_u) \in \mathbf{R}^2$ where $y_l \leq y_u$ is the target interval, and $\hat{y} \in \mathbf{R}$ is the model prediction.
+
+\subsubsection{Existing models}
+
+\paragraph{Max Margin Interval Regression (linear).} This linear model was introduced by \citet{rigaill2013penalty}, and its extended theoretical foundations were later studied by \citet{rit}.
+The model formula is given by:
+\begin{equation} \label{eq:linear_prediction}
+    \hat{y} = \mathbf{x} \cdot \beta + \beta_0
+\end{equation}
+where $\beta \in \mathbf{R}^m$ and $\beta_0 \in \mathbf{R}$ are the parameters. To estimate these parameters, the authors extended the Standard Regression loss function — the Squared Error (SE) — into a generalized form called the \textit{Hinge Squared Error}.
+The error value between prediction $\hat{y}$ and target interval $(y_l, y_u)$ is defined as: 
+$$l\Big(\hat{y}, (y_l, y_u)\Big) = 
+\begin{cases} 
+    (y_l - \hat{y} + \epsilon)^2, & \mbox{if } \hat{y} \leq y_l + \epsilon \\
+    0, & \mbox{if } y_l + \epsilon < \hat{y} < y_u - \epsilon \\
+    (\hat{y} - y_u + \epsilon)^2, & \mbox{if } \hat{y} \geq y_u - \epsilon
+\end{cases}$$
+
+\noindent where $\epsilon \geq 0$ is the margin length.
+This error becomes SE when $y_l +\epsilon = y_u - \epsilon$.
+\citet{rit} proposed a model called \textit{Regression with Interval Targets} (RIT), which is the same as model \eqref{eq:linear_prediction}, but uses \textit{Hinge Absolute Error} instead:
+$$l\Big(\hat{y}, (y_l, y_u)\Big) = 
+\begin{cases} 
+    |y_l - \hat{y} + \epsilon|, & \mbox{if } \hat{y} \leq y_l + \epsilon \\
+    0, & \mbox{if } y_l + \epsilon < \hat{y} < y_u - \epsilon \\
+    |\hat{y} - y_u + \epsilon|, & \mbox{if } \hat{y} \geq y_u - \epsilon
+\end{cases}$$
+\noindent The general Interval Regression loss function can be written in this short form:
+\begin{equation}
+    l\Big(\hat{y}, (y_l, y_u)\Big) = \Big( \text{ReLU}(y_l - \hat{y} + \epsilon)\Big)^p + \Big(\text{ReLU}(\hat{y} - y_u + \epsilon) \Big)^p
+\end{equation}
+
+\noindent where $p \in \{1, 2\}$. See Figure \ref{fig:loss_func} for the visual comparison between hinge errors and SE.
+
+To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}, apply a gradient descent algorithm with respect to $\beta$ and $\beta_0$ to minimize the sum of Hinge Error \eqref{eq:loss_func} over the training set having $N$ instances $\{\mathbf{x}^i, (y_l^i, y_u^i)\}_{i=1}^N$:
+\begin{equation*}
+    \sum_{i = 1}^N l\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i = 1}^N l\Big(\mathbf{x^i} \cdot \beta + \beta_0, (y_l^i, y_u^i)\Big)
+\end{equation*}
+\citet{rigaill2013penalty} employed the Fast Iterative Shrinkage-Thresholding Algorithm (FISTA) \citep{fista}, while \citet{rit} employed stochastic gradient descent (SGD).
+
+
+\paragraph{Maximum Margin Interval Trees (MMIT).} This Tree model was introduced by \citet{mmit} as an alternative nonlinear model to \textit{Max Margin Interval Regression} \citep{rigaill2013penalty}.
+The prediction is given by:
+\[
+\hat{y} = \mathcal{T}(\mathbf{x})
+\]
+where \(\mathcal{T}\) represents the tree model, having the same structure as CART (Classification And Regression Tree) \citep{cart}. 
+The difference is in the regression value for each leaf which is a set of $S$ instances $\{\mathbf{x}^i, (y_l^i,y_u^i)\}_{i=1}^S$: instead of taking the mean of all targets like CART does, it chooses a constant value $c$ that minimizes the mean Hinge Error \eqref{eq:loss_func} between this constant and the target intervals:
+\begin{equation*}
+    \hat{y} = \argmin_c \frac{1}{S} \sum_{i=1}^{S} l\big(c, (y_l^i, y_u^i)\big), \quad c \in \mathbf{R}
+\end{equation*}
+\noindent A heuristic algorithm is used to speed up the estimation of the mean value for each leaf by considering a finite set of candidates, rather than solving for the optimal $c$:
+
+\begin{equation}
+    \hat{y} = \argmin_c \frac{1}{S} \sum_{i=1}^{S} l\big(c, (y_l^i, y_u^i)\big), \quad c \in \{y_l^i, y_u^i, \frac{y_l^i + y_u^i}{2}|y_l^i > -\infty, y_u^i < \infty\}_{i = 1}^S
+\end{equation}
+
+\noindent The training procedure follows the same operations as in CART to minimize the sum of Hinge Error \eqref{eq:loss_func} over the training set.
+having $N$ instances $\{\mathbf{x}^i, (y_l^i, y_u^i)\}_{i=1}^N$:
+\begin{equation*}
+    \sum_{i = 1}^N l\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i = 1}^N l\Big(\mathcal{T}(\mathbf{x}^i), (y_l^i, y_u^i)\Big)
+\end{equation*}
+
+\paragraph{AFT Model in XGBoost (aft\_xgb).}
+
+\[
+y_p = \mathbf{T}(\mathbf{x}),
+\]
+Unlike classical AFT models, which can handle only non-negative uncensored and right-censored intervals, the AFT model in XGBoost \citep{aft_xgboost} can accommodate all non-negative intervals.
+To extend its applicability to real-valued intervals, they applied an exponential transformation to the original interval.
+After making a prediction in the exponential space, the result is mapped back to the original scale using the logarithm transformation.
+The model makes predictions as follows:  
+$$\hat{y} = \log \mathbf{T}(\mathbf{x})$$
+where $\mathbf{T}$ represents the ensemble of trees in XGBoost.
+Training this model is based on minimizing the negative log-likelihood function (loss function), which incorporates all training instances:
+\begin{equation}
+l_{AFT}\Big(\hat{y}, (y_l, y_u)\Big)=
+    \begin{cases}
+      -\log \big(f_Z(\frac{\log y_u - \hat{y}}{\sigma})\times \frac{1}{\sigma y_u}\big) &\text{if $y_l = y_u$}\\
+      -\log \Big[ F_Z\big( \frac{\log y_u - \hat{y}}{\sigma} \big) - F_Z\big(\frac{\log y_l - \hat{y}}{\sigma}\big) \Big] &\text{if $y_l < y_u$}
+    \end{cases}
+\end{equation}
+\noindent where $\sigma > 0$ is the scale parameter.
+The Probability Density Function $f_Z(z)$ and Cumulative Distribution Function $F_Z(z)$ depends on the chosen distribution:
+\begin{itemize}
+    \item normal: $f_Z(z) = \frac{\exp (-z^2/2)}{\sqrt{2\pi}}$, \phantom{00}  $F_Z(z) = \frac{1}{2}\big( 1 + \text{erf}(\frac{z}{\sqrt{2}}) \big)$
+    \item logistic: $f_Z(z) = \frac{e^z}{(1+e^z)^2}$, \phantom{0000} $F_Z(z) = \frac{e^z}{1+e^z}$
+    \item extreme: $f_Z(z) = e^ze^{-\exp z}$, \phantom{0} $F_Z(z) = 1 - e^{-\exp z}$
+\end{itemize}
+
+Figure \ref{fig:aft_loss_func} visualizes the loss function for each distributions, which can be compared to Figure \ref{fig:loss_func} to observe their similarities. 
+The model is trained using the gradient boosting algorithm \citep{gradient_boosting} to minimize the loss value \eqref{eq:aft_loss} over the training dataset given the distribution and the scale parameter $\sigma$.
+\begin{equation*}
+    \sum_{i = 1}^N l_{AFT}\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i=1}^N -\log \Big[ F_Z\big( \frac{\log y_u^i - \log\mathbf{T}(\mathbf{x}^i)}{\sigma} \big) - F_Z\big(\frac{\log y_l^i - \log\mathbf{T}(\mathbf{x}^i)}{\sigma}\big) \Big]
+\end{equation*}
+
+\begin{table}[!t]
+\centering
+\footnotesize
+\begin{tabular}{l|l|l|c|c|c|c}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{dataset}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{features}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{instances}}} & \multicolumn{4}{c}{\textbf{features pattern/quality}} \\
+\multicolumn{1}{c|}{}                         & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                           & linear   & nonlinear  & noisy  & excessive  \\ \midrule
+auto93                                       & 62                                            & 82                                             &$\checkmark$       &            &        &$\checkmark$         \\
+autohorse                                    & 59                                            & 159                                            &$\checkmark$       &            &        &$\checkmark$         \\
+autompg                                      & 25                                            & 392                                            &$\checkmark$       &            &        &            \\
+autoprice                                    & 15                                            & 159                                            &          &$\checkmark$         &        &            \\
+baskball                                     & 4                                             & 96                                             &$\checkmark$       &            &        &            \\
+bodyfat                                      & 14                                            & 252                                            &$\checkmark$       &            &        &            \\
+breasttumor                                  & 40                                            & 286                                            &$\checkmark$       &            &        &            \\
+cholesterol                                  & 26                                            & 299                                            &$\checkmark$       &            &$\checkmark$     &            \\
+cleveland                                    & 26                                            & 299                                            &$\checkmark$       &            &        &            \\
+cloud                                        & 10                                            & 108                                            &          &$\checkmark$         &        &            \\
+cpu                                          & 36                                            & 209                                            &          &$\checkmark$         &        &            \\
+echomonths                                   & 13                                            & 106                                            &$\checkmark$       &            &        &            \\
+elusage                                      & 13                                            & 55                                             &$\checkmark$       &            &        &            \\
+fishcatch                                    & 15                                            & 158                                            &$\checkmark$       &            &        &            \\
+fruitfly                                     & 8                                             & 125                                            &$\checkmark$       &            &$\checkmark$     &            \\
+housing                                      & 14                                            & 506                                            &          &$\checkmark$         &        &            \\
+lowbwt                                       & 23                                            & 189                                            &          &$\checkmark$         &        &            \\
+machine.cpu                                  & 6                                             & 209                                            &          &$\checkmark$         &        &            \\
+mbagrade                                     & 3                                             & 61                                             &          &$\checkmark$         &$\checkmark$     &            \\
+meta                                         & 54                                            & 264                                            &$\checkmark$       &            &        &$\checkmark$         \\
+pbc                                          & 29                                            & 276                                            &$\checkmark$       &            &        &            \\
+pollution                                    & 15                                            & 60                                             &          &$\checkmark$         &        &            \\
+pwlinear                                     & 10                                            & 200                                            &          &$\checkmark$         &        &            \\
+pyrim                                        & 27                                            & 74                                             &          &$\checkmark$         &$\checkmark$     &            \\
+sensory                                      & 36                                            & 576                                            &$\checkmark$       &            &$\checkmark$     &            \\
+servo                                        & 19                                            & 167                                            &          &$\checkmark$         &        &            \\
+sleep                                        & 7                                             & 51                                             &$\checkmark$       &            &        &            \\
+stock                                        & 9                                             & 950                                            &          &$\checkmark$         &        &            \\
+strike                                       & 23                                            & 625                                            &$\checkmark$       &            &        &            \\
+triazines                                    & 60                                            & 186                                            &          &$\checkmark$         &        &$\checkmark$         \\
+veteran                                      & 13                                            & 137                                            &$\checkmark$       &            &        &            \\
+vineyard                                     & 3                                             & 52                                             &$\checkmark$       &            &        &            \\
+wisconsin                                    & 32                                            & 194                                            &          &$\checkmark$         &        &            \\ \midrule
+simulated.abs                                & 20                                            & 200                                            &          &$\checkmark$         &$\checkmark$     &            \\
+simulated.linear                             & 20                                            & 200                                            &$\checkmark$       &            &$\checkmark$     &            \\
+simulated.sin                                & 20                                            & 200                                            &          &$\checkmark$         &$\checkmark$     &            \\ \midrule
+pharynx                                      & 218                                           & 195                                            &          &$\checkmark$         &        &$\checkmark$         \\
+lymphoma.mkatayama                               & 258                                           & 41                                             &          &$\checkmark$         &$\checkmark$     &$\checkmark$         \\
+lymphoma.tdh                                 & 258                                           & 23                                             &$\checkmark$       &            &$\checkmark$     &$\checkmark$        
+\\\bottomrule
+\end{tabular}
+\caption{Datasets list for Interval Regression study.}
+\label{tab:datasets_reg}
+\vspace{-0.5cm}
+\end{table}
+
+
+\subsubsection{Proposed Models}
+To provide a more comprehensive comparison, this study proposes several alternative machine learning models, such as KNN, Multilayer Perceptron and Forest.
+\paragraph{kNN.} kNN is a classical model for Standard Regression, which motivates its consideration for Interval Regression.
+The operation follows the same steps as the standard kNN regression model \citep{knn}, with the difference being how the regression value is determined from the \( k \) nearest neighbors.
 We propose utilizing the MMIT regression function. 
-Specifically, we treat the set of \( k \) nearest neighbors as a single leaf in a MMIT, where the regression value is a constant that minimizes the mean Hinge Error \eqref{eq:lossfunction} between this constant and the \( k \) target intervals.
+Specifically, we treat the set of \( k \) nearest neighbors as a single leaf in a MMIT, where the regression value is a constant that minimizes the mean Hinge Error \eqref{eq:loss_func} between this constant and the \( k \) target intervals.
 The prediction $\hat{y}$ based on the target intervals of the \( k \) nearest neighbors, denoted as \( \{(y_l^i, y_u^i)\}_{i=1}^k \), is formulated as:
 \[
     \hat{y} = \argmin_c \frac{1}{k} \sum_{i=1}^{k} l\big(c, (y_l^i, y_u^i)\big), \quad c \in \{y_l^i, y_u^i, \frac{y_l^i + y_u^i}{2}|y_l^i > -\infty, y_u^i < \infty\}_{i = 1}^k
 \]
 
-\paragraph{Multilayer Perceptron (MLP)} Since MLP is a commonly used neural network in Standard Regression models \citep{uni_approximator}, its application in Interval Regression is worth considering.
+
+\paragraph{Multilayer Perceptron (MLP).} Since MLP is a commonly used neural network in Standard Regression models \citep{uni_approximator}, its application in Interval Regression is worth considering.
 The training process of this model is the same as in the linear model \textit{Max Margin Interval Regression}.
 
-\paragraph{Maximum Margin Interval Forest (MMIF)} The idea of using ensembles of MMITs was mentioned in Chapter 6 (Discussion and Conclusions) of \citep{mmit}. 
-Since MMIT is a tree for the Interval Regression setting, its extension to construct a Random Forest for Interval Regression is straightforward.  
-The operation of MMIF follows the same principles as the standard Random Forest regressor \citep{rf}, with the key distinction being that MMITs are used instead of conventional decision trees.
+\paragraph{Maximum Margin Interval Forest (MMIF).} The idea of using ensembles of MMITs was mentioned in Chapter 6 (Discussion and Conclusions) of \citep{mmit}. 
+Since MMIT is the Interval Regressor Tree, its extension to construct a Forest is straightforward.
+The operation of MMIF follows the same principles as the standard Random Forest regressor \citep{rf}, with the key distinction being that MMITs are used instead of CART.
 
 \begin{figure}[!t]
 \vskip 0.2in
@@ -1144,47 +1741,74 @@ The operation of MMIF follows the same principles as the standard Random Forest 
 \vskip -0.2in
 \end{figure}
 
-\subsubsection{Experiments and Results}
-For each of the 39 datasets, 7 models were implemented, with each model producing 5 hinge error values (corresponding to 5 train/test pairs).
+\subsection{Experiments and Results}
+\paragraph{Experimental Datasets.}  
+To ensure a comprehensive comparison across different scenarios, we evaluate all the models on a diverse set of datasets. 
+Specifically, we use 36 real-world datasets from the UCI repository \citep{uci} along with 3 simulated datasets - identical to those in \citep{mmit}.
+Each simulated dataset consists of 200 instances with 20 features, where 19 are noise and one is the true feature \( x \). 
+The target intervals are defined based on the linear function of $x$, \( \sin(x) \), or the absolute value of \( x \).
+The targets in all datasets were transformed into target intervals as follows:
+\begin{equation*}
+y_i \rightarrow (y_i-\varepsilon, y_i+\varepsilon) \phantom{000} \text{where } \varepsilon \in \mathcal{N}(0, \frac{|y_i| + 10^{-6}}{10})
+\end{equation*}
+Then about 20\% of the interval bounds was removed to generate open interval (left or right censored).
+All datasets are in Table \ref{tab:datasets} and are accessible here: \href{https://github.com/lamtung16/ML_IntervalRegression/tree/main/data}{datasets}.
 
-\subsubsection{Discussions and Conclusions} \label{sec:discussion}
-\paragraph{Dataset Variations.}
-To ensure a comprehensive comparison, the quality of the datasets is important.
-The datasets employed have a variety of characteristics, including high- and low-dimensional data, real-world and synthetic sources, linear and nonlinear patterns, as well as low- and high-noise conditions. 
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=1\textwidth]{figs/figs.results_real_1.pdf}}
+\caption{The mean and standard deviation of the test squared hinge errors in real datasets}
+\label{fig:err_real_1}
+\end{center}
+\vskip -0.2in
+\end{figure}
 
+\paragraph{Evaluation Metrics.}
+Each dataset is divided into 5 similar sized folds. 
+Each fold is used as the test set, while the remaining 4 folds are combined to form the train set.
+For each train/test pair, the model is trained on the train set and used to make predictions on the test set. 
+The test set is denoted as having \( M \) instances with corresponding target intervals \( \{(y_l^i, y_u^i)\}_{i=1}^M \), and the predictions set is \( \{\hat{y}^i\}_{i=1}^M \). 
+The Mean Squared Hinge Error is given by:
+\begin{equation} \label{eq:eval_loss}
+    \frac{1}{M} \sum_{i=1}^{M} \left( \text{ReLU}(y_l^i - \hat{y}^i) \right)^2 + \left( \text{ReLU}(\hat{y}^i - y_u^i) \right)^2
+\end{equation}
+which is equivalent to using Hinge Error \eqref{eq:loss_func} with $p=2$ and $\epsilon=0$. Each train/test pair produces one error values. 
+From these 5 error values, the mean and standard deviation are computed.  
+Two metrics are then considered: \textbf{performance} and \textbf{consistency}. 
+A smaller mean error indicates better performance, while a smaller standard deviation indicates better consistency.
 
-\paragraph{Comprehensive Comparison.}
-The performance and consistency rankings are in Table \ref{tab:comparison}, 1st means the best and 7th means the worst. 
-About the performance, it's clear that MMIF outperforms other models in most cases. 
-Linear, MMIT and MLP are comparable, while Constant, kNN, and the AFT model in XGBoost show the poorest performance.
-About the consistency, MMIF stands out as the most consistent. 
-This is expected, as MMIF being an ensemble model, relies on a group of MMITs to make the final prediction, which helps improve its stability.
-Again, Constant, kNN, and the AFT model in XGBoost show the lowest consistency.
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=1\textwidth]{figs/figs.results_real_2.pdf}}
+\caption{The mean and standard deviation of the test squared hinge errors in small datasets}
+\label{fig:err_real_2}
+\end{center}
+\vskip -0.2in
+\end{figure}
 
-\paragraph{No single model is optimal for all scenarios.}  
-As shown in Table \ref{tab:comparison}, there is no universally optimal model for every scenario.
-However, if complexity is not a primary concern, and the goal is to select the model with the best overall performance and consistency, MMIF is likely the first choice.  
-Alternatively, if model complexity and training time are critical factors, MMIT is preferable, as it's less complex than MMIF, require significantly fewer training resources, and still maintain reliable performance.
-
-\paragraph{MMIT vs MMIF.} 
-This is a comparison worth considering.
-MMIF was proposed with the expectation that an ensemble of MMITs would outperform a single MMIT, and the results confirm this hypothesis. 
-Specifically, across 39 datasets, MMIF outperformed MMIT in 28 of them. 
-This makes sense: MMIF, being an ensemble of MMITs, is able to reduce overfitting by not relying on a single MMIT.
-
-\paragraph{Discussion on the AFT Model in XGBoost.}
-The AFT model in XGBoost is the complex models in this study, but its performance and consistency do not justify the complexity. 
-% It has a limitation in that it can only handle non-negative target intervals. 
-To make the model applicable to a general Interval Regression setting, the target intervals must be transformed using exponential function. 
-So the model becomes highly sensitive when the dataset contains many left-censored target intervals. 
-When predictions are made on the exponential scale, if the predicted value is close to zero, the mapping back to the original scale can result in large negative values.
-% as seen in some test cases where predictions like $-10^6$ were made.
-\[
-(-\infty, y_u) \overset{\text{exp}}{\longrightarrow} (0, \exp y_u) \overset{\text{predict}}{\longrightarrow} y_p \approx 0 \overset{\text{log}}{\longrightarrow} \hat{y} \approx -\infty \overset{\text{evaluate}}{\longrightarrow} \text{Big test error}
-\]
-The Figure 2.b in \citep{aft_xgboost} indicates that the AFT model in XGBoost performs among the worst across their six simulated datasets when compared to the Linear and MMIT. 
-
-A potential direction for future work is to transform left-censored intervals into interval-censored intervals by replacing all lower bounds of \(-\infty\) with a finite value. This adjustment aims to reduce the model's sensitivity to left-censored intervals and mitigate the tendency to produce excessively large negative predictions.
+\subsubsection{Model Configuration}
+Except for the AFT model in XGBoost, the Squared Hinge Error is used as the loss function for both the cross-validation process and model training.
+The configuration for each model below is applied to a single train/test set pair.
+\paragraph{Constant (Featureless).} 
+This model predicts a single value using only training target intervals.
+The prediction is a constant that minimizes the Mean Squared Hinge Error \eqref{eq:eval_loss} between this constant and the set of target intervals.
+\paragraph{Linear.} 
+The model \textit{Max Margin Interval Regression} model is implemented with L1 regularization.
+The regularization parameter starts at 0.001, geometrically increasing by a factor of 1.2 until no features remain, with cross-validation (\texttt{cv} = 5) on the train set to determine the optimal L1 value.
+\paragraph{MMIT.}  
+A cross-validation (\texttt{cv} = 5) was used to select the optimal hyperparameters, including \texttt{max\_depth} \{0, 1, 5, 10, 20, \(\infty\)\} and \texttt{min\_sample} \{0, 1, 2, 4, 8, 16, 20\}.
+\paragraph{AFT model in XGBoost.}
+A cross-validation (\texttt{cv} = 5) was performed to select the optimal hyperparameters, following the same grid search in \citet{aft_xgboost}:
+\begin{itemize}
+    \item \texttt{learning\_rate}: 0.001, 0.01, 0.1, 1.0
+    \item \texttt{max\_depth}: 2, 3, 4, 5, 6, 7, 8, 9, 10
+    \item \texttt{min\_child\_weight}: 0.001, 0.1, 1.0, 10.0, 100.0
+    \item \texttt{reg\_alpha}: 0.001, 0.01, 0.1, 1.0, 10.0, 100.0
+    \item \texttt{reg\_lambda}: 0.001, 0.01, 0.1, 1.0, 10.0, 100.0
+    \item \texttt{aft\_loss\_distribution\_scale}: 0.5, 0.8, 1.1, 1.4, 1.7, 2.0
+\end{itemize}
 
 \begin{table}[t!]
 \centering
@@ -1207,6 +1831,184 @@ mlp & 9 & 3 & 8 & 10 & 4 & 2 & 3 & 6 & 6 & 6 & 8 & 8 & 2 & 3 \\
 \label{tab:comparison}
 \end{table}
 
+\paragraph{kNN.}
+The Euclidean distance metric is applied to normalized features (mean 0, standard deviation 1) to determine the nearest neighbors. 
+A cross-validation (\texttt{cv} = 5) is used to select the optimal value of \( K \).
+The candidate values for \( K \) range from 1 to \( \lceil\sqrt{n}\rceil \), where \( n \) is the number of train instances.  
+
+\paragraph{MLP.} A cross-validation (\texttt{cv} = 5) is used to determine the optimal hyperparameters:  
+\begin{itemize} 
+    \item \texttt{num\_layer}: \{1, 2\}  
+    \item \texttt{hidden\_layer\_size}: \{5, 10, 20\}  
+    \item \texttt{activation}: \{ReLU, Sigmoid\}  
+\end{itemize}
+The model is trained using the Adam optimizer with a fixed learning rate of 0.001. 
+\paragraph{MMIF.}  
+MMIF is an ensemble of many MMITs, we chose 100.
+For each MMIT, two-thirds of the train dataset with one-third of the features are randomly selected for training, while the remaining instances serves as the out-of-bag (OOB) set for validation. 
+A cross-validation (\texttt{cv} = 5) is used to select the optimal hyperparameters for each MMIT including \texttt{max\_depth} \{2, 5, 10, 15, 20, 25\} and \texttt{min\_split\_samples} \{2, 5, 10, 20, 50\}.
+Each MMIT has its own OOB error, which is used to determine the aggregation rule.
+Let \(\mathcal{T}_i\) be an MMIT with OOB error \(e_i\). 
+The weight assigned to \(\mathcal{T}_i\) is given by
+$w_i = \frac{\frac{1}{e_i}}{\sum_{j=1}^{100} \frac{1}{e_j}}$
+and the final prediction from MMIF is computed as $\hat{y} = \sum_{i=1}^{100} w_i \mathcal{T}_i(\mathbf{x})$,
+where $\mathbf{x}$ is the set of features. 
+
+\subsubsection{Results}
+For each dataset, 7 models were implemented, each model produces 5 error values.
+Figure \ref{fig:err_simulated} shows the comparison on 3 simulated datasets, where 95\% of the features are noise.
+Figure \ref{fig:err_real_1} shows the comparison on 6 fairly unstable datasets, where the feature-to-instance ratio is high (from 0.06 to 1.12).
+Figure \ref{fig:err_real_2} shows the comparison on 6 fairly stable datasets, where the feature-to-instance ratio is low (from 0.009 to 0.09).
+
+\begin{table}[!ht]
+\centering
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & constant & knn & linear & mmit & mmif & aft\_xgb & mlp \\
+\midrule
+auto93 & 7 & 6 & 3 & 5 & 1 & 2 & 4 \\
+autohorse & 7 & 4 & 2 & 5 & 1 & 6 & 3 \\
+autompg & 7 & 6 & 2 & 3 & 4 & 5 & 1 \\
+autoprice & 7 & 4 & 6 & 2 & 1 & 5 & 3 \\
+baskball & 6 & 2 & 5 & 3 & 1 & 7 & 4 \\
+bodyfat & 7 & 6 & 2 & 4 & 3 & 5 & 1 \\
+breasttumor & 6 & 1 & 4 & 5 & 2 & 7 & 3 \\
+cholesterol & 3 & 5 & 4 & 6 & 1 & 7 & 2 \\
+cleveland & 6 & 4 & 2 & 5 & 3 & 7 & 1 \\
+cloud & 7 & 6 & 3 & 2 & 5 & 4 & 1 \\
+cpu & 7 & 6 & 4 & 3 & 1 & 2 & 5 \\
+echomonths & 7 & 4 & 2 & 5 & 3 & 6 & 1 \\
+elusage & 7 & 2 & 1 & 3 & 4 & 5 & 6 \\
+fishcatch & 7 & 6 & 4 & 5 & 3 & 2 & 1 \\
+fruitfly & 1 & 5 & 2 & 6 & 3 & 7 & 4 \\
+housing & 7 & 3 & 6 & 5 & 4 & 2 & 1 \\
+lowbwt & 6 & 5 & 3 & 2 & 1 & 7 & 4 \\
+lymphoma.mkatayama & 1 & 5 & 6 & 3 & 4 & 7 & 2 \\
+lymphoma.tdh & 3 & 6 & 2 & 4 & 1 & 7 & 5 \\
+machine.cpu & 7 & 6 & 5 & 3 & 2 & 1 & 4 \\
+mbagrade & 3 & 6 & 5 & 1 & 2 & 4 & 7 \\
+meta & 5 & 1 & 2 & 6 & 4 & 7 & 3 \\
+pbc & 7 & 5 & 1 & 4 & 2 & 6 & 3 \\
+pharynx & 7 & 6 & 2 & 1 & 3 & 4 & 5 \\
+pollution & 4 & 6 & 3 & 2 & 1 & 7 & 5 \\
+pwlinear & 7 & 6 & 5 & 2 & 3 & 4 & 1 \\
+pyrim & 2 & 1 & 6 & 3 & 4 & 5 & 7 \\
+sensory & 2 & 6 & 3 & 5 & 1 & 7 & 4 \\
+servo & 7 & 6 & 4 & 2 & 5 & 1 & 3 \\
+simulated.abs & 5 & 4 & 6 & 2 & 1 & 3 & 7 \\
+simulated.linear & 7 & 6 & 1 & 3 & 2 & 5 & 4 \\
+simulated.sin & 5 & 7 & 4 & 2 & 1 & 3 & 6 \\
+sleep & 7 & 1 & 2 & 5 & 3 & 6 & 4 \\
+stock & 7 & 2 & 5 & 3 & 1 & 6 & 4 \\
+strike & 6 & 2 & 4 & 7 & 5 & 1 & 3 \\
+triazines & 5 & 6 & 7 & 2 & 1 & 3 & 4 \\
+veteran & 6 & 3 & 2 & 7 & 4 & 5 & 1 \\
+vineyard & 7 & 4 & 3 & 6 & 5 & 1 & 2 \\
+wisconsin & 6 & 5 & 4 & 2 & 1 & 7 & 3 \\
+\bottomrule
+\end{tabular}
+\caption{The performance ranking of 7 models across 39 datasets.}
+\end{table}
+
+\subsection{Discussions and Conclusions} \label{sec:discussion}
+\paragraph{Dataset Variations.}
+To ensure a comprehensive comparison, the quality of the datasets is important.
+The datasets employed have a variety of characteristics, including high- and low-dimensional data, real-world and synthetic sources, linear and nonlinear patterns, as well as low- and high-noise conditions. 
+
+\paragraph{Comprehensive Comparison.}
+The performance and consistency rankings are in Table \ref{tab:comparison}, 1st means the best and 7th means the worst. 
+About the performance, it's clear that MMIF outperforms other models in most cases. 
+Linear, MMIT and MLP are comparable, while Constant, kNN, and the AFT model in XGBoost show the poorest performance.
+About the consistency, MMIF stands out as the most consistent. 
+This is expected, as MMIF being an ensemble model, relies on a group of MMITs to make the final prediction, which helps improve its stability.
+Again, Constant, kNN, and the AFT model in XGBoost show the lowest consistency.
+
+\paragraph{No single model is optimal for all scenarios.}  
+As shown in Table \ref{tab:comparison}, there is no universally optimal model for every scenario.
+However, if complexity is not a primary concern, and the goal is to select the model with the best overall performance and consistency, MMIF is likely the first choice.  
+Alternatively, if model complexity and training time are critical factors, MMIT is preferable, as it's less complex than MMIF, require significantly fewer training resources, and still maintain reliable performance.
+
+\begin{table}[!ht]
+\small
+\centering
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & constant & knn & linear & mmit & mmif & aft\_xgb & mlp \\
+\midrule
+auto93 & 7 & 6 & 4 & 2 & 1 & 3 & 5 \\
+autohorse & 7 & 4 & 2 & 5 & 1 & 6 & 3 \\
+autompg & 7 & 5 & 1 & 4 & 2 & 6 & 3 \\
+autoprice & 7 & 3 & 4 & 2 & 1 & 6 & 5 \\
+baskball & 5 & 4 & 3 & 2 & 1 & 6 & 7 \\
+bodyfat & 7 & 5 & 1 & 4 & 3 & 6 & 2 \\
+breasttumor & 6 & 1 & 2 & 5 & 3 & 7 & 4 \\
+cholesterol & 5 & 6 & 4 & 7 & 1 & 3 & 2 \\
+cleveland & 6 & 5 & 1 & 4 & 3 & 7 & 2 \\
+cloud & 7 & 6 & 3 & 2 & 5 & 4 & 1 \\
+cpu & 7 & 4 & 5 & 2 & 1 & 3 & 6 \\
+echomonths & 7 & 2 & 5 & 4 & 3 & 6 & 1 \\
+elusage & 7 & 4 & 1 & 2 & 3 & 5 & 6 \\
+fishcatch & 7 & 6 & 2 & 5 & 4 & 3 & 1 \\
+fruitfly & 3 & 5 & 2 & 7 & 1 & 6 & 4 \\
+housing & 7 & 3 & 4 & 5 & 2 & 6 & 1 \\
+lowbwt & 6 & 4 & 3 & 1 & 2 & 7 & 5 \\
+lymphoma.mkatayama & 1 & 6 & 5 & 2 & 3 & 7 & 4 \\
+lymphoma.tdh & 3 & 6 & 4 & 2 & 1 & 7 & 5 \\
+machine.cpu & 7 & 6 & 5 & 2 & 3 & 1 & 4 \\
+mbagrade & 6 & 2 & 5 & 1 & 3 & 4 & 7 \\
+meta & 6 & 1 & 2 & 5 & 4 & 7 & 3 \\
+pbc & 6 & 2 & 3 & 5 & 4 & 7 & 1 \\
+pharynx & 6 & 5 & 1 & 3 & 4 & 7 & 2 \\
+pollution & 4 & 6 & 3 & 2 & 1 & 7 & 5 \\
+pwlinear & 7 & 6 & 5 & 4 & 2 & 3 & 1 \\
+pyrim & 1 & 3 & 6 & 4 & 5 & 2 & 7 \\
+sensory & 1 & 6 & 3 & 4 & 2 & 7 & 5 \\
+servo & 7 & 5 & 4 & 2 & 6 & 1 & 3 \\
+simulated.abs & 6 & 7 & 5 & 2 & 1 & 3 & 4 \\
+simulated.linear & 7 & 6 & 1 & 4 & 2 & 5 & 3 \\
+simulated.sin & 4 & 7 & 6 & 2 & 1 & 3 & 5 \\
+sleep & 7 & 4 & 2 & 5 & 1 & 6 & 3 \\
+stock & 7 & 1 & 2 & 5 & 3 & 6 & 4 \\
+strike & 5 & 7 & 6 & 3 & 2 & 1 & 4 \\
+triazines & 1 & 5 & 3 & 6 & 2 & 7 & 4 \\
+veteran & 7 & 1 & 4 & 3 & 6 & 5 & 2 \\
+vineyard & 7 & 4 & 3 & 6 & 5 & 1 & 2 \\
+wisconsin & 4 & 6 & 1 & 3 & 2 & 7 & 5 \\
+\bottomrule
+\end{tabular}
+\caption{The consistency ranking of 7 models across 39 datasets.}
+\end{table}
+
+\paragraph{MMIT vs MMIF.} 
+This is a comparison worth considering.
+MMIF was proposed with the expectation that an ensemble of MMITs would outperform a single MMIT, and the results confirm this hypothesis. 
+Specifically, across 39 datasets, MMIF outperformed MMIT in 28 of them. 
+This makes sense: MMIF, being an ensemble of MMITs, is able to reduce overfitting by not relying on a single MMIT.
+
+\paragraph{Discussion on the AFT Model in XGBoost.}
+The AFT model in XGBoost is the complex models in this study, but its performance and consistency do not justify the complexity. 
+% It has a limitation in that it can only handle non-negative target intervals. 
+To make the model applicable to a general Interval Regression setting, the target intervals must be transformed using exponential function. 
+So the model becomes highly sensitive when the dataset contains many left-censored target intervals. 
+When predictions are made on the exponential scale, if the predicted value is close to zero, the mapping back to the original scale can result in large negative values.
+% as seen in some test cases where predictions like $-10^6$ were made.
+\[
+(-\infty, y_u) \overset{\text{exp}}{\longrightarrow} (0, \exp y_u) \overset{\text{predict}}{\longrightarrow} y_p \approx 0 \overset{\text{log}}{\longrightarrow} \hat{y} \approx -\infty \overset{\text{evaluate}}{\longrightarrow} \text{Big test error}
+\]
+The Figure 2.b in \citep{aft_xgboost} indicates that the AFT model in XGBoost performs among the worst across their six simulated datasets when compared to the Linear and MMIT. 
+
+A potential direction for future work is to transform left-censored intervals into interval-censored intervals.
+It can be done by replacing all lower bounds of \(-\infty\) with a finite value.
+This adjustment aims to reduce the model's sensitivity to left-censored intervals and mitigate the tendency to produce excessively large negative predictions.
+
+\foreach \x in {auto93, autohorse, autompg, autoprice, baskball, bodyfat, breasttumor, cholesterol, cleveland, cloud, cpu, echomonths, elusage, fishcatch, fruitfly, housing, lowbwt, lymphoma.mkatayama, lymphoma.tdh, machine.cpu, mbagrade, meta, pbc, pharynx, pollution, pwlinear, pyrim, sensory, servo, simulated.abs, simulated.linear, simulated.sin, sleep, stock, strike, triazines, veteran, vineyard, wisconsin} {
+    \begin{figure}[!t]
+        \centering
+        \includegraphics[width=0.95\textwidth]{figs_reg/figs.supplemental.\x_plot.pdf}
+    \end{figure}
+}
+\clearpage
 \newpage
 \thispagestyle{empty}
 \bibliographystyle{abbrvnat}
