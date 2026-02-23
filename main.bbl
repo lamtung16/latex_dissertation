@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{118}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +23,18 @@ R.~Ak, V.~Vitelli, and E.~Zio.
 H.~Akaike.
 \newblock A new look at the statistical model identification.
 \newblock \emph{IEEE transactions on automatic control}, 19\penalty0 (6):\penalty0 716--723, 1974.
+
+\bibitem[Ameijeiras-Alonso and Ley(2022)]{Ameijeiras-Alonso2022}
+J.~Ameijeiras-Alonso and C.~Ley.
+\newblock Sine-skewed toroidal distributions and their application in protein bioinformatics.
+\newblock \emph{Biostatistics}, 23:\penalty0 685--704, 2022.
+\newblock \doi{10.1093/biostatistics/kxaa039}.
+
+\bibitem[Arnaudon and Miclo(2016)]{Arnaudon2016}
+M.~Arnaudon and L.~Miclo.
+\newblock A stochastic algorithm finding p-means on the circle.
+\newblock \emph{Bernoulli}, 22:\penalty0 2237--2300, 11 2016.
+\newblock \doi{10.3150/15-BEJ728}.
 
 \bibitem[Auger and Lawrence(1989{\natexlab{a}})]{auger1989algorithms}
 I.~E. Auger and C.~E. Lawrence.
@@ -64,6 +76,12 @@ A.~Barnwal, H.~Cho, and T.~Hocking.
 A.~Beck and M.~Teboulle.
 \newblock A fast iterative shrinkage-thresholding algorithm for linear inverse problems.
 \newblock \emph{SIAM journal on imaging sciences}, 2\penalty0 (1):\penalty0 183--202, 2009.
+
+\bibitem[Beh et~al.(2014)Beh, Han, Durasiwami, and Ko]{Beh2014}
+J.~Beh, D.~K. Han, R.~Durasiwami, and H.~Ko.
+\newblock Hidden markov model on a unit hypersphere space for gesture trajectory recognition.
+\newblock \emph{Pattern Recognition Letters}, 36\penalty0 (1), 2014.
+\newblock \doi{10.1016/j.patrec.2013.10.007}.
 
 \bibitem[Billard and Diday(2000)]{interval_regression_analysis_3}
 L.~Billard and E.~Diday.
@@ -109,6 +127,11 @@ T.~Cai, J.~Huang, and L.~Tian.
 \newblock Regularized estimation for the accelerated failure time model.
 \newblock \emph{Biometrics}, 65\penalty0 (2):\penalty0 394--404, 2009{\natexlab{b}}.
 
+\bibitem[Cazals et~al.(2021)Cazals, Delmas, and O'Donnell]{Cazals2021}
+F.~Cazals, B.~Delmas, and T.~O'Donnell.
+\newblock Fréchet mean and p-mean on the unit circle: decidability, algorithm, and applications to clustering on the flat torus.
+\newblock In \emph{Proceedings of the Symposium on Experimental Algorithms (SEA)}, 2021.
+
 \bibitem[Chen and Guestrin(2016)]{xgb_package}
 T.~Chen and C.~Guestrin.
 \newblock Xgboost: A scalable tree boosting system.
@@ -123,6 +146,18 @@ X.~Cheng, Y.~Cao, X.~Li, B.~An, and L.~Feng.
 J.~Chung, C.~Gulcehre, K.~Cho, and Y.~Bengio.
 \newblock Empirical evaluation of gated recurrent neural networks on sequence modeling.
 \newblock \emph{arXiv preprint arXiv:1412.3555}, 2014.
+
+\bibitem[Coeurjolly and Bihan(2012)]{Coeurjolly2012}
+J.~F. Coeurjolly and N.~L. Bihan.
+\newblock Geodesic normal distribution on the circle.
+\newblock \emph{Metrika}, 75, 2012.
+\newblock \doi{10.1007/s00184-011-0363-7}.
+
+\bibitem[Condat(2022)]{Condat2022}
+L.~Condat.
+\newblock Tikhonov regularization of circle-valued signals.
+\newblock \emph{IEEE Transactions on Signal Processing}, 70:\penalty0 2775--2782, 2022.
+\newblock \doi{10.1109/TSP.2022.3179816}.
 
 \bibitem[de~A.~{Lima Neto} and de~A.T.~{de Carvalho}(2010)]{linear_input_interval}
 E.~de~A.~{Lima Neto} and F.~de~A.T.~{de Carvalho}.
@@ -169,6 +204,17 @@ M.~Fazil~Baksh, G.~Haars, S.~Todd, P.~A.~H. Van~Noord, and J.~Whitehead.
 \newblock \doi{10.1002/sim.2676}.
 \newblock URL \url{http://dx.doi.org/10.1002/sim.2676}.
 
+\bibitem[Fisher and Lee(1983)]{Fisher1983}
+N.~I. Fisher and A.~J. Lee.
+\newblock A correlation coefficient for circular data.
+\newblock \emph{Biometrika}, 70:\penalty0 327--332, 1983.
+
+\bibitem[Fisher and Lee(1994)]{Fisher1994}
+N.~I. Fisher and A.~J. Lee.
+\newblock Time series analysis of circular data.
+\newblock \emph{Journal of the Royal Statistical Society Series B: Statistical Methodology}, 56:\penalty0 327--339, 7 1994.
+\newblock \doi{10.1111/j.2517-6161.1994.tb01981.x}.
+
 \bibitem[Fix and Hodges(1985)]{knn}
 E.~Fix and J.~L. Hodges.
 \newblock \emph{Discriminatory Analysis: Nonparametric Discrimination and Consistency Properties}, volume~1.
@@ -186,6 +232,13 @@ J.~H. Friedman.
 \newblock ISSN 00905364, 21688966.
 \newblock URL \url{http://www.jstor.org/stable/2699986}.
 
+\bibitem[García-Portugués and Prieto-Tirado(2023)]{Garca-Portugus2023}
+E.~García-Portugués and A.~Prieto-Tirado.
+\newblock Toroidal pca via density ridges.
+\newblock \emph{Statistics and Computing}, 33:\penalty0 1--15, 2023.
+\newblock \doi{10.1007/s11222-023-10273-9}.
+\newblock URL \url{https://doi.org/10.1007/s11222-023-10273-9}.
+
 \bibitem[Hamed et~al.(2012)Hamed, Serrurier, and Durand]{knn_interval}
 M.~G. Hamed, M.~Serrurier, and N.~Durand.
 \newblock Possibilistic knn regression using tolerance intervals.
@@ -200,6 +253,12 @@ P.-Y. Hao.
 \newblock \doi{https://doi.org/10.1016/j.fss.2008.10.012}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0165011408005022}.
 \newblock Theme: Learning.
+
+\bibitem[Harvey et~al.(2023)Harvey, Hurn, Palumbo, and Thiele]{Harvey2023}
+A.~Harvey, S.~Hurn, D.~Palumbo, and S.~Thiele.
+\newblock Modelling circular time series.
+\newblock \emph{Journal of Econometrics}, 239:\penalty0 105450, 2023.
+\newblock \doi{10.1016/j.jeconom.2023.02.016}.
 
 \bibitem[Hastie(2017)]{hastie2017generalized}
 T.~J. Hastie.
@@ -248,6 +307,12 @@ T.~D. Hocking, P.~Goerner-Potvin, A.~Morin, X.~Shao, T.~Pastinen, and G.~Bourque
 \newblock \doi{10.1093/bioinformatics/btw672}.
 \newblock URL \url{https://doi.org/10.1093/bioinformatics/btw672}.
 
+\bibitem[Holzmann et~al.(2006)Holzmann, Munk, Suster, and Zucchini]{Holzmann2006}
+H.~Holzmann, A.~Munk, M.~Suster, and W.~Zucchini.
+\newblock Hidden {M}arkov models for circular and linear-circular time series.
+\newblock \emph{Environmental and Ecological Statistics}, 13:\penalty0 325--347, 2006.
+\newblock \doi{10.1007/s10651-006-0015-7}.
+
 \bibitem[Hornik et~al.(1989{\natexlab{a}})Hornik, Stinchcombe, and White]{mlp}
 K.~Hornik, M.~Stinchcombe, and H.~White.
 \newblock Multilayer feedforward networks are universal approximators.
@@ -262,6 +327,18 @@ K.~Hornik, M.~Stinchcombe, and H.~White.
 T.~Hothorn, B.~Lausen, A.~Benner, and M.~Radespiel-Tr{\"o}ger.
 \newblock Bagging survival trees.
 \newblock \emph{Statistics in medicine}, 23\penalty0 (1):\penalty0 77--91, 2004.
+
+\bibitem[Hotz(2013)]{Hotz2013}
+T.~Hotz.
+\newblock Extrinsic vs intrinsic means on the circle.
+\newblock In \emph{Geometric Science of Information}, pages 433--440, 2013.
+\newblock ISBN 978-3-642-40020-9.
+
+\bibitem[Hotz and Huckemann(2015)]{Hotz2015}
+T.~Hotz and S.~Huckemann.
+\newblock Intrinsic means on the circle: uniqueness, locus and asymptotics.
+\newblock \emph{Annals of the Institute of Statistical Mathematics}, 67, 2015.
+\newblock \doi{10.1007/s10463-013-0444-7}.
 
 \bibitem[Huang et~al.(2006{\natexlab{a}})Huang, Ma, and Xie]{aft_huang2006regularized}
 J.~Huang, S.~Ma, and H.~Xie.
@@ -293,6 +370,12 @@ B.~James, K.~L. James, and D.~Siegmund.
 \newblock Tests for a change-point.
 \newblock \emph{Biometrika}, 74\penalty0 (1):\penalty0 71--83, 1987.
 
+\bibitem[Jammalamadaka and Sengupta(2001)]{Jammalamadaka2001}
+S.~R. Jammalamadaka and A.~Sengupta.
+\newblock \emph{Topics in Circular Statistics}.
+\newblock Academiae, 2001.
+\newblock \doi{10.1142/4031}.
+
 \bibitem[Jeng et~al.(2003)Jeng, Chuang, and Su]{interval_regression_analysis_2}
 J.-T. Jeng, C.-C. Chuang, and S.-F. Su.
 \newblock Support vector interval regression networks for interval regression analysis.
@@ -300,6 +383,12 @@ J.-T. Jeng, C.-C. Chuang, and S.-F. Su.
 \newblock ISSN 0165-0114.
 \newblock \doi{https://doi.org/10.1016/S0165-0114(02)00570-5}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0165011402005705}.
+
+\bibitem[Jona-Lasinio et~al.(2012)Jona-Lasinio, Gelfand, and Jona-Lasinio]{Jona-Lasinio2012}
+G.~Jona-Lasinio, A.~Gelfand, and M.~Jona-Lasinio.
+\newblock Spatial analysis of wave direction data using wrapped gaussian processes.
+\newblock \emph{Annals of Applied Statistics}, 6:\penalty0 1478--1498, 2012.
+\newblock \doi{10.1214/12-AOAS576}.
 
 \bibitem[Killick et~al.(2012{\natexlab{a}})Killick, Fearnhead, and Eckley]{killick2012optimal}
 R.~Killick, P.~Fearnhead, and I.~A. Eckley.
@@ -310,6 +399,18 @@ R.~Killick, P.~Fearnhead, and I.~A. Eckley.
 R.~Killick, P.~Fearnhead, and I.~A. Eckley.
 \newblock Optimal detection of changepoints with a linear computational cost.
 \newblock \emph{Journal of the American Statistical Association}, 107\penalty0 (500):\penalty0 1590--1598, 2012{\natexlab{b}}.
+
+\bibitem[Lagona and Mingione(2025)]{Lagona2025}
+F.~Lagona and M.~Mingione.
+\newblock Nonhomogeneous hidden semi-markov models for toroidal data.
+\newblock \emph{Journal of the Royal Statistical Society Series C: Applied Statistics}, 74:\penalty0 142--166, 1 2025.
+\newblock \doi{10.1093/jrsssc/qlae049}.
+
+\bibitem[Lagona et~al.(2015)Lagona, Picone, and Maruotti]{Lagona2015}
+F.~Lagona, M.~Picone, and A.~Maruotti.
+\newblock A hidden markov model for the analysis of cylindrical time series.
+\newblock \emph{Environmetrics}, 26:\penalty0 534--544, 2015.
+\newblock \doi{10.1002/env.2355}.
 
 \bibitem[Lattanzi and Leonelli(2021)]{app:finance}
 C.~Lattanzi and M.~Leonelli.
@@ -330,6 +431,12 @@ M.~Lavielle.
 Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner.
 \newblock Gradient-based learning applied to document recognition.
 \newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+
+\bibitem[Lee(2010)]{Lee2010}
+A.~Lee.
+\newblock Circular data.
+\newblock \emph{Wiley Interdisciplinary Reviews: Computational Statistics}, 2\penalty0 (4):\penalty0 477--486, 2010.
+\newblock \doi{10.1002/wics.98}.
 
 \bibitem[Lee et~al.(2023)Lee, Xie, and Cheng]{review:lee2023}
 J.~Lee, Y.~Xie, and X.~Cheng.
@@ -387,6 +494,16 @@ R.~Maidstone, T.~Hocking, G.~Rigaill, and P.~Fearnhead.
 \newblock \doi{10.1007/s11222-016-9636-3}.
 \newblock URL \url{http://dx.doi.org/10.1007/s11222-016-9636-3}.
 
+\bibitem[McKilliam et~al.(2012)McKilliam, Quinn, and Clarkson]{McKilliam2012}
+R.~G. McKilliam, B.~G. Quinn, and I.~V.~L. Clarkson.
+\newblock Direction estimation by minimum squared arc length.
+\newblock \emph{IEEE Transactions on Signal Processing}, 60, 2012.
+\newblock \doi{10.1109/TSP.2012.2186444}.
+
+\bibitem[Michelot et~al.(2016)Michelot, Langrock, and Patterson]{Michelot2016}
+T.~Michelot, R.~Langrock, and T.~A. Patterson.
+\newblock movehmm: an r package for the statistical modelling of animal movement data using hidden markov models, 2016.
+
 \bibitem[Montufar et~al.(2014)Montufar, Pascanu, Cho, and Bengio]{montufar2014number}
 G.~F. Montufar, R.~Pascanu, K.~Cho, and Y.~Bengio.
 \newblock On the number of linear regions of deep neural networks.
@@ -400,6 +517,12 @@ V.~M.~R. Muggeo and G.~Adelfio.
 \newblock \doi{10.1093/bioinformatics/btq647}.
 \newblock URL \url{https://doi.org/10.1093/bioinformatics/btq647}.
 
+\bibitem[Nguyen et~al.(2023)Nguyen, Ngoc, and Rivoirard]{Nguyen2023}
+T.~D. Nguyen, T.~M.~P. Ngoc, and V.~Rivoirard.
+\newblock Adaptive warped kernel estimation for nonparametric regression with circular responses.
+\newblock \emph{Electronic Journal of Statistics}, 17:\penalty0 4011--4048, 2023.
+\newblock \doi{10.1214/23-EJS2186}.
+
 \bibitem[Nguyen and Hocking(2025{\natexlab{a}})]{meRNN}
 T.~L. Nguyen and T.~Hocking.
 \newblock Learning penalty for optimal partitioning via automatic feature extraction.
@@ -412,6 +535,17 @@ T.~L. Nguyen and T.~D. Hocking.
 \newblock ISSN 1573-1375.
 \newblock \doi{10.1007/s11222-025-10680-0}.
 \newblock URL \url{http://dx.doi.org/10.1007/s11222-025-10680-0}.
+
+\bibitem[Nguyen and Hocking(2025{\natexlab{c}})]{meRF}
+T.~L. Nguyen and T.~D. Hocking.
+\newblock Interval regression: A comparative study with proposed models.
+\newblock https://arxiv.org/abs/2503.02011, 2025{\natexlab{c}}.
+
+\bibitem[Pewsey and Garc\'ia-Portugu\'es(2021)]{Pewsey2021}
+A.~Pewsey and E.~Garc\'ia-Portugu\'es.
+\newblock Recent advances in directional statistics.
+\newblock \emph{Test}, 30\penalty0 (1), 2021.
+\newblock \doi{10.1007/s11749-021-00759-x}.
 
 \bibitem[P{\"o}lsterl(2020)]{polsterl2020scikit}
 S.~P{\"o}lsterl.
@@ -473,10 +607,34 @@ G.~Schwarz.
 \newblock \doi{10.1214/aos/1176344136}.
 \newblock URL \url{https://doi.org/10.1214/aos/1176344136}.
 
+\bibitem[Seifert et~al.(2013)Seifert, Coeurjolly, Hérault, Wattebled, and Davids]{Seifert2013}
+L.~Seifert, J.-F. Coeurjolly, R.~Hérault, L.~Wattebled, and K.~Davids.
+\newblock Temporal dynamics of inter-limb coordination in ice climbing revealed through change-point analysis of the geodesic mean of circular data.
+\newblock \emph{Journal of Applied Statistics}, 40:\penalty0 2317--2331, 2013.
+\newblock \doi{10.1080/02664763.2013.810194}.
+
 \bibitem[Sill(1997)]{monotonic}
 J.~Sill.
 \newblock Monotonic networks.
 \newblock \emph{Advances in neural information processing systems}, 10, 1997.
+
+\bibitem[Sowa et~al.(2005)Sowa, Rowe, Leake, Yakushi, Homma, Ishijima, and Berry]{Sowa2005}
+Y.~Sowa, A.~D. Rowe, M.~C. Leake, T.~Yakushi, M.~Homma, A.~Ishijima, and R.~M. Berry.
+\newblock Direct observation of steps in rotation of the bacterial flagellar motor.
+\newblock \emph{Nature}, 437, 2005.
+\newblock \doi{10.1038/nature04003}.
+
+\bibitem[Storath and Weinmann(2018)]{Storath2018}
+M.~Storath and A.~Weinmann.
+\newblock Fast median filtering for phase or orientation data.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 40, 2018.
+\newblock \doi{10.1109/TPAMI.2017.2692779}.
+
+\bibitem[Storath et~al.(2017)Storath, Weinmann, and Unser]{Storath2017}
+M.~Storath, A.~Weinmann, and M.~Unser.
+\newblock Jump-penalized least absolute values estimation of scalar or circle-valued signals.
+\newblock \emph{Information and Inference}, 1 2017.
+\newblock \doi{10.1093/imaiai/iaw022}.
 
 \bibitem[Tanaka and Lee(1998)]{interval_regression_analysis_1}
 H.~Tanaka and H.~Lee.
@@ -503,6 +661,17 @@ X.~Wang, S.~Li, and T.~Denœux.
 \newblock ISSN 1875-6883.
 \newblock \doi{10.2991/ijcis.2015.8.1.10}.
 \newblock URL \url{http://dx.doi.org/10.2991/ijcis.2015.8.1.10}.
+
+\bibitem[Watson(1966)]{Watson1966}
+G.~S. Watson.
+\newblock The statistics of orientation data.
+\newblock \emph{Applications of Multivariate Statistics in Geology}, 74, 1966.
+
+\bibitem[Watson and Beran(1967)]{Watson1967}
+G.~S. Watson and R.~J. Beran.
+\newblock Testing a sequence of unit vectors for serial correlation.
+\newblock \emph{Journal of Geophysical Research}, 72:\penalty0 5655--5659, 1967.
+\newblock \doi{10.1029/JZ072i022p05655}.
 
 \bibitem[Wei(1992{\natexlab{a}})]{aft}
 L.-J. Wei.

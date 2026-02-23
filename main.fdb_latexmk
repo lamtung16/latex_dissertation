@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1771611389.28511 "main.aux" "main.bbl" "main" 1771611391.61092 0
-  "./references.bib" 1771608521.96127 45409 3c31fff5c1189646aaa7c84d9ccd8b12 ""
+["bibtex main"] 1771868957.69357 "main.aux" "main.bbl" "main" 1771868960.14697 0
+  "./references.bib" 1771868608.97064 72693 f4d062b8a842fef118383084007114dc ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1771611391.29132 38957 2231deefd896933f45d06bc9cf4d008b "pdflatex"
+  "main.aux" 1771868959.7941 43981 62d46a4ce7cbd2b26b1413fd18a8e6a6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1771611389.36418 "/home/tung/Downloads/CODE/latex_dissertation/main.tex" "main.pdf" "main" 1771611391.61109 0
+["pdflatex"] 1771868957.78309 "/home/tung/Downloads/CODE/latex_dissertation/main.tex" "main.pdf" "main" 1771868960.14714 0
   "/etc/texmf/web2c/texmf.cnf" 1771543283.8752 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tung/Downloads/CODE/latex_dissertation/main.tex" 1771611382.20354 148459 2b75e6e49e23c96da09a1e6707577667 ""
+  "/home/tung/Downloads/CODE/latex_dissertation/main.tex" 1771868955.0983 159742 ed25e9fc0d3907c6a2d493b88f92207c ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrb7t.tfm" 1136768653 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -69,6 +69,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1248133631 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb" 1136849748 50493 4ed1f7e9eba8f1f3e1ec25195460190d ""
@@ -230,6 +231,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771543308.74746 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771543361 8213530 b9486729facdd3367cc3f44bf77f8a0c ""
+  "figs/cnn_diagram.png" 1771867081.21467 87413 ed11b3523fccf06a2cf8f704c4dae88e ""
   "figs/comprehensive.pdf" 1771568432 22757 657162d91428e096682d9d1823fa171a ""
   "figs/fig.DL_cdp.pdf" 1771568432 20760 dfa475a29caa2db56d1f1da74f8660cd ""
   "figs/fig.F1_compare.pdf" 1771568432 23117 417937ad1f520e5f004d930a5056965f ""
@@ -253,6 +255,8 @@
   "figs/figure.5_n_extracted_features.pdf" 1771568432 16328 cb1f06d3314dcb5b0952b46331924cb3 ""
   "figs/figure.5_window_size.pdf" 1771607356.71118 15549 c3e6ee8a88ffe260225290efff0a3e9a ""
   "figs/interval_regression.pdf" 1771568430 12126 ef55c852bfd098339c9ee2669525df7c ""
+  "figs/synth-fscore.pdf" 1771868093.82289 15986 0f3ab5749c6f22b57a019bd3f2f0b019 ""
+  "figs/synth-time.pdf" 1771868101.51192 17256 6bd4f3962040808efe8db93a13f87a2f ""
   "figs_reg/figs.supplemental.auto93_plot.pdf" 1771635424 20599 8a7818e0c34afd81143323598617dd35 ""
   "figs_reg/figs.supplemental.autohorse_plot.pdf" 1771635424 20047 56c37865ca5af5d28453fe93fae3d433 ""
   "figs_reg/figs.supplemental.autompg_plot.pdf" 1771635424 20112 12a475a77c5b7c51dd69df8ddba7c2ea ""
@@ -293,13 +297,13 @@
   "figs_reg/figs.supplemental.vineyard_plot.pdf" 1771635426 20360 41b4cf8223db99f2796c2878e184277b ""
   "figs_reg/figs.supplemental.wisconsin_plot.pdf" 1771635426 20599 21274aa21033bf72cadd0a3db48c42aa ""
   "logo.png" 1771568430 81032 0718149f580d20bf7ea2193798725d5b ""
-  "main.aux" 1771611391.29132 38957 2231deefd896933f45d06bc9cf4d008b "pdflatex"
-  "main.bbl" 1771611389.35996 27597 6317aa94ccb72816d3c080a4bc48c516 "bibtex main"
-  "main.lof" 1771611391.29435 3174 e080c931eb1a6cf34acf8a9b98e6a71d "pdflatex"
-  "main.lot" 1771611391.29435 1850 fa64f478839b91413b0ce401fd9444e7 "pdflatex"
-  "main.out" 1771611391.29327 5141 cf8f5456d82e5814d4247e698000cc92 "pdflatex"
-  "main.tex" 1771611382.20354 148459 2b75e6e49e23c96da09a1e6707577667 ""
-  "main.toc" 1771611391.29435 9708 51196a435743508e9033bcb3e32093c2 "pdflatex"
+  "main.aux" 1771868959.7941 43981 62d46a4ce7cbd2b26b1413fd18a8e6a6 "pdflatex"
+  "main.bbl" 1771868957.77864 35656 8dcabb30d1115b798f9afc891889ba2a "bibtex main"
+  "main.lof" 1771868959.7975 3520 52c50fd4814a75bcd56207b149c4253a "pdflatex"
+  "main.lot" 1771868959.7975 1850 fa64f478839b91413b0ce401fd9444e7 "pdflatex"
+  "main.out" 1771868959.7961 5841 afcb782ac8f0525965a816706b985d16 "pdflatex"
+  "main.tex" 1771868955.0983 159742 ed25e9fc0d3907c6a2d493b88f92207c ""
+  "main.toc" 1771868959.7975 10188 bed7b392987e25ca648fa744b7f4e081 "pdflatex"
   (generated)
   "main.aux"
   "main.lof"

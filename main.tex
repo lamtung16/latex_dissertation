@@ -130,7 +130,8 @@ ii
 \setcounter{tocdepth}{2}
 
 \begingroup
-\singlespacing      % or \onehalfspacing, \doublespacing
+\small
+\singlespacing
 \tableofcontents
 \endgroup
 
@@ -171,7 +172,12 @@ iv
 \renewcommand{\thepage}{\roman{page}}
 
 \phantomsection
+
+\begingroup
+\footnotesize
 \listoffigures
+\endgroup
+
 \addcontentsline{toc}{section}{LIST OF FIGURES}
 
 \thispagestyle{empty}
@@ -2008,6 +2014,163 @@ This adjustment aims to reduce the model's sensitivity to left-censored interval
         \includegraphics[width=0.95\textwidth]{figs_reg/figs.supplemental.\x_plot.pdf}
     \end{figure}
 }
+
+\clearpage
+\section{Future Plans}
+\subsection{Optimal Partitioning Penalty Learning using 1D-CNN}
+
+Changepoint detection (also known as partitioning or segmentation) plays a crucial role in identifying abrupt structural changes in sequential data across a wide range of domains, including finance \citep{app:finance}, healthcare \citep{cancer}, network security \citep{app:network}, and environmental science \citep{app:climate}. 
+This broad applicability has motivated the development of numerous detection strategies over the past decades. 
+Existing changepoint detection methods can generally be divided into heuristic approaches and dynamic programming (DP) approaches. 
+Heuristic methods include deep learning–based techniques inspired by classical statistical procedures such as CUSUM \citep{review:cusum, review:james1987tests}, where recent works \citep{review:li24automatic, review:ermshaus2023clasp} apply multilayer perceptrons (MLP) or k-nearest neighbors (KNN) over sliding windows to classify candidate changepoints. 
+Although effective in some contexts, these methods rely primarily on local neighborhood information rather than the entire sequence and are often unnecessarily complex for univariate data. 
+In contrast, DP-based methods formulate changepoint detection as a global optimization problem and are therefore more suitable when optimal partitioning is desired. 
+
+Among DP methods, regularization plays a central role in controlling the number of detected changepoints. 
+Two main strategies are used: specifying a fixed number of changepoints or introducing a penalty term that penalizes changepoint occurrences. 
+Algorithms designed for a fixed number of changepoints include Binary Segmentation and related approaches \citep{review:binseg, review:bai2003computation, review:pelt, rigaill2015pruned}. 
+However, since the true number of changepoints is rarely known in practice, penalty-based approaches are more commonly adopted. 
+Optimal Partitioning (OPART) \citep{review:opart} and its efficient variants—Pruned Exact Linear Time (PELT) \citep{review:pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{review:fpop}, and Labeled Optimal Partitioning (LOPART) \citep{review:lopart}—are widely regarded as state-of-the-art methods. 
+These algorithms solve an optimization problem that balances data fidelity with a penalty parameter $\lambda$, which directly controls the trade-off between model complexity and goodness of fit. 
+A larger $\lambda$ results in fewer detected changepoints, while a smaller $\lambda$ increases sensitivity to potential changes. 
+Therefore, accurate prediction of $\lambda$ is critical for achieving high detection performance. 
+
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=1\textwidth]{figs/cnn_diagram.png}}
+\caption{Diagram of the proposed model using 1D-CNN}
+\label{fig:proposed-cnn}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+Existing approaches for predicting $\lambda$ include unsupervised criteria such as AIC-, BIC-, or related penalties \citep{bic, aic, lavielle05}, as well as supervised models such as linear regression \citep{rigaill:13} and tree-based methods \citep{mmit, barnwal2022survival, meRF}. 
+However, these approaches depend heavily on manually engineered features extracted from the input sequence. 
+Since the space of possible features is effectively unbounded, manual feature design may include irrelevant characteristics while overlooking informative ones, thereby limiting predictive performance. 
+
+In earlier versions of this work, we incorporated a recurrent neural network (RNN) to automatically learn sequence representations for $\lambda$ prediction, alleviating the need for manual feature engineering. 
+While the RNN-based model achieved strong predictive performance, it suffered from long training times due to the sequential nature of recurrent computation, which restricts parallelization and increases computational cost, especially for long sequences. 
+
+In this study, we propose a more computationally efficient alternative based on an ensemble of one-dimensional convolutional neural networks (1D-CNNs) combined with a multilayer perceptron (MLP). 
+The 1D-CNN components extract hierarchical temporal features from the sequence in parallel, and the MLP aggregates these learned representations to predict the penalty parameter $\lambda$. 
+The proposed architecture achieves performance comparable to the RNN-based model in terms of OPART accuracy, while significantly reducing training time. 
+Importantly, the proposed model is not a heuristic neural network–based changepoint detector; rather, it learns to predict the penalty parameter for a classical DP-based changepoint algorithm grounded in maximum likelihood inference.
+
+\subsection{Heuristic Partitioning for circular data}
+
+
+Circular (directional or angular) data naturally arise in numerous scientific fields. 
+Typical applications include wind direction monitoring~\cite{Harvey2023}, wave direction analysis~\cite{Jona-Lasinio2012}, and molecular biology~\cite{Sowa2005}. 
+In particular, protein backbone dihedral angles provide a fundamental example of circular measurements. 
+The protein dataset and the associated avocado plots considered in this work are introduced later.
+
+Let $I := [-\pi,\pi)$. 
+The geodesic (arc-length) distance on $I$ is defined, for all $\theta,\theta' \in I$, by
+\begin{equation*}
+    d(\theta,\theta') 
+    = \min\left( |\theta-\theta'|,\; 2\pi - |\theta-\theta'| \right).
+\end{equation*}
+This geometry makes even basic statistical tasks nontrivial. 
+For instance, computing a simple average on the circle generally admits no closed-form expression and requires dedicated optimization algorithms~\cite{Hotz2015, Arnaudon2016, Cazals2021, McKilliam2012}. 
+The distinction between intrinsic and extrinsic means has been extensively studied~\cite{Hotz2013,McKilliam2012}. 
+Statistical inference for circular data dates back to the 1960s~\cite{Watson1966,Watson1967}, and a large body of work now addresses distributions and parameter estimation on the circle~\cite{Coeurjolly2012,Ameijeiras-Alonso2022,Jona-Lasinio2012}. 
+In particular, the sine-skewed toroidal distribution is a classical model for dihedral angle distributions~\cite{Ameijeiras-Alonso2022}.
+
+Modern developments include regression methods~\cite{Nguyen2023} and principal component analysis on the circle~\cite{Garca-Portugus2023}. 
+Signal processing techniques have also been extended to circular data, including autoregressive processes~\cite{Fisher1994,Fisher1983,Harvey2023}, hidden Markov models~\cite{Holzmann2006,Beh2014,Lagona2015,Lagona2025}, Gaussian processes~\cite{Jona-Lasinio2012}, median filtering~\cite{Storath2018}, signal approximation~\cite{Condat2022}, and change-point detection~\cite{Seifert2013,Storath2017}. 
+Comprehensive reviews are available in~\cite{Lee2010,Pewsey2021}.
+
+Change-point detection is particularly important in practice. 
+In protein analysis, structural regimes correspond to distinct conformational states, making segmentation methods especially relevant. 
+However, existing approaches are typically restricted to the univariate setting and become computationally impractical for very long signals (e.g., several hundred thousand samples). 
+Moreover, classical dynamic programming methods cannot be directly applied because they require repeated updates of a mean parameter, which is intractable in the angular setting due to the non-convexity of the Fréchet functional~\cite{McKilliam2012,Cazals2021}.
+
+\paragraph{Signal model}
+
+We observe a sequence of $I$-valued random variables $Y_1,\dots,Y_T$ satisfying
+\begin{equation}\label{eq:model-init}
+   Y_t = \left[ \theta^\star(t/T) + \epsilon_t \ \mathrm{mod}\ 2\pi \right] - \pi,
+\end{equation}
+where $\theta^\star : [0,1) \to I$ is a piecewise constant deterministic function and $(\epsilon_t)_t \subset I$ is a noise process.
+
+There exist $K^\star$ change-points 
+$0 < \tau_1^\star < \dots < \tau_{K^\star}^\star < 1$
+and $K^\star+1$ levels $m_k^\star \in I$ such that, for all $\tau \in [0,1)$,
+\begin{equation*}
+   \theta^\star(\tau)
+   = \sum_{k=1}^{K^\star+1}
+     m_k^\star \,
+     \mathbf{1}\!\left( \tau_{k-1}^\star \le \tau < \tau_k^\star \right),
+\end{equation*}
+with the convention $\tau_0^\star := 0$ and $\tau_{K^\star+1}^\star := 1$.
+
+The objective of change-point detection is to estimate the unknown number of change-points $K^\star$ and their locations $\tau_k^\star$.
+
+\paragraph{Change-point formulation}
+
+Given an angular signal $Y \in I^T$ and a penalty parameter $\beta > 0$, change-point detection can be formulated as
+\begin{equation}\label{eq:cpd-general}
+    \min_{\boldsymbol{\theta} \in I^T}
+    \left[
+        \sum_{t=1}^{T} d^2(Y_t,\theta_t)
+        + \beta \sum_{t=1}^{T-1}
+        \mathbf{1}(\theta_t \neq \theta_{t+1})
+    \right].
+\end{equation}
+
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.5\textwidth]{figs/synth-time.pdf}}
+\caption{Operation time of Changepoint Detection models}
+\label{fig:time-cpd}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+Classical dynamic programming approaches 
+(e.g.,~\cite{Harvey2023,Lee2010,Jona-Lasinio2012,Lagona2015,Pewsey2021,Beh2014}) 
+are not directly applicable because they require updating a segment-wise mean parameter. 
+In the circular setting, this update involves minimizing a non-convex Fréchet functional, which is computationally demanding and lacks closed-form solutions.
+
+Alternative procedures include binary segmentation with hypothesis testing under Fisher–von Mises distribution shifts~\cite{Jammalamadaka2001} and hidden Markov models~\cite{Michelot2016}. 
+However, these approaches are mainly restricted to univariate signals and become computationally impractical for very long sequences.
+
+To address these limitations, we restrict $\theta_t$ to a finite set 
+$\Theta := \{\theta^{(1)},\dots,\theta^{(M)}\} \subset I$. 
+The set $\Theta$ does not need to contain the true levels $m_k^\star$, but only approximate them sufficiently well. 
+Problem~\eqref{eq:cpd-general} then becomes
+\begin{equation}\label{eq:cpd-finite-state}
+    \min_{(\theta_t)_t \in \Theta^T}
+    \left[
+        \sum_{t=1}^{T} d^2(Y_t,\theta_t)
+        + \beta \sum_{t=1}^{T-1}
+        \mathbf{1}(\theta_t \neq \theta_{t+1})
+    \right].
+\end{equation}
+
+This discrete formulation admits an efficient dynamic programming solution with time complexity $\mathcal{O}(|\Theta|T)$ and space complexity $\mathcal{O}(|\Theta|T)$.
+
+\begin{figure}[!t]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=0.5\textwidth]{figs/synth-fscore.pdf}}
+\caption{F-score of Changepoint Detection models}
+\label{fig:F1-cpd}
+\end{center}
+\vskip -0.2in
+\end{figure}
+
+\paragraph{Contributions}
+
+The main contributions of this work are as follows. 
+First, we establish finite-sample recovery guarantees for the proposed method. 
+Second, we prove that the estimator achieves the minimax optimal rate. 
+Third, we introduce an improved initialization procedure that enhances practical performance. 
+Fourth, we provide an open-source implementation available in multiple programming languages. 
+Finally, we demonstrate the practical relevance of our approach on real protein dihedral angle data.
+
 \clearpage
 \newpage
 \thispagestyle{empty}

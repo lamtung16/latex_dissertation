@@ -126,3 +126,9 @@
 \contentsline {paragraph}{No single model is optimal for all scenarios.}{64}{section*.91}%
 \contentsline {paragraph}{MMIT vs MMIF.}{64}{section*.92}%
 \contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{65}{section*.93}%
+\contentsline {section}{\numberline {7}Future Plans}{75}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Optimal Partitioning Penalty Learning using 1D-CNN}{75}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Heuristic Partitioning for circular data}{77}{subsection.7.2}%
+\contentsline {paragraph}{Signal model}{78}{section*.94}%
+\contentsline {paragraph}{Change-point formulation}{79}{section*.95}%
+\contentsline {paragraph}{Contributions}{80}{section*.96}%

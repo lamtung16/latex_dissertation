@@ -21,3 +21,6 @@
 \contentsline {figure}{\numberline {21}{\ignorespaces The mean and standard deviation of the test squared hinge errors in simulated datasets}}{58}{figure.21}%
 \contentsline {figure}{\numberline {22}{\ignorespaces The mean and standard deviation of the test squared hinge errors in real datasets}}{59}{figure.22}%
 \contentsline {figure}{\numberline {23}{\ignorespaces The mean and standard deviation of the test squared hinge errors in small datasets}}{60}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagram of the proposed model using 1D-CNN}}{76}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Operation time of Changepoint Detection models}}{79}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces F-score of Changepoint Detection models}}{80}{figure.26}%
