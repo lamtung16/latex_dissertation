@@ -19,6 +19,7 @@
 \usepackage{array}
 \usepackage{utfsym}
 \usepackage{rotating}
+\usepackage{ragged2e}
 
 \usepackage{times}
 \usepackage[cm]{fullpage}
@@ -241,7 +242,7 @@ vi
 \paragraph{Definition} In traditional supervised regression tasks, the objective is to develop a model that accurately predicts a continuous real-valued outcome based on a set of input features. 
 This classical problem has been well-studied, resulting in a wide array of algorithms. 
 However, a related but less explored problem is \textit{interval regression}, where each instance is associated with an interval $y = [y_l, y_u]$ -- lower and upper -- that represents a range of acceptable predictions, rather than a single target value. 
-Unlike conventional regression, where the goal is to predict a specific point, interval regression acknowledges the uncertainty or variability in the target, which is common in various real-world applications, such as Medical Research \citep{example_medical, rigaill2013penalty, hawkins2004survival}, Economic Forecasting \citep{example_econ}, Environmental Studies \citep{example_environmental}, Engineering \citep{example_engineering}.
+Unlike conventional regression, where the goal is to predict a specific point, interval regression acknowledges the uncertainty or variability in the target, which is common in various real-world applications, such as Medical Research \citep{example_medical, rigaill:13, hawkins2004survival}, Economic Forecasting \citep{example_econ}, Environmental Studies \citep{example_environmental}, Engineering \citep{example_engineering}.
 Refer to Figure \ref{fig:interval_regression} for a visualization of the interval regression problem setting.
 
 \begin{table}[!b]
@@ -272,13 +273,13 @@ Using the same notations in Table \ref{tab:interval_vs_standard} for $\mathbf{x}
 While these approaches seem straightforward and reasonable, it overlooks the interval information by representing intervals by finite values and fails to handle left-censored or right-censored intervals, resulting in wasted data.
 Consequently, the performance of these models is worse compared to the models specifically designed for interval targets, see the results in \citep{mmit, rit} and the example in Figure \ref{fig:convert_interval_to_standard}.
 
-Linear models for censored outcomes, known as \textit{accelerated failure time} (AFT) models, have been thoroughly explored \citep{wei1992accelerated}. 
-More recently, variants with L1 regularization have emerged to handle high-dimensional datasets \citep{cai2009regularized, huang2006regularized}. 
+Linear models for censored outcomes, known as \textit{accelerated failure time} (AFT) models, have been thoroughly explored \citep{aft}. 
+More recently, variants with L1 regularization have emerged to handle high-dimensional datasets \citep{aft_cai2009regularized, aft_huang2006regularized}. 
 Nonlinear approaches to censored data have also been investigated, including Support Vector Machines \citep{svm} and decision tree-based models such as Random Survival Trees \citep{ishwaran2008random}, Cox-Boosting \citep{binder2008allowing}, Bagging Survival Trees \citep{hothorn2004bagging}, Scikit-Survival \citep{polsterl2020scikit} and Cox-PH in XGBoost \citep{lundberg2018consistent}.
 However, most of these models are limited to right-censored data.
-Recently, the AFT model in XGBoost \citep{barnwal2022survival} has emerged as a tree-based model that claims to support all types of label censoring.
+Recently, the AFT model in XGBoost \citep{aft_xgboost} has emerged as a tree-based model that claims to support all types of label censoring.
 However, this AFT model does not inherently support negative outcomes, so they addressed this by applying an exponential transformation to the output, ensuring non-negative interval-censored labels.
-In addition to AFT models, interval regression can also be approached through supervised machine learning techniques that use gradient descent optimizers to minimize a specific loss function (different from negative log-likelihood). This includes L1-regularized linear models with squared hinge loss \citep{rigaill2013penalty} and non-linear models such as maximal margin interval trees (MMIT) \citep{mmit}. The latter generalizes the widely known Classification and Regression Tree (CART) algorithm \citep{breiman2017classification} to accommodate censored outputs.
+In addition to AFT models, interval regression can also be approached through supervised machine learning techniques that use gradient descent optimizers to minimize a specific loss function (different from negative log-likelihood). This includes L1-regularized linear models with squared hinge loss \citep{rigaill:13} and non-linear models such as maximal margin interval trees (MMIT) \citep{mmit}. The latter generalizes the widely known Classification and Regression Tree (CART) algorithm \citep{cart} to accommodate censored outputs.
 
 This following sub-sections provides a technical overview of the interval regression method, consisting of two main subsections: AFT models (a statistical approach) and supervised machine learning models. 
 In essence, AFT models assume the data follows a specific distribution and aim to maximize the corresponding likelihood, while supervised machine learning models focus on minimizing their respective loss functions.
@@ -311,7 +312,7 @@ middlemost & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Linear, MLP 
 interval-CART & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Tree & \citep{mmit} \\
 interval-knn & \checkmark & \checkmark  & \checkmark & \usym{2613} & kNN & \citep{knn_interval} \\
 \midrule
-linear & \checkmark & \checkmark  & \checkmark & \checkmark & Linear & \citep{rigaill2013penalty}  \\ 
+linear & \checkmark & \checkmark  & \checkmark & \checkmark & Linear & \citep{rigaill:13}  \\ 
 mmit & \checkmark & \checkmark  & \checkmark & \checkmark & Tree & \citep{mmit} \\ 
 aft\_xgb & \checkmark & \checkmark  & \checkmark & \checkmark & Ensemble trees & \citep{aft_xgboost} \\ \midrule
 constant & \checkmark & \checkmark  & \checkmark & \checkmark & Constant & baseline \\ \midrule
@@ -446,8 +447,8 @@ where $\hat{\epsilon}$ is drawn from $N(0, \hat{\sigma}^2)$.
 \begin{tabular}{l|l|l|l} 
 \toprule
 \textbf{model} & \textbf{source code} & \textbf{language} & \textbf{citation} \\ \midrule
-linear                 & \citep{penaltyLearning} & R                                      & \citep{rigaill2013penalty}             \\ 
-mmit                   & \citep{mmit_package} & C++                     & \citep{mmit}                           \\ 
+linear                 & \citep{penaltyLearning} & R                                      & \citep{rigaill:13}             \\ 
+mmit                   & \citep{mmit} & C++                     & \citep{mmit}                           \\ 
 aft\_xgb               & \citep{xgb_package} & Python                                 & \citep{aft_xgboost}                    \\ \midrule
 constant                    & \href{https://github.com/lamtung16/ML_IntervalRegression}{paper GitHub repo} & C++                                 & additional baseline                               \\ \midrule
 knn                    & \href{https://github.com/lamtung16/ML_IntervalRegression}{paper GitHub repo} & Python                                 & proposed                               \\ 
@@ -528,7 +529,7 @@ From this point forward in the study, the following notation will be used: $\tex
 \end{figure}
 
 \subsubsection{Linear}
-This linear model was introduced in the first time by \citet{rigaill2013penalty}, and its extended theoretical foundations were later studied by \citet{rit}.
+This linear model was introduced in the first time by \citet{rigaill:13}, and its extended theoretical foundations were later studied by \citet{rit}.
 The prediction formula is given:
 \begin{equation}
     \hat{y} = \mathbf{x} \cdot \beta + \beta_0
@@ -567,7 +568,7 @@ To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}
 \begin{equation*}
     \sum_{i = 1}^N l\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i = 1}^N l\Big(\mathbf{x^i} \cdot \beta + \beta_0, (y_l^i, y_u^i)\Big)
 \end{equation*}
-\citet{rigaill2013penalty} employed the Fast Iterative Shrinkage-Thresholding Algorithm or FISTA \citep{fista}, while \citet{rit} employed stochastic gradient descent (SGD).
+\citet{rigaill:13} employed the Fast Iterative Shrinkage-Thresholding Algorithm or FISTA \citep{fista}, while \citet{rit} employed stochastic gradient descent (SGD).
 
 \subsubsection{Tree} MMIT introduced by \citet{mmit} is applicable for $\lambda$ prediction as an interval regression model. 
 The MMIT model is:
@@ -612,13 +613,13 @@ Take a look at the Figure \ref{fig:cdp_DL} for a clear visualization of the oper
 However, these methods rely on local neighbors rather than the entire sequence and are overly complex for univariate data.
 In contrast, DP is well-suited for this context.
 
-To determine the optimal partition of a sequence given a fixed number of segments (or number of changepoints), several efficient algorithms can be employed to achieve precise results \citep{auger1989algorithms, bai2003computation, killick2012optimal}. 
+To determine the optimal partition of a sequence given a fixed number of segments (or number of changepoints), several efficient algorithms can be employed to achieve precise results \citep{review:binseg, review:bai2003computation, pelt}. 
 However, in many instances, the number of segments is not predetermined and must instead be inferred from the data. 
-To address this challenge, several dynamic programming algorithms have been successfully applied to changepoint detection, including Optimal Partitioning (OPART) \citep{jackson:05} with its variations such as Pruned Exact Linear Time (PELT) \citep{killick2012optimal} or Functional Pruning Optimal Partitioning (FPOP) \citep{Maidstone:16}.
+To address this challenge, several dynamic programming algorithms have been successfully applied to changepoint detection, including Optimal Partitioning (OPART) \citep{jackson:05} with its variations such as Pruned Exact Linear Time (PELT) \citep{pelt} or Functional Pruning Optimal Partitioning (FPOP) \citep{fpop}.
 PELT uses a theorem to prune certain candidate changepoints that cannot be part of the optimal partition. 
 FPOP prunes at least as many candidate changepoints as PELT and can be more efficient, particularly for large datasets. 
 Despite these differences, OPART, PELT, and FPOP all produce the same partition.
-The Labeled Optimal Partitioning (LOPART) \citep{hocking:20} extends OPART's capabilities by leveraging predefined changepoint labels, indicating the expected number of changepoints within specific location ranges.
+The Labeled Optimal Partitioning (LOPART) \citep{lopart} extends OPART's capabilities by leveraging predefined changepoint labels, indicating the expected number of changepoints within specific location ranges.
 When no such labels are defined, LOPART behaves identically to OPART.
 Without prior knowledge of the number of changepoints in the partition and aiming to limit their occurrence, these algorithms employ a penalty parameter to discourage the presence of changepoints, denoted as $\lambda$, in the following optimization problem
 
@@ -646,6 +647,9 @@ For instance, for a sequence $\textbf{d} = [d_1, d_2, d_3, d_4, d_5, d_6] \in \m
 \includegraphics[width=0.99\textwidth]{figs/fig.lambdachanging.pdf}
 \caption{Different penalty result in varied sets of changepoints}
 \label{fig:lambda}
+\small
+\justifying
+\textit{Note: Example: how \(\lambda\) value influences changepoints count. The labeled sequence has 3 positive labels (each with one changepoint) and 1 negative label (with no changepoints). Label errors are classified as false positives (fp), occurring when multiple changepoints are detected in a positive label or any changepoint is detected in a negative label, and false negatives (fn), occurring when no changepoint is detected in a positive label. In this example, $\lambda = 10$ is optimal.}
 \end{figure}
 
 
@@ -668,10 +672,13 @@ There are two types of label errors: in each label, if the number of detected ch
 \includegraphics[width=0.99\textwidth]{figs/fig.problem_setting.pdf}
 \caption{The process involves a labeled sequences train set and a unlabeled sequences test set}
 \label{fig:problem_setting}
+\small
+\justifying
+\textit{Note: a train set with $n_1$ labeled sequences and a test set with $n_2$ unlabeled sequences. Step 1: Extract $m$ features from both sets and get a target interval from each labeled sequence in the train set. Step 2: Train the interval regression model using the features and target intervals from the train set. Step 3: Use the trained model to predict $\lambda$ for each test sequence. Step 4: For each unlabeled sequence in the test set, apply OP using the predicted $\lambda$ obtained from the trained model.}
 \end{figure}
 
 Finding the optimal partition for a given labeled sequence require considering a range of values for $\lambda$ (rather than just one specific value) that minimizes the number of label errors.
-Refer to \citep{rigaill2013penalty} for a method to determine the optimal range of \(\lambda\) for each labeled sequence.
+Refer to \citep{rigaill:13} for a method to determine the optimal range of \(\lambda\) for each labeled sequence.
 Consequently, the value of $\lambda$ to be predicted should fall within an optimal interval, see Figure \ref{fig:interval_regression}.
 This type of problem, where the objective is to find values falling within an interval, is referred to as the \textit{interval regression}.
 
@@ -730,8 +737,8 @@ In contrast, dynamic programming (DP) algorithms provides an ideal solution in t
 
 \paragraph{Regularization for Changepoints Count in DP Algorithms}
 DP algorithms detects changepoints using only one hyperparameter (contrast to numerous hyperparameters in DL-based methods) to control changepoints count, either (a) a fixed changepoints count or (b) a penalty to penalize changepoint presence.
-Approach (a), used in \citep{auger1989algorithms, bai2003computation, killick2012optimal}, is effective but relies on often unknown changepoints count.
-Approach (b), with the most popular methods being Optimal Partitioning (OP) \citep{jackson:05} and its variants, including Pruned Exact Linear Time (PELT) \citep{killick2012optimal}, Functional Pruning Optimal Partitioning (FPOP) \citep{Maidstone:16}, and Labeled Optimal Partitioning (LOP) \citep{hocking:20}.
+Approach (a), used in \citep{review:binseg, review:bai2003computation, pelt}, is effective but relies on often unknown changepoints count.
+Approach (b), with the most popular methods being Optimal Partitioning (OP) \citep{jackson:05} and its variants, including Pruned Exact Linear Time (PELT) \citep{pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{fpop}, and Labeled Optimal Partitioning (LOP) \citep{lopart}.
 PELT and FPOP improves efficiency by pruning technique whilst producing the same solution as OP. 
 LOP extends OP by incorporating predefined changepoint labels and defaults to OP when labels are absent.
 \textit{This study selects approach (b) to enhance changepoint detection performance as it offers greater flexibility.}
@@ -761,6 +768,9 @@ For simplicity, we refer to the OP penalty as $\lambda$ hereafter.
 \includegraphics[width=0.95\textwidth]{figs/fig.features_targets_all_datasets}
 \caption{Graphs showing the relationship between four features and target intervals}
 \label{fig:features_targets}
+\small
+\justifying
+\textit{Graphs illustrating the relationship between four features and target intervals. Variance and length are selected because previous studies have incorporated them into the model. Upon examination, we observe that the range value and sum of absolute differences exhibit a discernible increasing monotonic linear relationship with the target interval, indicating their potential as good features.}
 \end{figure}
 
 
@@ -774,7 +784,7 @@ For simplicity, we refer to the OP penalty as $\lambda$ hereafter.
 \midrule
 BIC.1 & 1 & unsupervised & None & \cite{bic} \\
 \midrule
-linear.1 & 1 & \multirow{3}{*}{linear} & \multirow{3}{*}{None} & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\cite{hocking:20}\\ \cite{rigaill:13}\\ \cite{lavielle05}\end{tabular}} \\
+linear.1 & 1 & \multirow{3}{*}{linear} & \multirow{3}{*}{None} & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\cite{lopart}\\ \cite{rigaill:13}\\ \cite{lavielle05}\end{tabular}} \\
 linear.2 & 2 &  &  & \\
 linear.4 & 4 &  &  & \\
 \midrule
@@ -868,7 +878,7 @@ And it's published in Statistics and Computing journal: \href{https://link.sprin
 
 \paragraph{Features} Four sets of features are considered to evaluate their quality:
 \begin{itemize} 
-\item \textbf{1 feature}: Sequence length, as used in \cite{hocking:20} and \cite{bic}. 
+\item \textbf{1 feature}: Sequence length, as used in \cite{lopart} and \cite{bic}. 
 \item \textbf{2 features}: Sequence length and variance, following \cite{rigaill:13}. 
 \item \textbf{4 features}: Sequence length, variance, value range, sum of absolute differences. 
 \item \textbf{All features}: According to \cite{rigaill:13} and \cite{mmit}, up to 365 features are generated, with only those without of missing data, infinite values, or zero variance retained.
@@ -891,7 +901,7 @@ The hyperparameters considered include a list for \texttt{max\_depth} values (0,
 
     \item \textbf{AFT in XGBoost}: 
 The hyperparameters considered include a list of \texttt{learning\_rate} values (0.001, 0.01, 0.1, 1.0), \texttt{max\_depth} (2, 3, 4, 5, 6, 7, 8, 9 10), \texttt{min\_child\_weight} (0.001, 0.1, 1.0, 10.0, 100.0), \texttt{reg\_alpha} (0.001, 0.01, 0.1, 1.0, 10.0, 100.0), \texttt{reg\_lambda} (0.001, 0.01, 0.1, 1.0, 10.0, 100.0), \texttt{aft\_loss\_distribution\_scale} (0.5, 0.8, 1.1, 1.4, 1.7, 2.0).
-This setup is identical to that described in \citep{barnwal2022survival}.
+This setup is identical to that described in \citep{aft_xgboost}.
 
     \item \textbf{MLP}: The hyperparameters considered include a list of \texttt{n\_hidden\_layer} (1, 2, 3, 4) and \texttt{hidden\_layer\_size} (2, 4, 8, 16, 32, 64, 128, 256, 512). We used the early stopping technique using a \texttt{patience} parameter, stopping training if the loss does not decrease after the specified patience iterations; in our study, we set the maximum iterations to 12,000 and the patience to 20. The model is trained using the Adam optimizer (with default PyTorch hyperparameters) to minimize the Squared Hinge Loss (as defined in Function \ref{eq:loss_func} with $p=2$ and $\epsilon=1$).
 \end{itemize}
@@ -917,7 +927,7 @@ In particular, increasing the number of features from one to two and then to fou
 
 \paragraph{Comparison Between Model Families}
 
-A notable observation is that tree-based models do not consistently outperform linear models when trained on the same feature sets. This phenomenon aligns with findings reported in \citep{mmit} for the Systematic dataset and in \citep{barnwal2022survival} for subsets of the Epigenomic dataset. The primary reason appears to be the predominantly linear relationship between the extracted features and the target intervals, as illustrated in Figure \ref{fig:features_targets}. When the underlying structure of the data is largely linear, more complex nonlinear learners such as tree ensembles do not offer a significant advantage.
+A notable observation is that tree-based models do not consistently outperform linear models when trained on the same feature sets. This phenomenon aligns with findings reported in \citep{mmit} for the Systematic dataset and in \citep{aft_xgboost} for subsets of the Epigenomic dataset. The primary reason appears to be the predominantly linear relationship between the extracted features and the target intervals, as illustrated in Figure \ref{fig:features_targets}. When the underlying structure of the data is largely linear, more complex nonlinear learners such as tree ensembles do not offer a significant advantage.
 
 The proposed model, formulated as a piecewise linear MLP, is conceptually positioned between purely linear models and highly nonlinear deep architectures. As expected, for identical feature configurations, it generally outperforms the standard linear model. The improvement can be attributed to its ability to capture mild nonlinearities while preserving much of the interpretability and stability of linear approaches. Importantly, strong performance is achieved with a relatively simple architecture—typically a single hidden layer containing 4 or 8 neurons—demonstrating that excessive architectural complexity is unnecessary for these datasets.
 
@@ -972,8 +982,8 @@ However, these methods rely on local neighbors rather than the entire sequence a
 
 In contrast, DP is well-suited for this context.
 These algorithms rely on a single hyperparameter to limit the changepoints number, which can be either: (a) a fixed changepoints number or (b) a penalty parameter to penalize the changepoint presence.
-Fixed changepoints number allow DP algorithms \citep{review:binseg, review:bai2003computation, review:pelt, rigaill2015pruned} to locate them, but the changepoints number is rarely predetermined.
-More commonly used, penalty-based DP algorithms, such as Optimal Partitioning (OPART) \citep{review:opart} and its variants—Pruned Exact Linear Time (PELT) \citep{review:pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{review:fpop}, and Labeled Optimal Partitioning (LOPART) \citep{review:lopart}—are widely regarded as the most effective.
+Fixed changepoints number allow DP algorithms \citep{review:binseg, review:bai2003computation, pelt, rigaill2015pruned} to locate them, but the changepoints number is rarely predetermined.
+More commonly used, penalty-based DP algorithms, such as Optimal Partitioning (OPART) \citep{jackson:05} and its variants—Pruned Exact Linear Time (PELT) \citep{pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{fpop}, and Labeled Optimal Partitioning (LOPART) \citep{lopart}—are widely regarded as the most effective.
 PELT and FPOP prune candidate changepoints efficiently, producing identical partitions as OPART, while LOPART extends OPART by incorporating predefined labels (the expected number of changepoints within specific location ranges) or defaulting to OPART when labels are absent.
 The following is the OPART optimization problem:
 
@@ -994,7 +1004,7 @@ This study aims to predict that penalty to improve the changepoint detection acc
 From here on, that conceptual penalty will be referred to as $\lambda$.
 
 \paragraph{Existing $\lambda$ prediction models.}
-Various models exist for predicting $\lambda$, including unsupervised \citep{bic, aic, lavielle05} and supervised such as linear \citep{rigaill:13} and tree(s) \citep{mmit, barnwal2022survival}.
+Various models exist for predicting $\lambda$, including unsupervised \citep{bic, aic, lavielle05} and supervised such as linear \citep{rigaill:13} and tree(s) \citep{mmit, aft_xgboost}.
 But all of these models rely on a set of manually extracted sequence features, yet the number of possible features is infinite, this process can result in the inclusion of many irrelevant features, and the potential omission of useful ones.
 
 \paragraph{Contribution.} This study proposes a novel method utilizing a recurrent network to automatically extract relevant features from sequences, which are then used to predict $\lambda$.
@@ -1011,7 +1021,7 @@ Additionally, some unsupervised models, which have served as inspiration for sup
 
 \paragraph{Noteworthy.} Adaptive Linear Penalty INference (ALPIN) \citep{truong17} is a method for this supervision special case, where every point is a label, equivalent to label regions having length 1.
 However, since this study uses a more relaxed supervision with varying label region lengths, ALPIN is not applicable.
-The Accelerated Failure Time (AFT) model \citep{aft} and its variants \citep{cai2009regularized, huang2006regularized, quinlan1986induction, svm}, which are designed for censored outcomes, can be considered.
+The Accelerated Failure Time (AFT) model \citep{aft} and its variants \citep{aft_cai2009regularized, aft_huang2006regularized, quinlan1986induction, svm}, which are designed for censored outcomes, can be considered.
 Supervised changepoint detection setups involve interval-censored targets, whereas traditional AFT models are restricted to uncensored or right-censored intervals, making them not directly applicable. 
 % An important distinction is that in AFT models, the left-censored interval is defined as $ (0 = \lambda_l < \lambda_u < \infty) $, which is different from this study's definition.
 
@@ -1021,7 +1031,7 @@ Let $N$ denote the sequence length, and $\sigma$ its standard deviation, with ex
 Akaike's Information Criterion (AIC) \citep{aic} predicts $\hat{\lambda} = 2p$, where $ p $ represents a sequence feature (e.g., standard deviation, variance).
 \citet{lavielle05} does not provide a closed-form formula but considers $\hat{\lambda}$ to be dependent on both $ N $ and $ \sigma $.
 
-\paragraph{Supervised.} The rest of this section will detail the training process of three supervised machine learning models: Maximum Margin Interval Regression \citep{rigaill:13}, a linear model; Maximal Margin Interval Tree (MMIT) \citep{mmit}; and AFT in XGBoost \citep{barnwal2022survival}, which utilizes a tree-based framework (although AFT in XGBoost is an AFT model, it is applicable due to its ability to handle all types of non-negative intervals).
+\paragraph{Supervised.} The rest of this section will detail the training process of three supervised machine learning models: Maximum Margin Interval Regression \citep{rigaill:13}, a linear model; Maximal Margin Interval Tree (MMIT) \citep{mmit}; and AFT in XGBoost \citep{aft_xgboost}, which utilizes a tree-based framework (although AFT in XGBoost is an AFT model, it is applicable due to its ability to handle all types of non-negative intervals).
 These models divided the training process into 2 sequential independent steps:
 \begin{itemize}
     \item Step 1: Extract features vector $\mathbf{x}$ from the sequence.
@@ -1074,7 +1084,7 @@ The model is trained using the gradient boosting algorithm \citep{gradient_boost
     \log \hat{\lambda} = \mathbf{x} \cdot \beta + \beta_0
 \end{equation}
 where $\beta$ is the parameter vector, $\mathbf{x} \cdot \beta$ is the dot product of $\mathbf{x}$ and $\beta$, and $\beta_0$ is the bias term.
-Its simplified version, used in \cite{review:lopart}, predicts $\log \hat{\lambda} = \beta_1 \times \log \log N + \beta_0$, where $N$ is the sequence length.
+Its simplified version, used in \cite{lopart}, predicts $\log \hat{\lambda} = \beta_1 \times \log \log N + \beta_0$, where $N$ is the sequence length.
 
 This model is trained by minimizing a loss function, the Hinge Error, defined by \citet{rigaill:13}, it achieves 0 loss when the prediction falls within the target interval.
 The error value between prediction $\log \hat{\lambda}$ and target interval $[\log \lambda_l, \log \lambda_u]$ is: 
@@ -1155,13 +1165,15 @@ where \(\beta \in \mathbb{R}^m\) and \(\beta_0 \in \mathbb{R}\) are the paramete
 
 
 \begin{figure}[!t]
-\vskip 0.2in
-\begin{center}
+\centering
 \centerline{\includegraphics[width=0.75\textwidth]{figs/figure.5_extracted_features.pdf}}
 \caption{Example: features vs. targets from the dataset detailed}
 \label{fig:extracted_features}
-\end{center}
-\vskip -0.2in
+\small
+\justifying
+\textit{The upper plots: the length or variance vs. targets, as these features are used on $\lambda$ prediction unsupervised methods.
+The lower plots: automatically extracted features vs targets, using a GRU model with two extracted features.
+Since we consider the predicted $\lambda$ has a linear relationship with the features, a good feature should exhibit a fairly linear pattern in the plot.}
 \end{figure}
 
 
@@ -1204,7 +1216,7 @@ difference sum & 2 & 1 & $0$ & $|d_t-d_{t-1}| + h_{t-1}$ &  \\
 \paragraph{Feature Approximation Ability of Recurrent Networks.}
 Recurrent networks have the ability to approximate statistical sequence features. For example, if the core network is defined as \( h_t = h_{t-1} + 1 \) when \( h_0 = 0 \) and the input size $k = 1$, then \( h_N = N \), which represents the sequence length, a feature used in BIC. 
 The core component of these models is a deep neural network. 
-For instance, the Vanilla Recurrent Network \citep{rnn} core is a MLP, which, according to the universal approximation theorem \citep{mlp}, can approximate any continuous function, regardless of its complexity, provided there are enough neurons in the hidden layer. 
+For instance, the Vanilla Recurrent Network \citep{rnn} core is a MLP, which, according to the universal approximation theorem \citep{uni_approximator}, can approximate any continuous function, regardless of its complexity, provided there are enough neurons in the hidden layer. 
 This is why, although these models may not directly produce exact statistical sequence features, their architecture enables them to approximate these features with a high degree of accuracy.
 
 \paragraph{Recurrent networks to be implemented.} This study explores three recurrent networks: Vanilla Recurrent Network (RNN), Long Short-Term Memory (LSTM) \citep{lstm}, Gated Recurrent Unit (GRU) \citep{gru}.
@@ -1254,7 +1266,7 @@ Finally, accuracy rates are calculated based on the predicted changepoints and t
 
 
 \paragraph{Raw Sequence Datasets.}  
-This study uses 20 datasets: two DNA copy number profiles from neuroblastoma tumors \citep{rigaill:13}, known for detailed and systematic dataset; one dataset cancer from \citep{review:lopart}; and 17 ChIP-seq datasets from \citep{hocking_peak16}, see Table \ref{tab:datasets} for all benchmark datasets, each sequence has a different length (number of datapoints), so the range of sequence lengths within each dataset is reported in the Table \ref{tab:datasets}.
+This study uses 20 datasets: two DNA copy number profiles from neuroblastoma tumors \citep{rigaill:13}, known for detailed and systematic dataset; one dataset cancer from \citep{lopart}; and 17 ChIP-seq datasets from \citep{hocking_peak16}, see Table \ref{tab:datasets} for all benchmark datasets, each sequence has a different length (number of datapoints), so the range of sequence lengths within each dataset is reported in the Table \ref{tab:datasets}.
 For each sequence in each dataset, biologist experts use their visual interpretation of important signal and noise patterns to label regions as having changes in mean value or not.
 
 \paragraph{Train/Test Setup.}  
@@ -1289,11 +1301,11 @@ Details of all models are provided in Table \ref{tab:models_reg}.
 \midrule
 linear & L1 & R & \citep{penaltyLearning} & \cite{rigaill:13} \\
 \midrule
-MMIT & tree architecture & Python/Cpp &  \citep{mmit_R} & \cite{mmit} \\
+MMIT & tree architecture & Python/Cpp &  \citep{mmit} & \cite{mmit} \\
 \midrule
-AFT\_XGboost & tree architecture & Python & \citep{xgb_package} & \cite{barnwal2022survival} \\
+AFT\_XGboost & tree architecture & Python & \citep{xgb_package} & \cite{aft_xgboost} \\
 \midrule
-constant & none & Python/Cpp &  \citep{mmit_R} & Baseline \\
+constant & none & Python/Cpp &  \citep{mmit} & Baseline \\
 \midrule
 
 \begin{tabular}[c]{@{}l@{}}MLP\end{tabular} & \begin{tabular}[c]{@{}l@{}} layer number\\  layer sizes\end{tabular} & Python &  & Additional \\
@@ -1320,7 +1332,7 @@ The regularization parameter L1 starts at 0.001, geometrically increasing by a f
     \item \texttt{loss\_type}:  \texttt{hinge} and \texttt{square} (equivalent to $p=1$ and $p=2$ in Hinge Error \ref{eq:loss_function});
 \end{itemize}
 
-\paragraph{AFT in XGBoost.} Following the same setup described in \citet{barnwal2022survival}, the optimal hyperparameters are chosen via cross-validation on the training set, including:
+\paragraph{AFT in XGBoost.} Following the same setup described in \citet{aft_xgboost}, the optimal hyperparameters are chosen via cross-validation on the training set, including:
 \begin{itemize}
     \item \texttt{learning\_rate}: 0.001, 0.01, 0.1, and 1.0
     \item \texttt{max\_depth}: 2, 3, 4, 5, 6, 7, 8, 9, and 10
@@ -1538,7 +1550,7 @@ middlemost & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Linear, MLP 
 interval-CART & \usym{2613} & \usym{2613}  & \checkmark & \checkmark & Tree & \citep{mmit} \\
 interval-knn & \checkmark & \checkmark  & \checkmark & \usym{2613} & kNN & \citep{knn_interval} \\
 \midrule
-linear & \checkmark & \checkmark  & \checkmark & \checkmark & Linear & \citep{rigaill2013penalty}  \\ 
+linear & \checkmark & \checkmark  & \checkmark & \checkmark & Linear & \citep{rigaill:13}  \\ 
 mmit & \checkmark & \checkmark  & \checkmark & \checkmark & Tree & \citep{mmit} \\ 
 aft\_xgb & \checkmark & \checkmark  & \checkmark & \checkmark & Ensemble trees & \citep{aft_xgboost} \\ \midrule
 constant & \checkmark & \checkmark  & \checkmark & \checkmark & Constant & baseline \\ \midrule
@@ -1562,7 +1574,7 @@ Interval Regression encompasses Survival Analysis as a special case, where Accel
 Survival analysis involves predicting the time until an event occurs, using censored data where the exact event time is unknown.
 However, a limitation of these models is that they can only handle uncensored and right-censored intervals, which makes them unsuitable for the general setting of Interval Regression.
 
-To date, existing Interval Regression models for this setting include Linear \citep{rigaill2013penalty, rit,meMLP}, Tree-based \citep{mmit, aft_xgboost} and Accelerated Failure Time (AFT) models family \citep{aft_semi, aft, aft_huang2006regularized, aft_cai2009regularized}.
+To date, existing Interval Regression models for this setting include Linear \citep{rigaill:13, rit,meMLP}, Tree-based \citep{mmit, aft_xgboost} and Accelerated Failure Time (AFT) models family \citep{aft_semi, aft, aft_huang2006regularized, aft_cai2009regularized}.
 
 
 
@@ -1573,7 +1585,7 @@ The notation used hereafter follows Table \ref{tab:interval_vs_standard}, where 
 
 \subsubsection{Existing models}
 
-\paragraph{Max Margin Interval Regression (linear).} This linear model was introduced by \citet{rigaill2013penalty}, and its extended theoretical foundations were later studied by \citet{rit}.
+\paragraph{Max Margin Interval Regression (linear).} This linear model was introduced by \citet{rigaill:13}, and its extended theoretical foundations were later studied by \citet{rit}.
 The model formula is given by:
 \begin{equation} \label{eq:linear_prediction}
     \hat{y} = \mathbf{x} \cdot \beta + \beta_0
@@ -1607,10 +1619,10 @@ To estimate the parameters $\beta$ and $\beta_0$ in \eqref{eq:linear_prediction}
 \begin{equation*}
     \sum_{i = 1}^N l\Big(\hat{y}^i, (y_l^i, y_u^i)\Big) = \sum_{i = 1}^N l\Big(\mathbf{x^i} \cdot \beta + \beta_0, (y_l^i, y_u^i)\Big)
 \end{equation*}
-\citet{rigaill2013penalty} employed the Fast Iterative Shrinkage-Thresholding Algorithm (FISTA) \citep{fista}, while \citet{rit} employed stochastic gradient descent (SGD).
+\citet{rigaill:13} employed the Fast Iterative Shrinkage-Thresholding Algorithm (FISTA) \citep{fista}, while \citet{rit} employed stochastic gradient descent (SGD).
 
 
-\paragraph{Maximum Margin Interval Trees (MMIT).} This Tree model was introduced by \citet{mmit} as an alternative nonlinear model to \textit{Max Margin Interval Regression} \citep{rigaill2013penalty}.
+\paragraph{Maximum Margin Interval Trees (MMIT).} This Tree model was introduced by \citet{mmit} as an alternative nonlinear model to \textit{Max Margin Interval Regression} \citep{rigaill:13}.
 The prediction is given by:
 \[
 \hat{y} = \mathcal{T}(\mathbf{x})
@@ -1714,7 +1726,11 @@ lymphoma.tdh                                 & 258                              
 \end{tabular}
 \caption{Datasets list for Interval Regression study.}
 \label{tab:datasets_reg}
-\vspace{-0.5cm}
+\vspace{2mm}
+\footnotesize
+\textit{Note:} Linear indicates that the relationship between features and the target variable is likely linear, while nonlinear indicates otherwise. 
+Noisy refers to datasets where more than half of the features are irrelevant. 
+Excessive describes datasets with more features than instances.
 \end{table}
 
 
@@ -2012,6 +2028,8 @@ This adjustment aims to reduce the model's sensitivity to left-censored interval
     \begin{figure}[!t]
         \centering
         \includegraphics[width=0.95\textwidth]{figs_reg/figs.supplemental.\x_plot.pdf}
+        \centering
+        \text{Hinge Square Error of 5 models on dataset: \x}
     \end{figure}
 }
 
@@ -2028,9 +2046,9 @@ In contrast, DP-based methods formulate changepoint detection as a global optimi
 
 Among DP methods, regularization plays a central role in controlling the number of detected changepoints. 
 Two main strategies are used: specifying a fixed number of changepoints or introducing a penalty term that penalizes changepoint occurrences. 
-Algorithms designed for a fixed number of changepoints include Binary Segmentation and related approaches \citep{review:binseg, review:bai2003computation, review:pelt, rigaill2015pruned}. 
+Algorithms designed for a fixed number of changepoints include Binary Segmentation and related approaches \citep{review:binseg, review:bai2003computation, pelt, rigaill2015pruned}. 
 However, since the true number of changepoints is rarely known in practice, penalty-based approaches are more commonly adopted. 
-Optimal Partitioning (OPART) \citep{review:opart} and its efficient variants—Pruned Exact Linear Time (PELT) \citep{review:pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{review:fpop}, and Labeled Optimal Partitioning (LOPART) \citep{review:lopart}—are widely regarded as state-of-the-art methods. 
+Optimal Partitioning (OPART) \citep{jackson:05} and its efficient variants—Pruned Exact Linear Time (PELT) \citep{pelt}, Functional Pruning Optimal Partitioning (FPOP) \citep{fpop}, and Labeled Optimal Partitioning (LOPART) \citep{lopart}—are widely regarded as state-of-the-art methods. 
 These algorithms solve an optimization problem that balances data fidelity with a penalty parameter $\lambda$, which directly controls the trade-off between model complexity and goodness of fit. 
 A larger $\lambda$ results in fewer detected changepoints, while a smaller $\lambda$ increases sensitivity to potential changes. 
 Therefore, accurate prediction of $\lambda$ is critical for achieving high detection performance. 
@@ -2045,7 +2063,7 @@ Therefore, accurate prediction of $\lambda$ is critical for achieving high detec
 \vskip -0.2in
 \end{figure}
 
-Existing approaches for predicting $\lambda$ include unsupervised criteria such as AIC-, BIC-, or related penalties \citep{bic, aic, lavielle05}, as well as supervised models such as linear regression \citep{rigaill:13} and tree-based methods \citep{mmit, barnwal2022survival, meRF}. 
+Existing approaches for predicting $\lambda$ include unsupervised criteria such as AIC-, BIC-, or related penalties \citep{bic, aic, lavielle05}, as well as supervised models such as linear regression \citep{rigaill:13} and tree-based methods \citep{mmit, aft_xgboost, meRF}. 
 However, these approaches depend heavily on manually engineered features extracted from the input sequence. 
 Since the space of possible features is effectively unbounded, manual feature design may include irrelevant characteristics while overlooking informative ones, thereby limiting predictive performance. 
 

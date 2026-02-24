@@ -7,7 +7,7 @@
 \@writefile{toc}{\contentsline {section}{LIST OF TABLES}{iv}{section*.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{LIST OF FIGURES}{v}{section*.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{PREFACE}{vi}{section*.8}\protected@file@percent }
-\citation{example_medical,rigaill2013penalty,hawkins2004survival}
+\citation{example_medical,rigaill:13,hawkins2004survival}
 \citation{example_econ}
 \citation{example_environmental}
 \citation{example_engineering}
@@ -19,18 +19,18 @@
 \@writefile{toc}{\contentsline {paragraph}{Literature Review}{1}{section*.10}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of Standard Regression versus Interval Regression setting.}}{1}{table.1}\protected@file@percent }
 \newlabel{tab:interval_vs_standard}{{1}{1}{Comparison of Standard Regression versus Interval Regression setting}{table.1}{}}
-\citation{wei1992accelerated}
-\citation{cai2009regularized,huang2006regularized}
+\citation{aft}
+\citation{aft_cai2009regularized,aft_huang2006regularized}
 \citation{svm}
 \citation{ishwaran2008random}
 \citation{binder2008allowing}
 \citation{hothorn2004bagging}
 \citation{polsterl2020scikit}
 \citation{lundberg2018consistent}
-\citation{barnwal2022survival}
-\citation{rigaill2013penalty}
+\citation{aft_xgboost}
+\citation{rigaill:13}
 \citation{mmit}
-\citation{breiman2017classification}
+\citation{cart}
 \citation{linear}
 \citation{knn}
 \citation{cart}
@@ -44,7 +44,7 @@
 \citation{rit}
 \citation{mmit}
 \citation{knn_interval}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{mmit}
 \citation{aft_xgboost}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces List of Regression models with compatible censored target intervals.}}{3}{table.2}\protected@file@percent }
@@ -57,8 +57,8 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of converting Interval Regression into Standard Regression}}{5}{figure.2}\protected@file@percent }
 \newlabel{fig:convert_interval_to_standard}{{2}{5}{Example of converting Interval Regression into Standard Regression}{figure.2}{}}
 \citation{penaltyLearning}
-\citation{rigaill2013penalty}
-\citation{mmit_package}
+\citation{rigaill:13}
+\citation{mmit}
 \citation{mmit}
 \citation{xgb_package}
 \citation{aft_xgboost}
@@ -73,14 +73,14 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Visualization of the AFT XGBoost Loss (negative log-likelihood) for 3 distributions}}{8}{figure.3}\protected@file@percent }
 \newlabel{fig:aft_loss_func}{{3}{8}{Visualization of the AFT XGBoost Loss (negative log-likelihood) for 3 distributions}{figure.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Supervised Machine Learning Models}{8}{subsection.1.2}\protected@file@percent }
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{rit}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Visualization of the Loss Functions: Error values relative to predictions and targets}}{9}{figure.4}\protected@file@percent }
 \newlabel{fig:loss_func}{{4}{9}{Visualization of the Loss Functions: Error values relative to predictions and targets}{figure.4}{}}
 \newlabel{eq:loss_func}{{2}{9}{Supervised Machine Learning Models}{equation.1.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Linear}{9}{subsubsection.1.2.1}\protected@file@percent }
 \citation{rit}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{fista}
 \citation{rit}
 \citation{mmit}
@@ -92,11 +92,11 @@
 \citation{app:climate}
 \citation{review:cusum,review:james1987tests}
 \citation{review:li24automatic,review:ermshaus2023clasp}
-\citation{auger1989algorithms,bai2003computation,killick2012optimal}
+\citation{review:binseg,review:bai2003computation,pelt}
 \citation{jackson:05}
-\citation{killick2012optimal}
-\citation{Maidstone:16}
-\citation{hocking:20}
+\citation{pelt}
+\citation{fpop}
+\citation{lopart}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Changepoint detection using Deep Learning}}{12}{figure.5}\protected@file@percent }
 \newlabel{fig:cdp_DL}{{5}{12}{Changepoint detection using Deep Learning}{figure.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Literature Review: Optimal Partitioning}{12}{section.2}\protected@file@percent }
@@ -107,7 +107,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Different penalty result in varied sets of changepoints}}{14}{figure.7}\protected@file@percent }
 \newlabel{fig:lambda}{{7}{14}{Different penalty result in varied sets of changepoints}{figure.7}{}}
 \@writefile{toc}{\contentsline {paragraph}{Role of the penalty parameter $\lambda $}{14}{section*.15}\protected@file@percent }
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The process involves a labeled sequences train set and a unlabeled sequences test set}}{15}{figure.8}\protected@file@percent }
 \newlabel{fig:problem_setting}{{8}{15}{The process involves a labeled sequences train set and a unlabeled sequences test set}{figure.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Relationship between OPART and Interval Regression}{15}{subsection.2.2}\protected@file@percent }
@@ -115,38 +115,38 @@
 \citation{hastie2017generalized}
 \citation{montufar2014number}
 \citation{friedman1991multivariate}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Literature Gaps and Proposed Plans}{16}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Inteval Regression}{16}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitation}{16}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Proposed Plan}{16}{section*.17}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comprehensive Diagram: Review and Contributions}}{17}{figure.9}\protected@file@percent }
-\newlabel{fig:comprehensive}{{9}{17}{Comprehensive Diagram: Review and Contributions}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Changepoint Detection}{17}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitation}{17}{section*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Proposed Plan}{17}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Literature Gaps and Proposed Plans}{17}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Inteval Regression}{17}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitation}{17}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Proposed Plan}{17}{section*.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comprehensive Diagram: Review and Contributions}}{18}{figure.9}\protected@file@percent }
+\newlabel{fig:comprehensive}{{9}{18}{Comprehensive Diagram: Review and Contributions}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Changepoint Detection}{18}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitation}{18}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Proposed Plan}{18}{section*.19}\protected@file@percent }
 \citation{app:finance}
 \citation{cancer}
 \citation{app:network}
 \citation{app:climate}
 \citation{review:londschien2023randomforest,review:lee2023,review:li24automatic,review:ermshaus2023clasp}
 \citation{review:cusum,review:james1987tests}
-\citation{auger1989algorithms,bai2003computation,killick2012optimal}
+\citation{review:binseg,review:bai2003computation,pelt}
 \citation{jackson:05}
-\citation{killick2012optimal}
-\citation{Maidstone:16}
-\citation{hocking:20}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Paper: Optimal Partitioning Penalty Learning using MLP}{18}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Changepoint detection methods review}{18}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Regularization for Changepoints Count in DP Algorithms}{18}{section*.21}\protected@file@percent }
+\citation{pelt}
+\citation{fpop}
+\citation{lopart}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Paper: Optimal Partitioning Penalty Learning using MLP}{19}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Changepoint detection methods review}{19}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Regularization for Changepoints Count in DP Algorithms}{19}{section*.21}\protected@file@percent }
 \citation{bic,aic,lavielle05}
 \citation{truong17,rigaill:13,mmit,aft_xgboost}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Model Diagram - Previous Methods versus Our Proposal}}{19}{figure.10}\protected@file@percent }
-\newlabel{fig:proposed_model}{{10}{19}{Comparative Model Diagram - Previous Methods versus Our Proposal}{figure.10}{}}
-\@writefile{toc}{\contentsline {paragraph}{The role of the OP penalty}{19}{section*.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Related Work review}{19}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Gap in the Literature and Contributions}{19}{section*.24}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Model Diagram - Previous Methods versus Our Proposal}}{20}{figure.10}\protected@file@percent }
+\newlabel{fig:proposed_model}{{10}{20}{Comparative Model Diagram - Previous Methods versus Our Proposal}{figure.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{The role of the OP penalty}{20}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Related Work review}{20}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gap in the Literature and Contributions}{20}{section*.24}\protected@file@percent }
 \citation{bic}
-\citation{hocking:20}
+\citation{lopart}
 \citation{rigaill:13}
 \citation{lavielle05}
 \citation{rigaill:13}
@@ -157,53 +157,53 @@
 \citation{bic}
 \citation{aic}
 \citation{lavielle05}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Graphs showing the relationship between four features and target intervals}}{20}{figure.11}\protected@file@percent }
-\newlabel{fig:features_targets}{{11}{20}{Graphs showing the relationship between four features and target intervals}{figure.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Previous Work}{20}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Noteworthy}{20}{section*.25}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Graphs showing the relationship between four features and target intervals}}{21}{figure.11}\protected@file@percent }
+\newlabel{fig:features_targets}{{11}{21}{Graphs showing the relationship between four features and target intervals}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Previous Work}{21}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Noteworthy}{21}{section*.25}\protected@file@percent }
 \citation{aft_xgboost}
 \citation{rigaill:13}
 \citation{mmit}
-\newlabel{tab:list_models}{{4}{21}{Gap in the Literature and Contributions}{figure.11}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces List of employed penalty prediction models}}{21}{table.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Unsupervised}{21}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Supervised}{21}{section*.27}\protected@file@percent }
+\newlabel{tab:list_models}{{4}{22}{Gap in the Literature and Contributions}{figure.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces List of employed penalty prediction models}}{22}{table.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Unsupervised}{22}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Supervised}{22}{section*.27}\protected@file@percent }
 \citation{rigaill:13}
 \citation{mmit}
-\newlabel{loss_function}{{7}{22}{Supervised}{equation.4.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Contribution}{22}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Novelty: MLP for $\lambda $ prediction}{22}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Additional Contribution: Feature Selection}{22}{section*.29}\protected@file@percent }
-\citation{hocking:20}
+\newlabel{loss_function}{{7}{23}{Supervised}{equation.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Contribution}{23}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Novelty: MLP for $\lambda $ prediction}{23}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Additional Contribution: Feature Selection}{23}{section*.29}\protected@file@percent }
+\citation{lopart}
 \citation{bic}
 \citation{rigaill:13}
 \citation{rigaill:13}
 \citation{mmit}
-\newlabel{tab:datasets}{{4.2}{23}{Additional Contribution: Feature Selection}{section*.29}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Datasets used in the study}}{23}{table.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Experiments and Results}{23}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Features}{23}{section*.30}\protected@file@percent }
-\citation{barnwal2022survival}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Median test accuracy and interquartile across 6 folds for each method}}{24}{figure.12}\protected@file@percent }
-\newlabel{fig:acc_comp}{{12}{24}{Median test accuracy and interquartile across 6 folds for each method}{figure.12}{}}
+\newlabel{tab:datasets}{{4.2}{24}{Additional Contribution: Feature Selection}{section*.29}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Datasets used in the study}}{24}{table.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Experiments and Results}{24}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Features}{24}{section*.30}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Models Configuration}{24}{section*.31}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Median test F1 score and interquartile across 6 folds for each method.}}{25}{figure.13}\protected@file@percent }
-\newlabel{fig:F1_comp}{{13}{25}{Median test F1 score and interquartile across 6 folds for each method}{figure.13}{}}
-\@writefile{toc}{\contentsline {paragraph}{Results}{25}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Discussion and Conclusion}{25}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Performance Analysis and Overall Comparison}{25}{section*.33}\protected@file@percent }
+\citation{aft_xgboost}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Median test accuracy and interquartile across 6 folds for each method}}{25}{figure.12}\protected@file@percent }
+\newlabel{fig:acc_comp}{{12}{25}{Median test accuracy and interquartile across 6 folds for each method}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Median test F1 score and interquartile across 6 folds for each method.}}{26}{figure.13}\protected@file@percent }
+\newlabel{fig:F1_comp}{{13}{26}{Median test F1 score and interquartile across 6 folds for each method}{figure.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results}{26}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Discussion and Conclusion}{26}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Performance Analysis and Overall Comparison}{26}{section*.33}\protected@file@percent }
 \citation{mmit}
-\citation{barnwal2022survival}
-\@writefile{toc}{\contentsline {paragraph}{Comparison Between Model Families}{26}{section*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Consistency and Stability of the Proposed Model}{26}{section*.35}\protected@file@percent }
+\citation{aft_xgboost}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Average validation accuracies for different MLP configurations}}{27}{figure.14}\protected@file@percent }
 \newlabel{fig:mlp}{{14}{27}{Average validation accuracies for different MLP configurations}{figure.14}{}}
-\@writefile{toc}{\contentsline {paragraph}{Factors Affecting Performance}{27}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Comparison Between Model Families}{27}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Consistency and Stability of the Proposed Model}{28}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Factors Affecting Performance}{28}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations}{28}{section*.37}\protected@file@percent }
 \citation{rnn}
 \citation{gru}
 \citation{lstm}
-\@writefile{toc}{\contentsline {paragraph}{Limitations}{28}{section*.37}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conclusion and Future Directions}{28}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conclusion and Future Directions}{29}{section*.38}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Reproducible Research Material}{29}{section*.39}\protected@file@percent }
 \citation{app:finance}
 \citation{cancer}
@@ -211,29 +211,29 @@
 \citation{app:climate}
 \citation{review:cusum,review:james1987tests}
 \citation{review:li24automatic,review:ermshaus2023clasp}
-\citation{review:binseg,review:bai2003computation,review:pelt,rigaill2015pruned}
-\citation{review:opart}
-\citation{review:pelt}
-\citation{review:fpop}
-\citation{review:lopart}
+\citation{review:binseg,review:bai2003computation,pelt,rigaill2015pruned}
+\citation{jackson:05}
+\citation{pelt}
+\citation{fpop}
+\citation{lopart}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Paper: Optimal Partitioning Penalty Learning using RNN}{30}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Changepoint Detection Methods.}{30}{section*.40}\protected@file@percent }
 \citation{bic,aic,lavielle05}
 \citation{rigaill:13}
-\citation{mmit,barnwal2022survival}
+\citation{mmit,aft_xgboost}
 \@writefile{toc}{\contentsline {paragraph}{OPART Problem.}{31}{section*.41}\protected@file@percent }
 \newlabel{eq:opart_loss}{{5}{31}{OPART Problem}{section*.41}{}}
 \@writefile{toc}{\contentsline {paragraph}{Existing $\lambda $ prediction models.}{31}{section*.42}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Contribution.}{31}{section*.43}\protected@file@percent }
 \citation{truong17}
 \citation{aft}
-\citation{cai2009regularized,huang2006regularized,quinlan1986induction,svm}
+\citation{aft_cai2009regularized,aft_huang2006regularized,quinlan1986induction,svm}
 \citation{bic}
 \citation{aic}
 \citation{lavielle05}
 \citation{rigaill:13}
 \citation{mmit}
-\citation{barnwal2022survival}
+\citation{aft_xgboost}
 \@writefile{toc}{\contentsline {paragraph}{Reproducibility.}{32}{section*.44}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Previous Work}{32}{subsection.5.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Noteworthy.}{32}{section*.45}\protected@file@percent }
@@ -246,7 +246,7 @@
 \@writefile{toc}{\contentsline {paragraph}{AFT in XGBoost.}{34}{section*.48}\protected@file@percent }
 \newlabel{eq:aft_loss}{{8}{34}{AFT in XGBoost}{equation.5.8}{}}
 \@writefile{toc}{\contentsline {paragraph}{Linear.}{34}{section*.49}\protected@file@percent }
-\citation{review:lopart}
+\citation{lopart}
 \citation{rigaill:13}
 \citation{mmit}
 \newlabel{eq:loss_function}{{10}{35}{Linear}{equation.5.10}{}}
@@ -260,38 +260,38 @@
 \@writefile{toc}{\contentsline {paragraph}{Feature Extraction via Recurrent Networks.}{37}{section*.51}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Predicting $\lambda $ from extracted features.}{37}{section*.52}\protected@file@percent }
 \citation{rnn}
-\citation{mlp}
+\citation{uni_approximator}
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Example: features vs. targets from the dataset detailed}}{38}{figure.16}\protected@file@percent }
 \newlabel{fig:extracted_features}{{16}{38}{Example: features vs. targets from the dataset detailed}{figure.16}{}}
 \@writefile{toc}{\contentsline {paragraph}{Automatic extracted features vs. Manual extracted features.}{38}{section*.53}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Feature Approximation Ability of Recurrent Networks.}{38}{section*.54}\protected@file@percent }
 \citation{lstm}
 \citation{gru}
 \@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Formula of recurrent core for each feature approximation.}}{39}{table.6}\protected@file@percent }
 \newlabel{tab:feature_approximation}{{6}{39}{Formula of recurrent core for each feature approximation}{table.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Feature Approximation Ability of Recurrent Networks.}{39}{section*.54}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Recurrent networks to be implemented.}{39}{section*.55}\protected@file@percent }
 \citation{rigaill:13}
-\citation{review:lopart}
+\citation{lopart}
 \citation{hocking_peak16}
 \newlabel{tab:datasets_rnn}{{5.2}{40}{Recurrent networks to be implemented}{section*.55}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces List of datasets with its number of sequences (Size)}}{40}{table.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Experiments and Results}{40}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Raw Sequence Datasets.}{40}{section*.56}\protected@file@percent }
 \citation{penaltyLearning}
 \citation{rigaill:13}
-\citation{mmit_R}
+\citation{mmit}
 \citation{mmit}
 \citation{xgb_package}
-\citation{barnwal2022survival}
-\citation{mmit_R}
+\citation{aft_xgboost}
+\citation{mmit}
+\@writefile{toc}{\contentsline {paragraph}{Raw Sequence Datasets.}{41}{section*.56}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Train/Test Setup.}{41}{section*.57}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Evaluation Metrics.}{41}{section*.58}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Model Implementation}{41}{subsubsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Baseline Models}{41}{subsubsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Linear.}{41}{section*.59}\protected@file@percent }
-\citation{barnwal2022survival}
+\citation{aft_xgboost}
 \@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces List of employed models}}{42}{table.8}\protected@file@percent }
 \newlabel{tab:models_reg}{{8}{42}{List of employed models}{table.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Baseline Models}{42}{subsubsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Linear.}{42}{section*.59}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{MMIT.}{42}{section*.60}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{AFT in XGBoost.}{42}{section*.61}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Constant (Featureless).}{43}{section*.62}\protected@file@percent }
@@ -299,12 +299,12 @@
 \@writefile{toc}{\contentsline {paragraph}{MLP.}{43}{section*.63}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.4}Proposed Models}{43}{subsubsection.5.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Architecture.}{43}{section*.64}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Preprocessing.}{43}{section*.65}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces The accuracies for each fold are presented for datasets without any pooling}}{44}{figure.17}\protected@file@percent }
-\newlabel{fig:acc_no_pooling}{{17}{44}{The accuracies for each fold are presented for datasets without any pooling}{figure.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{Preprocessing.}{44}{section*.65}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.5}Results}{44}{subsubsection.5.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Discussion and Conclusion}{45}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Summary of Contributions.}{45}{section*.66}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Discussion and Conclusion}{44}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Summary of Contributions.}{44}{section*.66}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces The accuracies for each fold are presented for datasets without any pooling}}{45}{figure.17}\protected@file@percent }
+\newlabel{fig:acc_no_pooling}{{17}{45}{The accuracies for each fold are presented for datasets without any pooling}{figure.17}{}}
 \@writefile{toc}{\contentsline {paragraph}{Comparison to Previous Models.}{45}{section*.67}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Comparison between Recurrent Networks.}{45}{section*.68}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Discussion on the Number of Automatically Extracted Features.}{45}{section*.69}\protected@file@percent }
@@ -350,7 +350,7 @@
 \citation{rit}
 \citation{mmit}
 \citation{knn_interval}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{mmit}
 \citation{aft_xgboost}
 \citation{mmit}
@@ -359,10 +359,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6}Paper: Interval Regression Review}{51}{section.6}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces List of Regression models with compatible censored target intervals and output setting. Only fully compatible models (match the setting of Table \ref {tab:interval_vs_standard}) are employed.}}{52}{table.10}\protected@file@percent }
 \newlabel{tab:models_reg_compare}{{10}{52}{List of Regression models with compatible censored target intervals and output setting. Only fully compatible models (match the setting of Table \ref {tab:interval_vs_standard}) are employed}{table.10}{}}
-\citation{rigaill2013penalty,rit,meMLP}
+\citation{rigaill:13,rit,meMLP}
 \citation{mmit,aft_xgboost}
 \citation{aft_semi,aft,aft_huang2006regularized,aft_cai2009regularized}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{rit}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Interval Regression Models}{53}{subsection.6.1}\protected@file@percent }
 \newlabel{sec:models}{{6.1}{53}{Interval Regression Models}{subsection.6.1}{}}
@@ -370,11 +370,11 @@
 \@writefile{toc}{\contentsline {paragraph}{Max Margin Interval Regression (linear).}{53}{section*.74}\protected@file@percent }
 \newlabel{eq:linear_prediction}{{11}{53}{Max Margin Interval Regression (linear)}{equation.6.11}{}}
 \citation{rit}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \citation{fista}
 \citation{rit}
 \citation{mmit}
-\citation{rigaill2013penalty}
+\citation{rigaill:13}
 \@writefile{toc}{\contentsline {paragraph}{Maximum Margin Interval Trees (MMIT).}{54}{section*.75}\protected@file@percent }
 \citation{cart}
 \citation{aft_xgboost}
@@ -394,54 +394,54 @@
 \newlabel{fig:err_simulated}{{21}{58}{The mean and standard deviation of the test squared hinge errors in simulated datasets}{figure.21}{}}
 \@writefile{toc}{\contentsline {paragraph}{Multilayer Perceptron (MLP).}{58}{section*.78}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Maximum Margin Interval Forest (MMIF).}{58}{section*.79}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Experiments and Results}{58}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Experimental Datasets.}{58}{section*.80}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces The mean and standard deviation of the test squared hinge errors in real datasets}}{59}{figure.22}\protected@file@percent }
 \newlabel{fig:err_real_1}{{22}{59}{The mean and standard deviation of the test squared hinge errors in real datasets}{figure.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Experiments and Results}{59}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Experimental Datasets.}{59}{section*.80}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Evaluation Metrics.}{59}{section*.81}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The mean and standard deviation of the test squared hinge errors in small datasets}}{60}{figure.23}\protected@file@percent }
 \newlabel{fig:err_real_2}{{23}{60}{The mean and standard deviation of the test squared hinge errors in small datasets}{figure.23}{}}
 \newlabel{eq:eval_loss}{{15}{60}{Evaluation Metrics}{equation.6.15}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Model Configuration}{60}{subsubsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Constant (Featureless).}{60}{section*.82}\protected@file@percent }
 \citation{aft_xgboost}
+\@writefile{toc}{\contentsline {paragraph}{Constant (Featureless).}{61}{section*.82}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Linear.}{61}{section*.83}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{MMIT.}{61}{section*.84}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{AFT model in XGBoost.}{61}{section*.85}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{kNN.}{61}{section*.86}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{MLP.}{61}{section*.87}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces The comparison of the performance and consistency of 7 interval regression models}}{62}{table.12}\protected@file@percent }
 \newlabel{tab:comparison}{{12}{62}{The comparison of the performance and consistency of 7 interval regression models}{table.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{MLP.}{62}{section*.87}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{MMIF.}{62}{section*.88}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Results}{62}{subsubsection.6.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces The performance ranking of 7 models across 39 datasets.}}{63}{table.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Discussions and Conclusions}{64}{subsection.6.3}\protected@file@percent }
-\newlabel{sec:discussion}{{6.3}{64}{Discussions and Conclusions}{subsection.6.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Dataset Variations.}{64}{section*.89}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Comprehensive Comparison.}{64}{section*.90}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{No single model is optimal for all scenarios.}{64}{section*.91}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{MMIT vs MMIF.}{64}{section*.92}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Discussions and Conclusions}{63}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:discussion}{{6.3}{63}{Discussions and Conclusions}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset Variations.}{63}{section*.89}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Comprehensive Comparison.}{63}{section*.90}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{No single model is optimal for all scenarios.}{63}{section*.91}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{MMIT vs MMIF.}{63}{section*.92}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces The performance ranking of 7 models across 39 datasets.}}{64}{table.13}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces The consistency ranking of 7 models across 39 datasets.}}{65}{table.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{65}{section*.93}\protected@file@percent }
 \citation{aft_xgboost}
+\@writefile{toc}{\contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{66}{section*.93}\protected@file@percent }
 \citation{app:finance}
 \citation{cancer}
 \citation{app:network}
 \citation{app:climate}
 \citation{review:cusum,review:james1987tests}
 \citation{review:li24automatic,review:ermshaus2023clasp}
-\citation{review:binseg,review:bai2003computation,review:pelt,rigaill2015pruned}
-\citation{review:opart}
-\citation{review:pelt}
-\citation{review:fpop}
-\citation{review:lopart}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Future Plans}{75}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Optimal Partitioning Penalty Learning using 1D-CNN}{75}{subsection.7.1}\protected@file@percent }
+\citation{review:binseg,review:bai2003computation,pelt,rigaill2015pruned}
+\citation{jackson:05}
+\citation{pelt}
+\citation{fpop}
+\citation{lopart}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Future Plans}{76}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Optimal Partitioning Penalty Learning using 1D-CNN}{76}{subsection.7.1}\protected@file@percent }
 \citation{bic,aic,lavielle05}
 \citation{rigaill:13}
-\citation{mmit,barnwal2022survival,meRF}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Diagram of the proposed model using 1D-CNN}}{76}{figure.24}\protected@file@percent }
-\newlabel{fig:proposed-cnn}{{24}{76}{Diagram of the proposed model using 1D-CNN}{figure.24}{}}
+\citation{mmit,aft_xgboost,meRF}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Diagram of the proposed model using 1D-CNN}}{77}{figure.24}\protected@file@percent }
+\newlabel{fig:proposed-cnn}{{24}{77}{Diagram of the proposed model using 1D-CNN}{figure.24}{}}
 \citation{Harvey2023}
 \citation{Jona-Lasinio2012}
 \citation{Sowa2005}
@@ -450,7 +450,7 @@
 \citation{Watson1966,Watson1967}
 \citation{Coeurjolly2012,Ameijeiras-Alonso2022,Jona-Lasinio2012}
 \citation{Ameijeiras-Alonso2022}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Heuristic Partitioning for circular data}{77}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Heuristic Partitioning for circular data}{78}{subsection.7.2}\protected@file@percent }
 \citation{Nguyen2023}
 \citation{Garca-Portugus2023}
 \citation{Fisher1994,Fisher1983,Harvey2023}
@@ -461,19 +461,19 @@
 \citation{Seifert2013,Storath2017}
 \citation{Lee2010,Pewsey2021}
 \citation{McKilliam2012,Cazals2021}
-\@writefile{toc}{\contentsline {paragraph}{Signal model}{78}{section*.94}\protected@file@percent }
-\newlabel{eq:model-init}{{16}{78}{Signal model}{equation.7.16}{}}
+\@writefile{toc}{\contentsline {paragraph}{Signal model}{79}{section*.94}\protected@file@percent }
+\newlabel{eq:model-init}{{16}{79}{Signal model}{equation.7.16}{}}
 \citation{Harvey2023,Lee2010,Jona-Lasinio2012,Lagona2015,Pewsey2021,Beh2014}
 \citation{Jammalamadaka2001}
 \citation{Michelot2016}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Operation time of Changepoint Detection models}}{79}{figure.25}\protected@file@percent }
-\newlabel{fig:time-cpd}{{25}{79}{Operation time of Changepoint Detection models}{figure.25}{}}
-\@writefile{toc}{\contentsline {paragraph}{Change-point formulation}{79}{section*.95}\protected@file@percent }
-\newlabel{eq:cpd-general}{{17}{79}{Change-point formulation}{equation.7.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces F-score of Changepoint Detection models}}{80}{figure.26}\protected@file@percent }
-\newlabel{fig:F1-cpd}{{26}{80}{F-score of Changepoint Detection models}{figure.26}{}}
-\newlabel{eq:cpd-finite-state}{{18}{80}{Change-point formulation}{equation.7.18}{}}
-\@writefile{toc}{\contentsline {paragraph}{Contributions}{80}{section*.96}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Operation time of Changepoint Detection models}}{80}{figure.25}\protected@file@percent }
+\newlabel{fig:time-cpd}{{25}{80}{Operation time of Changepoint Detection models}{figure.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{Change-point formulation}{80}{section*.95}\protected@file@percent }
+\newlabel{eq:cpd-general}{{17}{80}{Change-point formulation}{equation.7.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces F-score of Changepoint Detection models}}{81}{figure.26}\protected@file@percent }
+\newlabel{fig:F1-cpd}{{26}{81}{F-score of Changepoint Detection models}{figure.26}{}}
+\newlabel{eq:cpd-finite-state}{{18}{81}{Change-point formulation}{equation.7.18}{}}
+\@writefile{toc}{\contentsline {paragraph}{Contributions}{81}{section*.96}\protected@file@percent }
 \bibstyle{abbrvnat}
 \bibdata{references}
 \bibcite{example_econ}{{1}{2018}{{Abbara and Zevallos}}{{}}}
@@ -481,117 +481,102 @@
 \bibcite{aic}{{3}{1974}{{Akaike}}{{}}}
 \bibcite{Ameijeiras-Alonso2022}{{4}{2022}{{Ameijeiras-Alonso and Ley}}{{}}}
 \bibcite{Arnaudon2016}{{5}{2016}{{Arnaudon and Miclo}}{{}}}
-\bibcite{auger1989algorithms}{{6}{1989{a}}{{Auger and Lawrence}}{{}}}
-\bibcite{review:binseg}{{7}{1989{b}}{{Auger and Lawrence}}{{}}}
-\bibcite{attention}{{8}{2014}{{Bahdanau et~al.}}{{Bahdanau, Cho, and Bengio}}}
-\bibcite{bai2003computation}{{9}{2003{a}}{{Bai and Perron}}{{}}}
-\bibcite{review:bai2003computation}{{10}{2003{b}}{{Bai and Perron}}{{}}}
-\bibcite{aft_xgboost}{{11}{2022{a}}{{Barnwal et~al.}}{{Barnwal, Cho, and Hocking}}}
-\bibcite{barnwal2022survival}{{12}{2022{b}}{{Barnwal et~al.}}{{Barnwal, Cho, and Hocking}}}
-\bibcite{fista}{{13}{2009}{{Beck and Teboulle}}{{}}}
-\bibcite{Beh2014}{{14}{2014}{{Beh et~al.}}{{Beh, Han, Durasiwami, and Ko}}}
-\bibcite{interval_regression_analysis_3}{{15}{2000}{{Billard and Diday}}{{}}}
-\bibcite{binder2008allowing}{{16}{2008}{{Binder and Schumacher}}{{}}}
-\bibcite{rf}{{17}{2001}{{Breiman}}{{}}}
-\bibcite{breiman2017classification}{{18}{2017}{{Breiman}}{{}}}
-\bibcite{cart}{{19}{1984}{{Breiman et~al.}}{{Breiman, Friedman, Olshen, and Stone}}}
-\bibcite{aft_semi}{{20}{1979}{{Buckley and James}}{{}}}
-\bibcite{aft_cai2009regularized}{{21}{2009{a}}{{Cai et~al.}}{{Cai, Huang, and Tian}}}
-\bibcite{cai2009regularized}{{22}{2009{b}}{{Cai et~al.}}{{Cai, Huang, and Tian}}}
-\bibcite{Cazals2021}{{23}{2021}{{Cazals et~al.}}{{Cazals, Delmas, and O'Donnell}}}
-\bibcite{xgb_package}{{24}{2016}{{Chen and Guestrin}}{{}}}
-\bibcite{rit}{{25}{2023}{{Cheng et~al.}}{{Cheng, Cao, Li, An, and Feng}}}
-\bibcite{gru}{{26}{2014}{{Chung et~al.}}{{Chung, Gulcehre, Cho, and Bengio}}}
-\bibcite{Coeurjolly2012}{{27}{2012}{{Coeurjolly and Bihan}}{{}}}
-\bibcite{Condat2022}{{28}{2022}{{Condat}}{{}}}
-\bibcite{linear_input_interval}{{29}{2010}{{de~A.~{Lima Neto} and de~A.T.~{de Carvalho}}}{{}}}
-\bibcite{mmit_R}{{30}{2017{a}}{{Drouin}}{{}}}
-\bibcite{mmit_package}{{31}{2017{b}}{{Drouin}}{{}}}
-\bibcite{mmit}{{32}{2017}{{Drouin et~al.}}{{Drouin, Hocking, and Laviolette}}}
-\bibcite{example_environmental}{{33}{2014}{{Ellison et~al.}}{{Ellison, Lundblad, and Petersson}}}
-\bibcite{review:ermshaus2023clasp}{{34}{2023}{{Ermshaus et~al.}}{{Ermshaus, Sch{\"a}fer, and Leser}}}
-\bibcite{example_medical}{{35}{2006}{{Fazil~Baksh et~al.}}{{Fazil~Baksh, Haars, Todd, Van~Noord, and Whitehead}}}
-\bibcite{Fisher1983}{{36}{1983}{{Fisher and Lee}}{{}}}
-\bibcite{Fisher1994}{{37}{1994}{{Fisher and Lee}}{{}}}
-\bibcite{knn}{{38}{1985}{{Fix and Hodges}}{{}}}
-\bibcite{friedman1991multivariate}{{39}{1991}{{Friedman}}{{}}}
-\bibcite{gradient_boosting}{{40}{2001}{{Friedman}}{{}}}
-\bibcite{Garca-Portugus2023}{{41}{2023}{{García-Portugués and Prieto-Tirado}}{{}}}
-\bibcite{knn_interval}{{42}{2012}{{Hamed et~al.}}{{Hamed, Serrurier, and Durand}}}
-\bibcite{interval_regression_analysis_4}{{43}{2009}{{Hao}}{{}}}
-\bibcite{Harvey2023}{{44}{2023}{{Harvey et~al.}}{{Harvey, Hurn, Palumbo, and Thiele}}}
-\bibcite{hastie2017generalized}{{45}{2017}{{Hastie}}{{}}}
-\bibcite{hawkins2004survival}{{46}{2004}{{Hawkins}}{{}}}
-\bibcite{review:cusum}{{47}{1971}{{Hinkley}}{{}}}
-\bibcite{lstm}{{48}{1997}{{Hochreiter}}{{}}}
-\bibcite{penaltyLearning}{{49}{2024}{{Hocking}}{{}}}
-\bibcite{hocking:20}{{50}{2023{a}}{{Hocking and Srivastava}}{{}}}
-\bibcite{review:lopart}{{51}{2023{b}}{{Hocking and Srivastava}}{{}}}
-\bibcite{hocking_peak16}{{52}{2016}{{Hocking et~al.}}{{Hocking, Goerner-Potvin, Morin, Shao, Pastinen, and Bourque}}}
-\bibcite{Holzmann2006}{{53}{2006}{{Holzmann et~al.}}{{Holzmann, Munk, Suster, and Zucchini}}}
-\bibcite{mlp}{{54}{1989{a}}{{Hornik et~al.}}{{Hornik, Stinchcombe, and White}}}
-\bibcite{uni_approximator}{{55}{1989{b}}{{Hornik et~al.}}{{Hornik, Stinchcombe, and White}}}
-\bibcite{hothorn2004bagging}{{56}{2004}{{Hothorn et~al.}}{{Hothorn, Lausen, Benner, and Radespiel-Tr{\"o}ger}}}
-\bibcite{Hotz2013}{{57}{2013}{{Hotz}}{{}}}
-\bibcite{Hotz2015}{{58}{2015}{{Hotz and Huckemann}}{{}}}
-\bibcite{aft_huang2006regularized}{{59}{2006{a}}{{Huang et~al.}}{{Huang, Ma, and Xie}}}
-\bibcite{huang2006regularized}{{60}{2006{b}}{{Huang et~al.}}{{Huang, Ma, and Xie}}}
-\bibcite{ishwaran2008random}{{61}{2008}{{Ishwaran et~al.}}{{Ishwaran, Kogalur, Blackstone, and Lauer}}}
-\bibcite{jackson:05}{{62}{2005{a}}{{Jackson et~al.}}{{Jackson, Scargle, Barnes, Arabhi, Alt, Gioumousis, Gwin, Sangtrakulcharoen, Tan, and Tsai}}}
-\bibcite{review:opart}{{63}{2005{b}}{{Jackson et~al.}}{{Jackson, Scargle, Barnes, Arabhi, Alt, Gioumousis, Gwin, Sangtrakulcharoen, Tan, and Tsai}}}
-\bibcite{review:james1987tests}{{64}{1987}{{James et~al.}}{{James, James, and Siegmund}}}
-\bibcite{Jammalamadaka2001}{{65}{2001}{{Jammalamadaka and Sengupta}}{{}}}
-\bibcite{interval_regression_analysis_2}{{66}{2003}{{Jeng et~al.}}{{Jeng, Chuang, and Su}}}
-\bibcite{Jona-Lasinio2012}{{67}{2012}{{Jona-Lasinio et~al.}}{{Jona-Lasinio, Gelfand, and Jona-Lasinio}}}
-\bibcite{killick2012optimal}{{68}{2012{a}}{{Killick et~al.}}{{Killick, Fearnhead, and Eckley}}}
-\bibcite{review:pelt}{{69}{2012{b}}{{Killick et~al.}}{{Killick, Fearnhead, and Eckley}}}
-\bibcite{Lagona2025}{{70}{2025}{{Lagona and Mingione}}{{}}}
-\bibcite{Lagona2015}{{71}{2015}{{Lagona et~al.}}{{Lagona, Picone, and Maruotti}}}
-\bibcite{app:finance}{{72}{2021}{{Lattanzi and Leonelli}}{{}}}
-\bibcite{lavielle05}{{73}{2005}{{Lavielle}}{{}}}
-\bibcite{cnn}{{74}{1998}{{LeCun et~al.}}{{LeCun, Bottou, Bengio, and Haffner}}}
-\bibcite{Lee2010}{{75}{2010}{{Lee}}{{}}}
-\bibcite{review:lee2023}{{76}{2023}{{Lee et~al.}}{{Lee, Xie, and Cheng}}}
-\bibcite{linear}{{77}{1805}{{Legendre}}{{}}}
-\bibcite{example_engineering}{{78}{2011}{{Levitin et~al.}}{{Levitin, Xing, Ben-Haim, and Dai}}}
-\bibcite{review:li24automatic}{{79}{2024}{{Li et~al.}}{{Li, Fearnhead, Fryzlewicz, and Wang}}}
-\bibcite{uci}{{80}{2013}{{Lichman}}{{}}}
-\bibcite{review:londschien2023randomforest}{{81}{2023}{{Londschien et~al.}}{{Londschien, B{\"u}hlmann, and Kov{\'a}cs}}}
-\bibcite{lundberg2018consistent}{{82}{2018}{{Lundberg et~al.}}{{Lundberg, Erion, and Lee}}}
-\bibcite{Maidstone:16}{{83}{2016{a}}{{Maidstone et~al.}}{{Maidstone, Hocking, Rigaill, and Fearnhead}}}
-\bibcite{review:fpop}{{84}{2016{b}}{{Maidstone et~al.}}{{Maidstone, Hocking, Rigaill, and Fearnhead}}}
-\bibcite{McKilliam2012}{{85}{2012}{{McKilliam et~al.}}{{McKilliam, Quinn, and Clarkson}}}
-\bibcite{Michelot2016}{{86}{2016}{{Michelot et~al.}}{{Michelot, Langrock, and Patterson}}}
-\bibcite{montufar2014number}{{87}{2014}{{Montufar et~al.}}{{Montufar, Pascanu, Cho, and Bengio}}}
-\bibcite{cancer}{{88}{2010}{{Muggeo and Adelfio}}{{}}}
-\bibcite{Nguyen2023}{{89}{2023}{{Nguyen et~al.}}{{Nguyen, Ngoc, and Rivoirard}}}
-\bibcite{meRNN}{{90}{2025{a}}{{Nguyen and Hocking}}{{}}}
-\bibcite{meMLP}{{91}{2025{b}}{{Nguyen and Hocking}}{{}}}
-\bibcite{meRF}{{92}{2025{c}}{{Nguyen and Hocking}}{{}}}
-\bibcite{Pewsey2021}{{93}{2021}{{Pewsey and Garc\'ia-Portugu\'es}}{{}}}
-\bibcite{polsterl2020scikit}{{94}{2020}{{P{\"o}lsterl}}{{}}}
-\bibcite{svm}{{95}{2016}{{P{\"o}lsterl et~al.}}{{P{\"o}lsterl, Navab, and Katouzian}}}
-\bibcite{quinlan1986induction}{{96}{1986}{{Quinlan}}{{}}}
-\bibcite{app:climate}{{97}{2007}{{Reeves et~al.}}{{Reeves, Chen, Wang, Lund, and Lu}}}
-\bibcite{rigaill2015pruned}{{98}{2015}{{Rigaill}}{{}}}
-\bibcite{rigaill2013penalty}{{99}{2013{a}}{{Rigaill et~al.}}{{Rigaill, Hocking, Bach, and Vert}}}
-\bibcite{rigaill:13}{{100}{2013{b}}{{Rigaill et~al.}}{{Rigaill, Hocking, Bach, and Vert}}}
-\bibcite{mlp_input_interval}{{101}{2007}{{Roque et~al.}}{{Roque, Mat{\'e}, Arroyo, and Sarabia}}}
-\bibcite{rnn}{{102}{1986}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
-\bibcite{bidirectional}{{103}{1997}{{Schuster and Paliwal}}{{}}}
-\bibcite{bic}{{104}{1978}{{Schwarz}}{{}}}
-\bibcite{Seifert2013}{{105}{2013}{{Seifert et~al.}}{{Seifert, Coeurjolly, Hérault, Wattebled, and Davids}}}
-\bibcite{monotonic}{{106}{1997}{{Sill}}{{}}}
-\bibcite{Sowa2005}{{107}{2005}{{Sowa et~al.}}{{Sowa, Rowe, Leake, Yakushi, Homma, Ishijima, and Berry}}}
-\bibcite{Storath2018}{{108}{2018}{{Storath and Weinmann}}{{}}}
-\bibcite{Storath2017}{{109}{2017}{{Storath et~al.}}{{Storath, Weinmann, and Unser}}}
-\bibcite{interval_regression_analysis_1}{{110}{1998}{{Tanaka and Lee}}{{}}}
-\bibcite{app:network}{{111}{2013}{{Tartakovsky et~al.}}{{Tartakovsky, Polunchenko, and Sokolov}}}
-\bibcite{truong17}{{112}{2017}{{Truong et~al.}}{{Truong, Gudre, and Vayatis}}}
-\bibcite{linear_output_interval}{{113}{2015}{{Wang et~al.}}{{Wang, Li, and Denœux}}}
-\bibcite{Watson1966}{{114}{1966}{{Watson}}{{}}}
-\bibcite{Watson1967}{{115}{1967}{{Watson and Beran}}{{}}}
-\bibcite{aft}{{116}{1992{a}}{{Wei}}{{}}}
-\bibcite{wei1992accelerated}{{117}{1992{b}}{{Wei}}{{}}}
-\bibcite{lattice}{{118}{2017}{{You et~al.}}{{You, Ding, Canini, Pfeifer, and Gupta}}}
-\gdef \@abspage@last{99}
+\bibcite{review:binseg}{{6}{1989}{{Auger and Lawrence}}{{}}}
+\bibcite{attention}{{7}{2014}{{Bahdanau et~al.}}{{Bahdanau, Cho, and Bengio}}}
+\bibcite{review:bai2003computation}{{8}{2003}{{Bai and Perron}}{{}}}
+\bibcite{aft_xgboost}{{9}{2022}{{Barnwal et~al.}}{{Barnwal, Cho, and Hocking}}}
+\bibcite{fista}{{10}{2009}{{Beck and Teboulle}}{{}}}
+\bibcite{Beh2014}{{11}{2014}{{Beh et~al.}}{{Beh, Han, Durasiwami, and Ko}}}
+\bibcite{interval_regression_analysis_3}{{12}{2000}{{Billard and Diday}}{{}}}
+\bibcite{binder2008allowing}{{13}{2008}{{Binder and Schumacher}}{{}}}
+\bibcite{rf}{{14}{2001}{{Breiman}}{{}}}
+\bibcite{cart}{{15}{1984}{{Breiman et~al.}}{{Breiman, Friedman, Olshen, and Stone}}}
+\bibcite{aft_semi}{{16}{1979}{{Buckley and James}}{{}}}
+\bibcite{aft_cai2009regularized}{{17}{2009}{{Cai et~al.}}{{Cai, Huang, and Tian}}}
+\bibcite{Cazals2021}{{18}{2021}{{Cazals et~al.}}{{Cazals, Delmas, and O'Donnell}}}
+\bibcite{xgb_package}{{19}{2016}{{Chen and Guestrin}}{{}}}
+\bibcite{rit}{{20}{2023}{{Cheng et~al.}}{{Cheng, Cao, Li, An, and Feng}}}
+\bibcite{gru}{{21}{2014}{{Chung et~al.}}{{Chung, Gulcehre, Cho, and Bengio}}}
+\bibcite{Coeurjolly2012}{{22}{2012}{{Coeurjolly and Bihan}}{{}}}
+\bibcite{Condat2022}{{23}{2022}{{Condat}}{{}}}
+\bibcite{linear_input_interval}{{24}{2010}{{de~A.~{Lima Neto} and de~A.T.~{de Carvalho}}}{{}}}
+\bibcite{mmit}{{25}{2017}{{Drouin et~al.}}{{Drouin, Hocking, and Laviolette}}}
+\bibcite{example_environmental}{{26}{2014}{{Ellison et~al.}}{{Ellison, Lundblad, and Petersson}}}
+\bibcite{review:ermshaus2023clasp}{{27}{2023}{{Ermshaus et~al.}}{{Ermshaus, Sch{\"a}fer, and Leser}}}
+\bibcite{example_medical}{{28}{2006}{{Fazil~Baksh et~al.}}{{Fazil~Baksh, Haars, Todd, Van~Noord, and Whitehead}}}
+\bibcite{Fisher1983}{{29}{1983}{{Fisher and Lee}}{{}}}
+\bibcite{Fisher1994}{{30}{1994}{{Fisher and Lee}}{{}}}
+\bibcite{knn}{{31}{1985}{{Fix and Hodges}}{{}}}
+\bibcite{friedman1991multivariate}{{32}{1991}{{Friedman}}{{}}}
+\bibcite{gradient_boosting}{{33}{2001}{{Friedman}}{{}}}
+\bibcite{Garca-Portugus2023}{{34}{2023}{{García-Portugués and Prieto-Tirado}}{{}}}
+\bibcite{knn_interval}{{35}{2012}{{Hamed et~al.}}{{Hamed, Serrurier, and Durand}}}
+\bibcite{interval_regression_analysis_4}{{36}{2009}{{Hao}}{{}}}
+\bibcite{Harvey2023}{{37}{2023}{{Harvey et~al.}}{{Harvey, Hurn, Palumbo, and Thiele}}}
+\bibcite{hastie2017generalized}{{38}{2017}{{Hastie}}{{}}}
+\bibcite{hawkins2004survival}{{39}{2004}{{Hawkins}}{{}}}
+\bibcite{review:cusum}{{40}{1971}{{Hinkley}}{{}}}
+\bibcite{lstm}{{41}{1997}{{Hochreiter}}{{}}}
+\bibcite{penaltyLearning}{{42}{2024}{{Hocking}}{{}}}
+\bibcite{lopart}{{43}{2023}{{Hocking and Srivastava}}{{}}}
+\bibcite{hocking_peak16}{{44}{2016}{{Hocking et~al.}}{{Hocking, Goerner-Potvin, Morin, Shao, Pastinen, and Bourque}}}
+\bibcite{Holzmann2006}{{45}{2006}{{Holzmann et~al.}}{{Holzmann, Munk, Suster, and Zucchini}}}
+\bibcite{uni_approximator}{{46}{1989}{{Hornik et~al.}}{{Hornik, Stinchcombe, and White}}}
+\bibcite{hothorn2004bagging}{{47}{2004}{{Hothorn et~al.}}{{Hothorn, Lausen, Benner, and Radespiel-Tr{\"o}ger}}}
+\bibcite{Hotz2013}{{48}{2013}{{Hotz}}{{}}}
+\bibcite{Hotz2015}{{49}{2015}{{Hotz and Huckemann}}{{}}}
+\bibcite{aft_huang2006regularized}{{50}{2006}{{Huang et~al.}}{{Huang, Ma, and Xie}}}
+\bibcite{ishwaran2008random}{{51}{2008}{{Ishwaran et~al.}}{{Ishwaran, Kogalur, Blackstone, and Lauer}}}
+\bibcite{jackson:05}{{52}{2005}{{Jackson et~al.}}{{Jackson, Scargle, Barnes, Arabhi, Alt, Gioumousis, Gwin, Sangtrakulcharoen, Tan, and Tsai}}}
+\bibcite{review:james1987tests}{{53}{1987}{{James et~al.}}{{James, James, and Siegmund}}}
+\bibcite{Jammalamadaka2001}{{54}{2001}{{Jammalamadaka and Sengupta}}{{}}}
+\bibcite{interval_regression_analysis_2}{{55}{2003}{{Jeng et~al.}}{{Jeng, Chuang, and Su}}}
+\bibcite{Jona-Lasinio2012}{{56}{2012}{{Jona-Lasinio et~al.}}{{Jona-Lasinio, Gelfand, and Jona-Lasinio}}}
+\bibcite{pelt}{{57}{2012}{{Killick et~al.}}{{Killick, Fearnhead, and Eckley}}}
+\bibcite{Lagona2025}{{58}{2025}{{Lagona and Mingione}}{{}}}
+\bibcite{Lagona2015}{{59}{2015}{{Lagona et~al.}}{{Lagona, Picone, and Maruotti}}}
+\bibcite{app:finance}{{60}{2021}{{Lattanzi and Leonelli}}{{}}}
+\bibcite{lavielle05}{{61}{2005}{{Lavielle}}{{}}}
+\bibcite{cnn}{{62}{1998}{{LeCun et~al.}}{{LeCun, Bottou, Bengio, and Haffner}}}
+\bibcite{Lee2010}{{63}{2010}{{Lee}}{{}}}
+\bibcite{review:lee2023}{{64}{2023}{{Lee et~al.}}{{Lee, Xie, and Cheng}}}
+\bibcite{linear}{{65}{1805}{{Legendre}}{{}}}
+\bibcite{example_engineering}{{66}{2011}{{Levitin et~al.}}{{Levitin, Xing, Ben-Haim, and Dai}}}
+\bibcite{review:li24automatic}{{67}{2024}{{Li et~al.}}{{Li, Fearnhead, Fryzlewicz, and Wang}}}
+\bibcite{uci}{{68}{2013}{{Lichman}}{{}}}
+\bibcite{review:londschien2023randomforest}{{69}{2023}{{Londschien et~al.}}{{Londschien, B{\"u}hlmann, and Kov{\'a}cs}}}
+\bibcite{lundberg2018consistent}{{70}{2018}{{Lundberg et~al.}}{{Lundberg, Erion, and Lee}}}
+\bibcite{fpop}{{71}{2017}{{Maidstone et~al.}}{{Maidstone, Hocking, Rigaill, and Fearnhead}}}
+\bibcite{McKilliam2012}{{72}{2012}{{McKilliam et~al.}}{{McKilliam, Quinn, and Clarkson}}}
+\bibcite{Michelot2016}{{73}{2016}{{Michelot et~al.}}{{Michelot, Langrock, and Patterson}}}
+\bibcite{montufar2014number}{{74}{2014}{{Montufar et~al.}}{{Montufar, Pascanu, Cho, and Bengio}}}
+\bibcite{cancer}{{75}{2010}{{Muggeo and Adelfio}}{{}}}
+\bibcite{Nguyen2023}{{76}{2023}{{Nguyen et~al.}}{{Nguyen, Ngoc, and Rivoirard}}}
+\bibcite{meRNN}{{77}{2025{a}}{{Nguyen and Hocking}}{{}}}
+\bibcite{meMLP}{{78}{2025{b}}{{Nguyen and Hocking}}{{}}}
+\bibcite{meRF}{{79}{2025{c}}{{Nguyen and Hocking}}{{}}}
+\bibcite{Pewsey2021}{{80}{2021}{{Pewsey and Garc\'ia-Portugu\'es}}{{}}}
+\bibcite{polsterl2020scikit}{{81}{2020}{{P{\"o}lsterl}}{{}}}
+\bibcite{svm}{{82}{2016}{{P{\"o}lsterl et~al.}}{{P{\"o}lsterl, Navab, and Katouzian}}}
+\bibcite{quinlan1986induction}{{83}{1986}{{Quinlan}}{{}}}
+\bibcite{app:climate}{{84}{2007}{{Reeves et~al.}}{{Reeves, Chen, Wang, Lund, and Lu}}}
+\bibcite{rigaill2015pruned}{{85}{2015}{{Rigaill}}{{}}}
+\bibcite{rigaill:13}{{86}{2013}{{Rigaill et~al.}}{{Rigaill, Hocking, Bach, and Vert}}}
+\bibcite{mlp_input_interval}{{87}{2007}{{Roque et~al.}}{{Roque, Mat{\'e}, Arroyo, and Sarabia}}}
+\bibcite{rnn}{{88}{1986}{{Rumelhart et~al.}}{{Rumelhart, Hinton, and Williams}}}
+\bibcite{bidirectional}{{89}{1997}{{Schuster and Paliwal}}{{}}}
+\bibcite{bic}{{90}{1978}{{Schwarz}}{{}}}
+\bibcite{Seifert2013}{{91}{2013}{{Seifert et~al.}}{{Seifert, Coeurjolly, Hérault, Wattebled, and Davids}}}
+\bibcite{monotonic}{{92}{1997}{{Sill}}{{}}}
+\bibcite{Sowa2005}{{93}{2005}{{Sowa et~al.}}{{Sowa, Rowe, Leake, Yakushi, Homma, Ishijima, and Berry}}}
+\bibcite{Storath2018}{{94}{2018}{{Storath and Weinmann}}{{}}}
+\bibcite{Storath2017}{{95}{2017}{{Storath et~al.}}{{Storath, Weinmann, and Unser}}}
+\bibcite{interval_regression_analysis_1}{{96}{1998}{{Tanaka and Lee}}{{}}}
+\bibcite{app:network}{{97}{2013}{{Tartakovsky et~al.}}{{Tartakovsky, Polunchenko, and Sokolov}}}
+\bibcite{truong17}{{98}{2017}{{Truong et~al.}}{{Truong, Gudre, and Vayatis}}}
+\bibcite{linear_output_interval}{{99}{2015}{{Wang et~al.}}{{Wang, Li, and Denœux}}}
+\bibcite{Watson1966}{{100}{1966}{{Watson}}{{}}}
+\bibcite{Watson1967}{{101}{1967}{{Watson and Beran}}{{}}}
+\bibcite{aft}{{102}{1992}{{Wei}}{{}}}
+\bibcite{lattice}{{103}{2017}{{You et~al.}}{{You, Ding, Canini, Pfeifer, and Gupta}}}
+\gdef \@abspage@last{98}
