@@ -238,6 +238,58 @@ vi
 
 \setcounter{page}{1}
 
+\section{Motivation and Context}
+
+Changepoint detection is the statistical task of identifying points in a sequence of observations at which the underlying data-generating mechanism changes.  
+More precisely, it aims to detect locations where the probability distribution, mean, variance, or other structural properties of a signal undergo an abrupt shift.  
+These changes may correspond to sudden events, regime switches, or structural breaks in time series or ordered data.  
+The importance of changepoint detection arises from the fact that many real-world systems are not stationary over time.  
+Accurately identifying structural changes allows practitioners to understand system behavior, detect anomalies, and make informed decisions.  
+In many applications, failing to detect such changes can lead to incorrect modeling assumptions and poor predictive performance.  
+
+For example, detecting changepoints is crucial in the diagnosis of certain types of cancer, such as neuroblastoma.  
+Abrupt changes in genomic copy number profiles can indicate tumor progression or clinically significant mutations.  
+Timely and accurate detection in this context can directly influence treatment planning and patient outcomes.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.95\textwidth]{figs/example1.png}
+\caption{Example of DNA signal for cancer detection}
+\small
+\justifying
+\textit{Source: Toby D. Hocking, et al, SegAnnDB: interactive Web-based genomic segmentation, Bioinformatics, Volume 30, Issue 11, June 2014}
+\end{figure}
+
+In cybersecurity, changepoint detection plays an essential role in monitoring network traffic.  
+By detecting abrupt changes in network behavior, cybersecurity teams can identify potential intrusions or malicious activity.  
+Early detection enables rapid investigation and mitigation, thereby reducing the impact of cyberattacks.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.95\textwidth]{figs/example2.png}
+\caption{Example of network behavior signal for cyberattack detection}
+\small
+\justifying
+\textit{Source: Lung-Yut-Fong, A., Levy-Leduc, C. and Cappe, O. Distributed detection/localization of change-points in high-dimensional network traffic data. Stat Comput 22,https://doi.org/10.1007/s11222-011-9240-5}
+\end{figure}
+
+In urban traffic management, partitioning data into distinct regimes allows traffic light systems to adapt to varying traffic patterns across different time periods.  
+Such adaptive control helps optimize signal timing in response to rush hours, off-peak periods, or unexpected congestion.  
+As a result, traffic flow becomes smoother and overall congestion can be significantly reduced.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.95\textwidth]{figs/example3.png}
+\caption{Example of traffic behavior signal for traffic light duration assigment}
+\small
+\justifying
+\textit{Source: National Academies of Sciences, Engineering, and Medicine. (2022). Highway Capacity Manual 7th Edition: A Guide for Multimodal Mobility Analysis. The National Academies Press. https://doi.org/10.17226/26432.}
+\end{figure}
+
+Beyond these examples, changepoint detection provides a general framework for modeling heterogeneous data through segmentation.  
+In particular, it is closely related to interval regression, where the data are partitioned into segments within which a simpler regression structure is assumed.  
+In the following sections, we will review the literature of changepoint detection and interval regression, highlighting both theoretical connections and methodological implications.
+
 \section{Literature Review: Interval Regression}
 \paragraph{Definition} In traditional supervised regression tasks, the objective is to develop a model that accurately predicts a continuous real-valued outcome based on a set of input features. 
 This classical problem has been well-studied, resulting in a wide array of algorithms. 

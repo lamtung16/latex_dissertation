@@ -1,0 +1,135 @@
+\contentsline {section}{ABSTRACT}{ii}{section*.1}%
+\contentsline {section}{TABLE OF CONTENTS}{iii}{section*.2}%
+\contentsline {section}{LIST OF TABLES}{iv}{section*.5}%
+\contentsline {section}{LIST OF FIGURES}{v}{section*.7}%
+\contentsline {section}{PREFACE}{vi}{section*.8}%
+\contentsline {section}{\numberline {1}Motivation and Context}{1}{section.1}%
+\contentsline {section}{\numberline {2}Literature Review: Interval Regression}{3}{section.2}%
+\contentsline {paragraph}{Definition}{3}{section*.9}%
+\contentsline {paragraph}{Literature Review}{3}{section*.10}%
+\contentsline {subsection}{\numberline {2.1}AFT Models}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Original AFT Model}{5}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Censored Data and Likelihood Function}{6}{section*.11}%
+\contentsline {paragraph}{Model Fitting Procedure}{8}{section*.12}%
+\contentsline {paragraph}{Example: Survival Analysis with Normal Distribution}{8}{section*.13}%
+\contentsline {subsubsection}{\numberline {2.1.2}AFT Model in XGBoost}{9}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Supervised Machine Learning Models}{10}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Linear}{11}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Tree}{13}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}Literature Review: Optimal Partitioning}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Changpoint Detection Algorithms}{14}{subsection.3.1}%
+\contentsline {paragraph}{OPART problem}{15}{section*.14}%
+\contentsline {paragraph}{Role of the penalty parameter $\lambda $}{16}{section*.15}%
+\contentsline {subsection}{\numberline {3.2}Relationship between OPART and Interval Regression}{17}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Literature Gaps and Proposed Plans}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Inteval Regression}{19}{subsection.4.1}%
+\contentsline {paragraph}{Limitation}{19}{section*.16}%
+\contentsline {paragraph}{Proposed Plan}{19}{section*.17}%
+\contentsline {subsection}{\numberline {4.2}Changepoint Detection}{20}{subsection.4.2}%
+\contentsline {paragraph}{Limitation}{20}{section*.18}%
+\contentsline {paragraph}{Proposed Plan}{20}{section*.19}%
+\contentsline {section}{\numberline {5}Paper: Optimal Partitioning Penalty Learning using MLP}{21}{section.5}%
+\contentsline {paragraph}{Changepoint detection methods review}{21}{section*.20}%
+\contentsline {paragraph}{Regularization for Changepoints Count in DP Algorithms}{21}{section*.21}%
+\contentsline {paragraph}{The role of the OP penalty}{22}{section*.22}%
+\contentsline {paragraph}{Related Work review}{22}{section*.23}%
+\contentsline {paragraph}{Gap in the Literature and Contributions}{22}{section*.24}%
+\contentsline {subsection}{\numberline {5.1}Previous Work}{23}{subsection.5.1}%
+\contentsline {paragraph}{Noteworthy}{23}{section*.25}%
+\contentsline {paragraph}{Unsupervised}{24}{section*.26}%
+\contentsline {paragraph}{Supervised}{24}{section*.27}%
+\contentsline {subsection}{\numberline {5.2}Contribution}{25}{subsection.5.2}%
+\contentsline {paragraph}{Novelty: MLP for $\lambda $ prediction}{25}{section*.28}%
+\contentsline {paragraph}{Additional Contribution: Feature Selection}{25}{section*.29}%
+\contentsline {subsection}{\numberline {5.3}Experiments and Results}{26}{subsection.5.3}%
+\contentsline {paragraph}{Features}{26}{section*.30}%
+\contentsline {paragraph}{Models Configuration}{26}{section*.31}%
+\contentsline {paragraph}{Results}{28}{section*.32}%
+\contentsline {subsection}{\numberline {5.4}Discussion and Conclusion}{28}{subsection.5.4}%
+\contentsline {paragraph}{Performance Analysis and Overall Comparison}{28}{section*.33}%
+\contentsline {paragraph}{Comparison Between Model Families}{29}{section*.34}%
+\contentsline {paragraph}{Consistency and Stability of the Proposed Model}{30}{section*.35}%
+\contentsline {paragraph}{Factors Affecting Performance}{30}{section*.36}%
+\contentsline {paragraph}{Limitations}{30}{section*.37}%
+\contentsline {paragraph}{Conclusion and Future Directions}{31}{section*.38}%
+\contentsline {paragraph}{Reproducible Research Material}{31}{section*.39}%
+\contentsline {section}{\numberline {6}Paper: Optimal Partitioning Penalty Learning using RNN}{32}{section.6}%
+\contentsline {paragraph}{Changepoint Detection Methods.}{32}{section*.40}%
+\contentsline {paragraph}{OPART Problem.}{33}{section*.41}%
+\contentsline {paragraph}{Existing $\lambda $ prediction models.}{33}{section*.42}%
+\contentsline {paragraph}{Contribution.}{33}{section*.43}%
+\contentsline {paragraph}{Reproducibility.}{34}{section*.44}%
+\contentsline {subsection}{\numberline {6.1}Previous Work}{34}{subsection.6.1}%
+\contentsline {paragraph}{Noteworthy.}{34}{section*.45}%
+\contentsline {paragraph}{Unsupervised.}{34}{section*.46}%
+\contentsline {paragraph}{Supervised.}{34}{section*.47}%
+\contentsline {subsubsection}{\numberline {6.1.1}Step 1: Feature Extraction}{35}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Step 2: Model Training}{36}{subsubsection.6.1.2}%
+\contentsline {paragraph}{AFT in XGBoost.}{36}{section*.48}%
+\contentsline {paragraph}{Linear.}{36}{section*.49}%
+\contentsline {paragraph}{Tree.}{38}{section*.50}%
+\contentsline {subsection}{\numberline {6.2}Contribution}{39}{subsection.6.2}%
+\contentsline {paragraph}{Feature Extraction via Recurrent Networks.}{39}{section*.51}%
+\contentsline {paragraph}{Predicting $\lambda $ from extracted features.}{39}{section*.52}%
+\contentsline {paragraph}{Automatic extracted features vs. Manual extracted features.}{40}{section*.53}%
+\contentsline {paragraph}{Feature Approximation Ability of Recurrent Networks.}{41}{section*.54}%
+\contentsline {paragraph}{Recurrent networks to be implemented.}{41}{section*.55}%
+\contentsline {subsection}{\numberline {6.3}Experiments and Results}{42}{subsection.6.3}%
+\contentsline {paragraph}{Raw Sequence Datasets.}{43}{section*.56}%
+\contentsline {paragraph}{Train/Test Setup.}{43}{section*.57}%
+\contentsline {paragraph}{Evaluation Metrics.}{43}{section*.58}%
+\contentsline {subsubsection}{\numberline {6.3.1}Model Implementation}{43}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Baseline Models}{44}{subsubsection.6.3.2}%
+\contentsline {paragraph}{Linear.}{44}{section*.59}%
+\contentsline {paragraph}{MMIT.}{44}{section*.60}%
+\contentsline {paragraph}{AFT in XGBoost.}{44}{section*.61}%
+\contentsline {paragraph}{Constant (Featureless).}{45}{section*.62}%
+\contentsline {subsubsection}{\numberline {6.3.3}Additional Model}{45}{subsubsection.6.3.3}%
+\contentsline {paragraph}{MLP.}{45}{section*.63}%
+\contentsline {subsubsection}{\numberline {6.3.4}Proposed Models}{45}{subsubsection.6.3.4}%
+\contentsline {paragraph}{Architecture.}{45}{section*.64}%
+\contentsline {paragraph}{Preprocessing.}{46}{section*.65}%
+\contentsline {subsubsection}{\numberline {6.3.5}Results}{46}{subsubsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.4}Discussion and Conclusion}{46}{subsection.6.4}%
+\contentsline {paragraph}{Summary of Contributions.}{46}{section*.66}%
+\contentsline {paragraph}{Comparison to Previous Models.}{47}{section*.67}%
+\contentsline {paragraph}{Comparison between Recurrent Networks.}{47}{section*.68}%
+\contentsline {paragraph}{Discussion on the Number of Automatically Extracted Features.}{47}{section*.69}%
+\contentsline {paragraph}{Impact of pooling preprocessing.}{48}{section*.70}%
+\contentsline {paragraph}{Study Limitations.}{49}{section*.71}%
+\contentsline {paragraph}{Practical Considerations in Real-World Applications.}{49}{section*.72}%
+\contentsline {paragraph}{Future Directions.}{50}{section*.73}%
+\contentsline {section}{\numberline {7}Paper: Interval Regression Review}{53}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Interval Regression Models}{55}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Existing models}{55}{subsubsection.7.1.1}%
+\contentsline {paragraph}{Max Margin Interval Regression (linear).}{55}{section*.74}%
+\contentsline {paragraph}{Maximum Margin Interval Trees (MMIT).}{56}{section*.75}%
+\contentsline {paragraph}{AFT Model in XGBoost (aft\_xgb).}{57}{section*.76}%
+\contentsline {subsubsection}{\numberline {7.1.2}Proposed Models}{58}{subsubsection.7.1.2}%
+\contentsline {paragraph}{kNN.}{59}{section*.77}%
+\contentsline {paragraph}{Multilayer Perceptron (MLP).}{60}{section*.78}%
+\contentsline {paragraph}{Maximum Margin Interval Forest (MMIF).}{60}{section*.79}%
+\contentsline {subsection}{\numberline {7.2}Experiments and Results}{61}{subsection.7.2}%
+\contentsline {paragraph}{Experimental Datasets.}{61}{section*.80}%
+\contentsline {paragraph}{Evaluation Metrics.}{61}{section*.81}%
+\contentsline {subsubsection}{\numberline {7.2.1}Model Configuration}{62}{subsubsection.7.2.1}%
+\contentsline {paragraph}{Constant (Featureless).}{63}{section*.82}%
+\contentsline {paragraph}{Linear.}{63}{section*.83}%
+\contentsline {paragraph}{MMIT.}{63}{section*.84}%
+\contentsline {paragraph}{AFT model in XGBoost.}{63}{section*.85}%
+\contentsline {paragraph}{kNN.}{63}{section*.86}%
+\contentsline {paragraph}{MLP.}{64}{section*.87}%
+\contentsline {paragraph}{MMIF.}{64}{section*.88}%
+\contentsline {subsubsection}{\numberline {7.2.2}Results}{64}{subsubsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.3}Discussions and Conclusions}{65}{subsection.7.3}%
+\contentsline {paragraph}{Dataset Variations.}{65}{section*.89}%
+\contentsline {paragraph}{Comprehensive Comparison.}{65}{section*.90}%
+\contentsline {paragraph}{No single model is optimal for all scenarios.}{65}{section*.91}%
+\contentsline {paragraph}{MMIT vs MMIF.}{65}{section*.92}%
+\contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{68}{section*.93}%
+\contentsline {section}{\numberline {8}Future Plans}{78}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Optimal Partitioning Penalty Learning using 1D-CNN}{78}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Heuristic Partitioning for circular data}{80}{subsection.8.2}%
+\contentsline {paragraph}{Signal model}{81}{section*.94}%
+\contentsline {paragraph}{Change-point formulation}{82}{section*.95}%
+\contentsline {paragraph}{Contributions}{83}{section*.96}%
