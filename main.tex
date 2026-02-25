@@ -1779,7 +1779,8 @@ lymphoma.tdh                                 & 258                              
 \caption{Datasets list for Interval Regression study.}
 \label{tab:datasets_reg}
 \vspace{2mm}
-\footnotesize
+\small
+\justifying
 \textit{Note:} Linear indicates that the relationship between features and the target variable is likely linear, while nonlinear indicates otherwise. 
 Noisy refers to datasets where more than half of the features are irrelevant. 
 Excessive describes datasets with more features than instances.
@@ -1806,13 +1807,13 @@ Since MMIT is the Interval Regressor Tree, its extension to construct a Forest i
 The operation of MMIF follows the same principles as the standard Random Forest regressor \citep{rf}, with the key distinction being that MMITs are used instead of CART.
 
 \begin{figure}[!t]
-\vskip 0.2in
-\begin{center}
+\centering
 \centerline{\includegraphics[width=1\textwidth]{figs/fig.results_simulated.pdf}}
 \caption{The mean and standard deviation of the test squared hinge errors in simulated datasets}
 \label{fig:err_simulated}
-\end{center}
-\vskip -0.2in
+\small
+\justifying
+\textit{Note: The Linear model performs best when the dataset is linear. In nonlinear datasets, Tree-based models achieve the best performance.}
 \end{figure}
 
 \subsection{Experiments and Results}
@@ -1829,13 +1830,13 @@ Then about 20\% of the interval bounds was removed to generate open interval (le
 All datasets are in Table \ref{tab:datasets} and are accessible here: \href{https://github.com/lamtung16/ML_IntervalRegression/tree/main/data}{datasets}.
 
 \begin{figure}[!t]
-\vskip 0.2in
-\begin{center}
+\centering
 \centerline{\includegraphics[width=1\textwidth]{figs/figs.results_real_1.pdf}}
 \caption{The mean and standard deviation of the test squared hinge errors in real datasets}
 \label{fig:err_real_1}
-\end{center}
-\vskip -0.2in
+\small
+\justifying
+\textit{Note: The mean and standard deviation of test squared hinge errors for datasets with a high number of features. Tree-based models generally perform well due to their inherent feature selection mechanism. On the other hand, while MLP with ReLU activation function is a more generalized Linear model, it fails to outperform the Linear model. One reason for this is that when a dataset contains a majority of noisy features, MLP cannot effectively reduce their impact on predictions in the same way that a Linear model with L1 regularization can.}
 \end{figure}
 
 \paragraph{Evaluation Metrics.}
@@ -1853,13 +1854,13 @@ Two metrics are then considered: \textbf{performance} and \textbf{consistency}.
 A smaller mean error indicates better performance, while a smaller standard deviation indicates better consistency.
 
 \begin{figure}[!t]
-\vskip 0.2in
-\begin{center}
+\centering
 \centerline{\includegraphics[width=1\textwidth]{figs/figs.results_real_2.pdf}}
 \caption{The mean and standard deviation of the test squared hinge errors in small datasets}
 \label{fig:err_real_2}
-\end{center}
-\vskip -0.2in
+\small
+\justifying
+\textit{Note: The mean and standard deviation of test squared hinge errors for datasets with a moderate number of features. In these scenarios, MLP generally performs well.}
 \end{figure}
 
 \subsubsection{Model Configuration}

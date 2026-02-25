@@ -111,25 +111,25 @@
 \contentsline {paragraph}{Maximum Margin Interval Forest (MMIF).}{60}{section*.79}%
 \contentsline {subsection}{\numberline {7.2}Experiments and Results}{61}{subsection.7.2}%
 \contentsline {paragraph}{Experimental Datasets.}{61}{section*.80}%
-\contentsline {paragraph}{Evaluation Metrics.}{61}{section*.81}%
-\contentsline {subsubsection}{\numberline {7.2.1}Model Configuration}{62}{subsubsection.7.2.1}%
+\contentsline {paragraph}{Evaluation Metrics.}{62}{section*.81}%
+\contentsline {subsubsection}{\numberline {7.2.1}Model Configuration}{63}{subsubsection.7.2.1}%
 \contentsline {paragraph}{Constant (Featureless).}{63}{section*.82}%
 \contentsline {paragraph}{Linear.}{63}{section*.83}%
 \contentsline {paragraph}{MMIT.}{63}{section*.84}%
 \contentsline {paragraph}{AFT model in XGBoost.}{63}{section*.85}%
-\contentsline {paragraph}{kNN.}{63}{section*.86}%
+\contentsline {paragraph}{kNN.}{64}{section*.86}%
 \contentsline {paragraph}{MLP.}{64}{section*.87}%
 \contentsline {paragraph}{MMIF.}{64}{section*.88}%
-\contentsline {subsubsection}{\numberline {7.2.2}Results}{64}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2}Results}{65}{subsubsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.3}Discussions and Conclusions}{65}{subsection.7.3}%
 \contentsline {paragraph}{Dataset Variations.}{65}{section*.89}%
 \contentsline {paragraph}{Comprehensive Comparison.}{65}{section*.90}%
 \contentsline {paragraph}{No single model is optimal for all scenarios.}{65}{section*.91}%
-\contentsline {paragraph}{MMIT vs MMIF.}{65}{section*.92}%
+\contentsline {paragraph}{MMIT vs MMIF.}{66}{section*.92}%
 \contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{68}{section*.93}%
-\contentsline {section}{\numberline {8}Future Plans}{78}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Optimal Partitioning Penalty Learning using 1D-CNN}{78}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Heuristic Partitioning for circular data}{80}{subsection.8.2}%
-\contentsline {paragraph}{Signal model}{81}{section*.94}%
-\contentsline {paragraph}{Change-point formulation}{82}{section*.95}%
-\contentsline {paragraph}{Contributions}{83}{section*.96}%
+\contentsline {section}{\numberline {8}Future Plans}{79}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Optimal Partitioning Penalty Learning using 1D-CNN}{79}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Heuristic Partitioning for circular data}{81}{subsection.8.2}%
+\contentsline {paragraph}{Signal model}{82}{section*.94}%
+\contentsline {paragraph}{Change-point formulation}{83}{section*.95}%
+\contentsline {paragraph}{Contributions}{84}{section*.96}%

@@ -1,18 +1,18 @@
 # Fdb version 4
-["bibtex main"] 1772033784.2576 "main.aux" "main.bbl" "main" 1772034786.28942 0
+["bibtex main"] 1772033784.2576 "main.aux" "main.bbl" "main" 1772036467.68274 0
   "main.aux" 1771952681.73932 42366 36b77b05c6608b84ea102f4404b8a0f0 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1772034783.91583 "/home/tung/Downloads/CODE/latex_dissertation/main.tex" "main.pdf" "main" 1772034786.28947 0
-  "%OUTDIR%/main.aux" 1772034786.09792 43011 81277e1227842e3274c4f1e6c03b4135 "pdflatex"
-  "%OUTDIR%/main.lof" 1772034786.10153 3911 566395ee3e31dec1b47ae1533998550a "pdflatex"
-  "%OUTDIR%/main.lot" 1772034786.10153 1850 16f48f76777d5a8ecb1cd5dc55933b48 "pdflatex"
-  "%OUTDIR%/main.out" 1772034786.09992 6001 667b4edf2b4c1b55c5c89887356069aa "pdflatex"
-  "%OUTDIR%/main.toc" 1772034786.10153 10268 edb558c874d55d381743a499ae8210d0 "pdflatex"
+["pdflatex"] 1772036465.36466 "/home/tung/Downloads/CODE/latex_dissertation/main.tex" "main.pdf" "main" 1772036467.68279 0
+  "%OUTDIR%/main.aux" 1772036467.49276 43011 b7299ad3998eacd01cbf59425a8bdc68 "pdflatex"
+  "%OUTDIR%/main.lof" 1772036467.49634 3911 ea6e2d52f8479896a42f482048921412 "pdflatex"
+  "%OUTDIR%/main.lot" 1772036467.49634 1850 16f48f76777d5a8ecb1cd5dc55933b48 "pdflatex"
+  "%OUTDIR%/main.out" 1772036467.49557 6001 667b4edf2b4c1b55c5c89887356069aa "pdflatex"
+  "%OUTDIR%/main.toc" 1772036467.49634 10268 c5e5d87da558a76d64d0c89be4224574 "pdflatex"
   "/etc/texmf/web2c/texmf.cnf" 1771543283.8752 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/tung/Downloads/CODE/latex_dissertation/main.tex" 1772034783.7333 165235 abfc25179014001687b0a1d5c61728c1 ""
+  "/home/tung/Downloads/CODE/latex_dissertation/main.tex" 1772036465.1913 166037 49c1139d7b2c64e918a172df1c933912 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrb7t.tfm" 1136768653 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -307,7 +307,7 @@
   "figs_reg/figs.supplemental.wisconsin_plot.pdf" 1771635426 20599 21274aa21033bf72cadd0a3db48c42aa ""
   "logo.png" 1771568430 81032 0718149f580d20bf7ea2193798725d5b ""
   "main.bbl" 1772033784.32703 30692 e45ccac6f1dda69c8d349282ab53716a "bibtex main"
-  "main.tex" 1772034783.7333 165235 abfc25179014001687b0a1d5c61728c1 ""
+  "main.tex" 1772036465.1913 166037 49c1139d7b2c64e918a172df1c933912 ""
   (generated)
   "%OUTDIR%/main.aux"
   "%OUTDIR%/main.lof"
