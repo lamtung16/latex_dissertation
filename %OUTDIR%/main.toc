@@ -124,12 +124,15 @@
 \contentsline {subsection}{\numberline {7.3}Discussions and Conclusions}{65}{subsection.7.3}%
 \contentsline {paragraph}{Dataset Variations.}{65}{section*.89}%
 \contentsline {paragraph}{Comprehensive Comparison.}{65}{section*.90}%
-\contentsline {paragraph}{No single model is optimal for all scenarios.}{65}{section*.91}%
-\contentsline {paragraph}{MMIT vs MMIF.}{66}{section*.92}%
-\contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{68}{section*.93}%
-\contentsline {section}{\numberline {8}Future Plans}{79}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Optimal Partitioning Penalty Learning using 1D-CNN}{79}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Heuristic Partitioning for circular data}{81}{subsection.8.2}%
-\contentsline {paragraph}{Signal model}{82}{section*.94}%
-\contentsline {paragraph}{Change-point formulation}{83}{section*.95}%
-\contentsline {paragraph}{Contributions}{84}{section*.96}%
+\contentsline {paragraph}{No single model is optimal for all scenarios.}{67}{section*.91}%
+\contentsline {paragraph}{MMIT vs MMIF.}{67}{section*.92}%
+\contentsline {paragraph}{Discussion on the AFT Model in XGBoost.}{67}{section*.93}%
+\contentsline {section}{\numberline {8}Conclusion}{79}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Model complexity and performance}{79}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Data complexity (linearity and dataset size)}{80}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Future Plans}{80}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Optimal Partitioning Penalty Learning using 1D-CNN}{80}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Heuristic Partitioning for circular data}{83}{subsection.9.2}%
+\contentsline {paragraph}{Signal model}{84}{section*.94}%
+\contentsline {paragraph}{Change-point formulation}{84}{section*.95}%
+\contentsline {paragraph}{Contributions}{86}{section*.96}%

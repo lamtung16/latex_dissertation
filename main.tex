@@ -131,7 +131,7 @@ ii
 \setcounter{tocdepth}{2}
 
 \begingroup
-\small
+\footnotesize
 \singlespacing
 \tableofcontents
 \endgroup
@@ -1998,6 +1998,12 @@ Linear, MMIT and MLP are comparable, while Constant, kNN, and the AFT model in X
 About the consistency, MMIF stands out as the most consistent. 
 This is expected, as MMIF being an ensemble model, relies on a group of MMITs to make the final prediction, which helps improve its stability.
 Again, Constant, kNN, and the AFT model in XGBoost show the lowest consistency.
+A constant model is theoretically the simplest and least expressive model, so we might expect it to always perform the worst. 
+However, in practice, that is not guaranteed. 
+For example, when the features are completely unrelated to the outcome (i.e., all features are pure noise), a more complex model may overfit the noise and perform worse than a constant predictor. 
+Similarly, with very small datasets, high-capacity models do not have enough data to learn meaningful patterns and may generalize poorly, allowing a constant model to outperform them. 
+The same issue appears when comparing a linear model to an MLP with ReLU activations: although an MLP is strictly more expressive in theory, in practice it may not perform better due to optimization difficulties, limited data, or overfitting. 
+Even when comparing a constant model to a regularized linear model such as Lasso, there is no guarantee that the linear model will always outperform the constant one, since the regularization strength is chosen based on validation performance and may not be truly optimal.
 
 \paragraph{No single model is optimal for all scenarios.}  
 As shown in Table \ref{tab:comparison}, there is no universally optimal model for every scenario.
@@ -2087,6 +2093,47 @@ This adjustment aims to reduce the model's sensitivity to left-censored interval
 }
 
 \clearpage
+\section{Conclusion}
+\subsection{Model complexity and performance}
+There are two main ways to choose a model for OPART penalty learning: manual feature extraction and automatic feature extraction.
+The manual way starts with a step where the raw data sequence is turned into a fixed list of summary numbers.
+Because these summaries describe the whole sequence with just a few values, the model never actually looks at the original data points.
+This group includes standard machine learning tools like linear regression, decision trees, k-NN, ensemble methods like Random Forest or XGBoost and neural network like an MLP.
+
+Automatic feature extraction is a more advanced approach using deep learning for predicting change-points penalty.
+Instead of making a short list of summaries, these models take in the entire raw data sequence at once.
+The model itself learns to find important patterns and creates its own features while it runs.
+This helps the model catch small details and local patterns that simple summary numbers usually miss.
+
+When looking at how complex a model is, we usually check two things: the number of parameters and how long it takes to train.
+The number of parameters shows how much memory the model needs and how much it can "learn" from the data.
+For manual models, the simplest ones are linear regression and k-NN, while decision trees and small MLPs are in the middle.
+The most complex manual models are usually Random Forest and XGBoost because they are made of many individual trees.
+
+For automatic models, the complexity depends on the type of "memory" or recurrent layers they use.
+LSTMs are the most complex because they have many internal parts, followed by GRUs.
+Even though they are smart, these automatic models often have fewer parameters than large forest models.
+
+However, automatic models are much slower to train and use a lot more computer power.
+They are slow because they have to keep track of a lot of information as they process the data sequence step by step.
+To summarize, if you want fast training and decent results, manual features are the best choice.
+In that group, Random Forest is usually the best all-around model because it works well on many different types of data.
+But if getting the absolute best performance is your goal, then automatic feature models are the winner.
+
+\subsection{Data complexity (linearity and dataset size)}
+Model performance is highly sensitive to the underlying linearity of the target function.
+For datasets where the relationship is largely linear, simple linear regression models achieve high accuracy with minimal overhead.
+Conversely, on highly non-linear datasets, tree-based models are more effective at capturing complex decision boundaries.
+For intermediate cases—where the data is non-linear but not excessively complex—Multi-Layer Perceptrons (MLPs) provide a balanced solution.
+Despite these variations, ensemble forest models frequently emerge as the most robust performers overall.
+
+When evaluating dataset scale, we consider two primary metrics: the number of instances and the sequence length.
+Our analysis focuses specifically on the challenges posed by sequence length.
+For extremely long sequences, such as the 11 million time steps found in our benchmarks, automatic feature extraction models face extreme training delays.
+To mitigate this, we must apply pooling or downsampling techniques to reduce the sequence dimensionality.
+Empirical results from our experiments show that training on a single raw sequence of this magnitude can take several hours.
+
+
 \section{Future Plans}
 \subsection{Optimal Partitioning Penalty Learning using 1D-CNN}
 
