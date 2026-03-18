@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  24 FEB 2026 10:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  18 MAR 2026 09:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2416,11 +2416,11 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2
 
 ] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -2446,816 +2446,860 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [6
 
 
-] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 275.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+]
+<figs/example1.png, id=301, 1534.73375pt x 361.35pt>
+File: figs/example1.png Graphic file (type png)
+<use figs/example1.png>
+Package pdftex.def Info: figs/example1.png  used on input line 256.
+(pdftex.def)             Requested size: 450.38504pt x 106.04044pt.
+<figs/example2.png, id=302, 1453.43pt x 413.545pt>
+File: figs/example2.png Graphic file (type png)
+<use figs/example2.png>
+Package pdftex.def Info: figs/example2.png  used on input line 269.
+(pdftex.def)             Requested size: 450.38504pt x 128.14714pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 279.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<logo.png, id=300, 2055.68pt x 349.305pt>
+<logo.png, id=303, 2055.68pt x 349.305pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 275.
+Package pdftex.def Info: logo.png  used on input line 279.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 
+l.279 
        [1
 
- <./logo.png>]
+ <./logo.png> <./figs/example1.png>]
+<figs/example3.png, id=312, 1236.62pt x 230.8625pt>
+File: figs/example3.png Graphic file (type png)
+<use figs/example3.png>
+Package pdftex.def Info: figs/example3.png  used on input line 282.
+(pdftex.def)             Requested size: 450.38504pt x 84.08269pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 286.
+Package pdftex.def Info: logo.png  used on input line 299.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [2] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
+ [2 <./figs/example2.png> <./figs/example3.png>] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 342.
+Package pdftex.def Info: logo.png  used on input line 327.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [3]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 342.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 338.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [4] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 394.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [5]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 394.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<figs/interval_regression.pdf, id=419, 867.24pt x 180.675pt>
+<figs/interval_regression.pdf, id=456, 867.24pt x 180.675pt>
 File: figs/interval_regression.pdf Graphic file (type pdf)
 <use figs/interval_regression.pdf>
-Package pdftex.def Info: figs/interval_regression.pdf  used on input line 351.
+Package pdftex.def Info: figs/interval_regression.pdf  used on input line 403.
 (pdftex.def)             Requested size: 469.35274pt x 97.78358pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--363
+Underfull \hbox (badness 10000) in paragraph at lines 411--415
 
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 379.
+Package pdftex.def Info: logo.png  used on input line 431.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[4 <./figs/interval_regression.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 383--387
+[6 <./figs/interval_regression.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 435--439
 
  []
 
 
 
 pdfTeX warning: pdflatex (file ./figs/figs.Convert_Intervals_to_points.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/figs.Convert_Intervals_to_points.pdf, id=455, 817.13275pt x 519.86218pt>
+<figs/figs.Convert_Intervals_to_points.pdf, id=492, 817.13275pt x 519.86218pt>
 File: figs/figs.Convert_Intervals_to_points.pdf Graphic file (type pdf)
 <use figs/figs.Convert_Intervals_to_points.pdf>
-Package pdftex.def Info: figs/figs.Convert_Intervals_to_points.pdf  used on input line 395.
+Package pdftex.def Info: figs/figs.Convert_Intervals_to_points.pdf  used on input line 447.
 (pdftex.def)             Requested size: 469.35274pt x 298.60112pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 406.
+Package pdftex.def Info: logo.png  used on input line 458.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[5 <./figs/figs.Convert_Intervals_to_points.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+[7 <./figs/figs.Convert_Intervals_to_points.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 486--490
 
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 461.
+Package pdftex.def Info: logo.png  used on input line 513.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[6]
+[8]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 482.
+Package pdftex.def Info: logo.png  used on input line 534.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [7]
-<figs/fig.aft_loss_function.pdf, id=518, 593.21625pt x 133.49875pt>
+ [9]
+<figs/fig.aft_loss_function.pdf, id=555, 593.21625pt x 133.49875pt>
 File: figs/fig.aft_loss_function.pdf Graphic file (type pdf)
 <use figs/fig.aft_loss_function.pdf>
-Package pdftex.def Info: figs/fig.aft_loss_function.pdf  used on input line 504.
+Package pdftex.def Info: figs/fig.aft_loss_function.pdf  used on input line 556.
 (pdftex.def)             Requested size: 469.35274pt x 105.62782pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 514.
+Package pdftex.def Info: logo.png  used on input line 566.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [8 <./figs/fig.aft_loss_function.pdf>]
-<figs/figs.loss_function.pdf, id=560, 590.205pt x 133.49875pt>
+ [10 <./figs/fig.aft_loss_function.pdf>]
+<figs/figs.loss_function.pdf, id=597, 590.205pt x 133.49875pt>
 File: figs/figs.loss_function.pdf Graphic file (type pdf)
 <use figs/figs.loss_function.pdf>
-Package pdftex.def Info: figs/figs.loss_function.pdf  used on input line 526.
+Package pdftex.def Info: figs/figs.loss_function.pdf  used on input line 578.
 (pdftex.def)             Requested size: 469.35274pt x 106.1656pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 539.
+Package pdftex.def Info: logo.png  used on input line 591.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [9 <./figs/figs.loss_function.pdf>]
+ [11 <./figs/figs.loss_function.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 577.
+Package pdftex.def Info: logo.png  used on input line 629.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [10]
+ [12]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 597.
+Package pdftex.def Info: logo.png  used on input line 649.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [11]
+ [13]
 
 pdfTeX warning: pdflatex (file ./figs/fig.DL_cdp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fig.DL_cdp.pdf, id=636, 728.81287pt x 201.91435pt>
+<figs/fig.DL_cdp.pdf, id=675, 728.81287pt x 201.91435pt>
 File: figs/fig.DL_cdp.pdf Graphic file (type pdf)
 <use figs/fig.DL_cdp.pdf>
-Package pdftex.def Info: figs/fig.DL_cdp.pdf  used on input line 601.
+Package pdftex.def Info: figs/fig.DL_cdp.pdf  used on input line 653.
 (pdftex.def)             Requested size: 469.35274pt x 130.03502pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 625.
+Package pdftex.def Info: logo.png  used on input line 677.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[12 <./figs/fig.DL_cdp.pdf>]
+[14 <./figs/fig.DL_cdp.pdf>]
 
 pdfTeX warning: pdflatex (file ./figs/fig.overall_focus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fig.overall_focus.pdf, id=700, 694.23366pt x 168.72034pt>
+<figs/fig.overall_focus.pdf, id=738, 694.23366pt x 168.72034pt>
 File: figs/fig.overall_focus.pdf Graphic file (type pdf)
 <use figs/fig.overall_focus.pdf>
-Package pdftex.def Info: figs/fig.overall_focus.pdf  used on input line 628.
+Package pdftex.def Info: figs/fig.overall_focus.pdf  used on input line 680.
 (pdftex.def)             Requested size: 469.35274pt x 114.06923pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 643.
+Package pdftex.def Info: logo.png  used on input line 695.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[13 <./figs/fig.overall_focus.pdf>]
+[15 <./figs/fig.overall_focus.pdf>]
 
 pdfTeX warning: pdflatex (file ./figs/fig.lambdachanging.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fig.lambdachanging.pdf, id=738, 808.94218pt x 314.13359pt>
+<figs/fig.lambdachanging.pdf, id=775, 808.94218pt x 314.13359pt>
 File: figs/fig.lambdachanging.pdf Graphic file (type pdf)
 <use figs/fig.lambdachanging.pdf>
-Package pdftex.def Info: figs/fig.lambdachanging.pdf  used on input line 647.
+Package pdftex.def Info: figs/fig.lambdachanging.pdf  used on input line 699.
 (pdftex.def)             Requested size: 469.35274pt x 182.25992pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 662.
+Package pdftex.def Info: logo.png  used on input line 714.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[14 <./figs/fig.lambdachanging.pdf>]
+[16 <./figs/fig.lambdachanging.pdf>]
 
 pdfTeX warning: pdflatex (file ./figs/fig.problem_setting.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fig.problem_setting.pdf, id=774, 377.49028pt x 172.7253pt>
+<figs/fig.problem_setting.pdf, id=811, 377.49028pt x 172.7253pt>
 File: figs/fig.problem_setting.pdf Graphic file (type pdf)
 <use figs/fig.problem_setting.pdf>
-Package pdftex.def Info: figs/fig.problem_setting.pdf  used on input line 672.
+Package pdftex.def Info: figs/fig.problem_setting.pdf  used on input line 724.
 (pdftex.def)             Requested size: 469.35274pt x 214.76752pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 684.
+Package pdftex.def Info: logo.png  used on input line 736.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[15 <./figs/fig.problem_setting.pdf>]
+[17 <./figs/fig.problem_setting.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 685.
+Package pdftex.def Info: logo.png  used on input line 737.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [16]
+ [18]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 701.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [17]
-
-pdfTeX warning: pdflatex (file ./figs/comprehensive.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/comprehensive.pdf, id=826, 926.54156pt x 221.23654pt>
-File: figs/comprehensive.pdf Graphic file (type pdf)
-<use figs/comprehensive.pdf>
-Package pdftex.def Info: figs/comprehensive.pdf  used on input line 718.
-(pdftex.def)             Requested size: 469.35274pt x 112.06958pt.
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 723.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[18 <./figs/comprehensive.pdf>]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 745.
+Package pdftex.def Info: logo.png  used on input line 753.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [19]
 
+pdfTeX warning: pdflatex (file ./figs/comprehensive.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figs/comprehensive.pdf, id=864, 926.54156pt x 221.23654pt>
+File: figs/comprehensive.pdf Graphic file (type pdf)
+<use figs/comprehensive.pdf>
+Package pdftex.def Info: figs/comprehensive.pdf  used on input line 770.
+(pdftex.def)             Requested size: 469.35274pt x 112.06958pt.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 775.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+[20 <./figs/comprehensive.pdf>]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 799.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [21]
+
 pdfTeX warning: pdflatex (file ./figs/fig.model_diagram.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fig.model_diagram.pdf, id=887, 604.17719pt x 223.7961pt>
+<figs/fig.model_diagram.pdf, id=929, 604.17719pt x 223.7961pt>
 File: figs/fig.model_diagram.pdf Graphic file (type pdf)
 <use figs/fig.model_diagram.pdf>
-Package pdftex.def Info: figs/fig.model_diagram.pdf  used on input line 748.
+Package pdftex.def Info: figs/fig.model_diagram.pdf  used on input line 802.
 (pdftex.def)             Requested size: 426.67905pt x 158.05286pt.
-<figs/fig.features_targets_all_datasets.pdf, id=903, 1043.9pt x 629.35126pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 819.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+[22 <./figs/fig.model_diagram.pdf>]
+<figs/fig.features_targets_all_datasets.pdf, id=976, 1043.9pt x 629.35126pt>
 File: figs/fig.features_targets_all_datasets.pdf Graphic file (type pdf)
 <use figs/fig.features_targets_all_datasets.pdf>
-Package pdftex.def Info: figs/fig.features_targets_all_datasets.pdf  used on input line 768.
+Package pdftex.def Info: figs/fig.features_targets_all_datasets.pdf  used on input line 822.
 (pdftex.def)             Requested size: 450.38504pt x 271.52806pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 774.
+Package pdftex.def Info: logo.png  used on input line 877.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[20 <./figs/fig.model_diagram.pdf>]
+ [23 <./figs/fig.features_targets_all_datasets.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 823.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [21 <./figs/fig.features_targets_all_datasets.pdf>]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 834.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [22]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 853.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [23]
-<figs/fig.acc_compare.pdf, id=1081, 650.43pt x 289.08pt>
-File: figs/fig.acc_compare.pdf Graphic file (type pdf)
-<use figs/fig.acc_compare.pdf>
-Package pdftex.def Info: figs/fig.acc_compare.pdf  used on input line 889.
-(pdftex.def)             Requested size: 426.67905pt x 189.6377pt.
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 898.
+Package pdftex.def Info: logo.png  used on input line 888.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [24]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 907.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [25 <./figs/fig.acc_compare.pdf>]
-<figs/fig.F1_compare.pdf, id=1140, 632.3625pt x 231.86626pt>
+ [25]
+<figs/fig.acc_compare.pdf, id=1128, 650.43pt x 289.08pt>
+File: figs/fig.acc_compare.pdf Graphic file (type pdf)
+<use figs/fig.acc_compare.pdf>
+Package pdftex.def Info: figs/fig.acc_compare.pdf  used on input line 943.
+(pdftex.def)             Requested size: 426.67905pt x 189.6377pt.
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 952.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [26]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 961.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [27 <./figs/fig.acc_compare.pdf>]
+<figs/fig.F1_compare.pdf, id=1185, 632.3625pt x 231.86626pt>
 File: figs/fig.F1_compare.pdf Graphic file (type pdf)
 <use figs/fig.F1_compare.pdf>
-Package pdftex.def Info: figs/fig.F1_compare.pdf  used on input line 915.
+Package pdftex.def Info: figs/fig.F1_compare.pdf  used on input line 969.
 (pdftex.def)             Requested size: 426.67905pt x 156.44989pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 927.
+Package pdftex.def Info: logo.png  used on input line 981.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [26 <./figs/fig.F1_compare.pdf>]
-<figs/fig.mlp.pdf, id=1200, 867.24pt x 216.81pt>
+ [28 <./figs/fig.F1_compare.pdf>]
+<figs/fig.mlp.pdf, id=1245, 867.24pt x 216.81pt>
 File: figs/fig.mlp.pdf Graphic file (type pdf)
 <use figs/fig.mlp.pdf>
-Package pdftex.def Info: figs/fig.mlp.pdf  used on input line 935.
+Package pdftex.def Info: figs/fig.mlp.pdf  used on input line 989.
 (pdftex.def)             Requested size: 469.35274pt x 117.3403pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 943.
+Package pdftex.def Info: logo.png  used on input line 997.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [27 <./figs/fig.mlp.pdf>]
+ [29 <./figs/fig.mlp.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 955.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [28]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 971.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [29]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 990.
+Package pdftex.def Info: logo.png  used on input line 1009.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [30]
-Underfull \hbox (badness 10000) in paragraph at lines 996--1000
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1025.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [31]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1044.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
 
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1015.
+Package pdftex.def Info: logo.png  used on input line 1070.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[31]
+[33]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1037.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [32]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1060.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [33]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1085.
+Package pdftex.def Info: logo.png  used on input line 1092.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [34]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1113.
+Package pdftex.def Info: logo.png  used on input line 1115.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [35]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1136.
+Package pdftex.def Info: logo.png  used on input line 1140.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [36]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1168.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [37]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1191.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [38]
 
 pdfTeX warning: pdflatex (file ./figs/figure.3_proposed_plan_rnn.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/figure.3_proposed_plan_rnn.pdf, id=1410, 513.83968pt x 151.5261pt>
+<figs/figure.3_proposed_plan_rnn.pdf, id=1458, 513.83968pt x 151.5261pt>
 File: figs/figure.3_proposed_plan_rnn.pdf Graphic file (type pdf)
 <use figs/figure.3_proposed_plan_rnn.pdf>
-Package pdftex.def Info: figs/figure.3_proposed_plan_rnn.pdf  used on input line 1143.
+Package pdftex.def Info: figs/figure.3_proposed_plan_rnn.pdf  used on input line 1198.
 (pdftex.def)             Requested size: 355.56828pt x 104.8583pt.
-<figs/figure.5_extracted_features.pdf, id=1411, 433.62pt x 433.62pt>
+<figs/figure.5_extracted_features.pdf, id=1459, 433.62pt x 433.62pt>
 File: figs/figure.5_extracted_features.pdf Graphic file (type pdf)
 <use figs/figure.5_extracted_features.pdf>
-Package pdftex.def Info: figs/figure.5_extracted_features.pdf  used on input line 1169.
+Package pdftex.def Info: figs/figure.5_extracted_features.pdf  used on input line 1224.
 (pdftex.def)             Requested size: 355.56828pt x 355.58394pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1183.
+Package pdftex.def Info: logo.png  used on input line 1238.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[37 <./figs/figure.3_proposed_plan_rnn.pdf>]
+[39 <./figs/figure.3_proposed_plan_rnn.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1221.
+Package pdftex.def Info: logo.png  used on input line 1276.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [38 <./figs/figure.5_extracted_features.pdf>]
+ [40 <./figs/figure.5_extracted_features.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1226.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [39]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1271.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [40]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1324.
+Package pdftex.def Info: logo.png  used on input line 1281.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [41]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1340.
+Package pdftex.def Info: logo.png  used on input line 1326.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [42]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1368.
+Package pdftex.def Info: logo.png  used on input line 1379.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [43]
-<figs/figure.4_acc_no_pooling.pdf, id=1572, 498.663pt x 173.448pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1395.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [44]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1423.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [45]
+<figs/figure.4_acc_no_pooling.pdf, id=1619, 498.663pt x 173.448pt>
 File: figs/figure.4_acc_no_pooling.pdf Graphic file (type pdf)
 <use figs/figure.4_acc_no_pooling.pdf>
-Package pdftex.def Info: figs/figure.4_acc_no_pooling.pdf  used on input line 1384.
+Package pdftex.def Info: figs/figure.4_acc_no_pooling.pdf  used on input line 1439.
 (pdftex.def)             Requested size: 331.86227pt x 115.43144pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1398.
+Package pdftex.def Info: logo.png  used on input line 1453.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [44]
-<figs/figure.4_acc_chipseq.pdf, id=1582, 498.663pt x 542.025pt>
+ [46]
+<figs/figure.4_acc_chipseq.pdf, id=1629, 498.663pt x 542.025pt>
 File: figs/figure.4_acc_chipseq.pdf Graphic file (type pdf)
 <use figs/figure.4_acc_chipseq.pdf>
-Package pdftex.def Info: figs/figure.4_acc_chipseq.pdf  used on input line 1411.
+Package pdftex.def Info: figs/figure.4_acc_chipseq.pdf  used on input line 1466.
 (pdftex.def)             Requested size: 331.86227pt x 360.7233pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1428.
+Package pdftex.def Info: logo.png  used on input line 1483.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [45 <./figs/figure.4_acc_no_pooling.pdf>]
+ [47 <./figs/figure.4_acc_no_pooling.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1434.
+Package pdftex.def Info: logo.png  used on input line 1489.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [46 <./figs/figure.4_acc_chipseq.pdf>]
-<figs/figure.5_n_extracted_features.pdf, id=1712, 433.62pt x 216.81pt>
+ [48 <./figs/figure.4_acc_chipseq.pdf>]
+<figs/figure.5_n_extracted_features.pdf, id=1759, 433.62pt x 216.81pt>
 File: figs/figure.5_n_extracted_features.pdf Graphic file (type pdf)
 <use figs/figure.5_n_extracted_features.pdf>
-Package pdftex.def Info: figs/figure.5_n_extracted_features.pdf  used on input line 1438.
+Package pdftex.def Info: figs/figure.5_n_extracted_features.pdf  used on input line 1493.
 (pdftex.def)             Requested size: 331.86227pt x 165.93849pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1452.
+Package pdftex.def Info: logo.png  used on input line 1507.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [47 <./figs/figure.5_n_extracted_features.pdf>]
-<figs/figure.5_window_size.pdf, id=1764, 433.62pt x 216.81pt>
+ [49 <./figs/figure.5_n_extracted_features.pdf>]
+<figs/figure.5_window_size.pdf, id=1812, 433.62pt x 216.81pt>
 File: figs/figure.5_window_size.pdf Graphic file (type pdf)
 <use figs/figure.5_window_size.pdf>
-Package pdftex.def Info: figs/figure.5_window_size.pdf  used on input line 1456.
+Package pdftex.def Info: figs/figure.5_window_size.pdf  used on input line 1511.
 (pdftex.def)             Requested size: 331.86227pt x 165.93849pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1473.
+Package pdftex.def Info: logo.png  used on input line 1528.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [48 <./figs/figure.5_window_size.pdf>]
+ [50 <./figs/figure.5_window_size.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1510.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [49]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1510.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [50] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1572.
+Package pdftex.def Info: logo.png  used on input line 1565.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [51]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1576.
+Package pdftex.def Info: logo.png  used on input line 1565.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [52]
+ [52] (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz) (/usr/share/texlive/texmf-dist/tex/latex/utfsym/usym2613.tikz)
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1600.
+Package pdftex.def Info: logo.png  used on input line 1622.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [53]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1629.
+Package pdftex.def Info: logo.png  used on input line 1633.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [54]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1656.
+Package pdftex.def Info: logo.png  used on input line 1657.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [55]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1744.
+Package pdftex.def Info: logo.png  used on input line 1686.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [56]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1744.
+Package pdftex.def Info: logo.png  used on input line 1713.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [57]
-<figs/fig.results_simulated.pdf, id=2030, 686.565pt x 144.54pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1802.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [58]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1802.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [59]
+<figs/fig.results_simulated.pdf, id=2079, 686.565pt x 144.54pt>
 File: figs/fig.results_simulated.pdf Graphic file (type pdf)
 <use figs/fig.results_simulated.pdf>
-Package pdftex.def Info: figs/fig.results_simulated.pdf  used on input line 1759.
+Package pdftex.def Info: figs/fig.results_simulated.pdf  used on input line 1816.
 (pdftex.def)             Requested size: 474.09105pt x 99.80768pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1773.
+Package pdftex.def Info: logo.png  used on input line 1831.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [58 <./figs/fig.results_simulated.pdf>]
-<figs/figs.results_real_1.pdf, id=2082, 686.565pt x 289.08pt>
+ [60 <./figs/fig.results_simulated.pdf>]
+<figs/figs.results_real_1.pdf, id=2132, 686.565pt x 289.08pt>
 File: figs/figs.results_real_1.pdf Graphic file (type pdf)
 <use figs/figs.results_real_1.pdf>
-Package pdftex.def Info: figs/figs.results_real_1.pdf  used on input line 1782.
+Package pdftex.def Info: figs/figs.results_real_1.pdf  used on input line 1839.
 (pdftex.def)             Requested size: 474.09105pt x 199.61537pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1795.
+Package pdftex.def Info: logo.png  used on input line 1853.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [59 <./figs/figs.results_real_1.pdf>]
-<figs/figs.results_real_2.pdf, id=2136, 686.565pt x 289.08pt>
+ [61 <./figs/figs.results_real_1.pdf>]
+<figs/figs.results_real_2.pdf, id=2186, 686.565pt x 289.08pt>
 File: figs/figs.results_real_2.pdf Graphic file (type pdf)
 <use figs/figs.results_real_2.pdf>
-Package pdftex.def Info: figs/figs.results_real_2.pdf  used on input line 1806.
+Package pdftex.def Info: figs/figs.results_real_2.pdf  used on input line 1863.
 (pdftex.def)             Requested size: 474.09105pt x 199.61537pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1819.
+Package pdftex.def Info: logo.png  used on input line 1874.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [60 <./figs/figs.results_real_2.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 1823.
+ [62 <./figs/figs.results_real_2.pdf>]
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 1881.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1823.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1881.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1865.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [61]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1884.
-(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [62]
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2010.
+Package pdftex.def Info: logo.png  used on input line 1918.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [63]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2011.
+Package pdftex.def Info: logo.png  used on input line 1942.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [64]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2018.
+Package pdftex.def Info: logo.png  used on input line 2012.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
  [65]
-Overfull \hbox (0.74005pt too wide) in paragraph at lines 2023--2026
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2012.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [66]
+Overfull \hbox (0.74005pt too wide) in paragraph at lines 2087--2090
 []\OT1/ptm/m/n/12 A po-ten-tial di-rec-tion for fu-ture work is to trans-form left-censored in-ter-vals into interval-censored
  []
 
-<figs_reg/figs.supplemental.auto93_plot.pdf, id=2230, 744.5002pt x 170.94363pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2090.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+[67]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2090.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [68]
+<figs_reg/figs.supplemental.auto93_plot.pdf, id=2285, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.auto93_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.auto93_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.auto93_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.auto93_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.autohorse_plot.pdf, id=2231, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.autohorse_plot.pdf, id=2286, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.autohorse_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.autohorse_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.autohorse_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.autohorse_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.autompg_plot.pdf, id=2232, 757.27289pt x 170.94363pt>
+<figs_reg/figs.supplemental.autompg_plot.pdf, id=2287, 757.27289pt x 170.94363pt>
 File: figs_reg/figs.supplemental.autompg_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.autompg_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.autompg_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.autompg_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 101.66968pt.
-<figs_reg/figs.supplemental.autoprice_plot.pdf, id=2233, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.autoprice_plot.pdf, id=2288, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.autoprice_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.autoprice_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.autoprice_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.autoprice_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.baskball_plot.pdf, id=2234, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.baskball_plot.pdf, id=2289, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.baskball_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.baskball_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.baskball_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.baskball_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.bodyfat_plot.pdf, id=2235, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.bodyfat_plot.pdf, id=2290, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.bodyfat_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.bodyfat_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.bodyfat_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.bodyfat_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.breasttumor_plot.pdf, id=2236, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.breasttumor_plot.pdf, id=2291, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.breasttumor_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.breasttumor_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.breasttumor_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.breasttumor_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.cholesterol_plot.pdf, id=2237, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.cholesterol_plot.pdf, id=2292, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.cholesterol_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.cholesterol_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.cholesterol_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.cholesterol_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.cleveland_plot.pdf, id=2238, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.cleveland_plot.pdf, id=2293, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.cleveland_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.cleveland_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.cleveland_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.cleveland_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.cloud_plot.pdf, id=2239, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.cloud_plot.pdf, id=2294, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.cloud_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.cloud_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.cloud_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.cloud_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.cpu_plot.pdf, id=2240, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.cpu_plot.pdf, id=2295, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.cpu_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.cpu_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.cpu_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.cpu_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.echomonths_plot.pdf, id=2241, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.echomonths_plot.pdf, id=2296, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.echomonths_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.echomonths_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.echomonths_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.echomonths_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.elusage_plot.pdf, id=2242, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.elusage_plot.pdf, id=2297, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.elusage_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.elusage_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.elusage_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.elusage_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.fishcatch_plot.pdf, id=2243, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.fishcatch_plot.pdf, id=2298, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.fishcatch_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.fishcatch_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.fishcatch_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.fishcatch_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.fruitfly_plot.pdf, id=2244, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.fruitfly_plot.pdf, id=2299, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.fruitfly_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.fruitfly_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.fruitfly_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.fruitfly_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.housing_plot.pdf, id=2245, 760.2453pt x 170.94363pt>
+<figs_reg/figs.supplemental.housing_plot.pdf, id=2300, 760.2453pt x 170.94363pt>
 File: figs_reg/figs.supplemental.housing_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.housing_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.housing_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.housing_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 101.2732pt.
-<figs_reg/figs.supplemental.lowbwt_plot.pdf, id=2246, 749.01003pt x 170.94363pt>
+<figs_reg/figs.supplemental.lowbwt_plot.pdf, id=2301, 749.01003pt x 170.94363pt>
 File: figs_reg/figs.supplemental.lowbwt_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.lowbwt_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.lowbwt_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.lowbwt_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.78867pt.
-<figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf, id=2247, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf, id=2302, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf, id=2248, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf, id=2303, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.machine.cpu_plot.pdf, id=2249, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.machine.cpu_plot.pdf, id=2304, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.machine.cpu_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.machine.cpu_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.machine.cpu_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.machine.cpu_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.mbagrade_plot.pdf, id=2250, 754.17372pt x 170.94363pt>
+<figs_reg/figs.supplemental.mbagrade_plot.pdf, id=2305, 754.17372pt x 170.94363pt>
 File: figs_reg/figs.supplemental.mbagrade_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.mbagrade_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.mbagrade_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.mbagrade_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.08702pt.
-<figs_reg/figs.supplemental.meta_plot.pdf, id=2251, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.meta_plot.pdf, id=2306, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.meta_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.meta_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.meta_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.meta_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.pbc_plot.pdf, id=2252, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.pbc_plot.pdf, id=2307, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.pbc_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.pbc_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.pbc_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.pbc_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.pharynx_plot.pdf, id=2253, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.pharynx_plot.pdf, id=2308, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.pharynx_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.pharynx_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.pharynx_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.pharynx_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.pollution_plot.pdf, id=2254, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.pollution_plot.pdf, id=2309, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.pollution_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.pollution_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.pollution_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.pollution_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.pwlinear_plot.pdf, id=2255, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.pwlinear_plot.pdf, id=2310, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.pwlinear_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.pwlinear_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.pwlinear_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.pwlinear_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.pyrim_plot.pdf, id=2256, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.pyrim_plot.pdf, id=2311, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.pyrim_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.pyrim_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.pyrim_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.pyrim_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.sensory_plot.pdf, id=2257, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.sensory_plot.pdf, id=2312, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.sensory_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.sensory_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.sensory_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.sensory_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.servo_plot.pdf, id=2258, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.servo_plot.pdf, id=2313, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.servo_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.servo_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.servo_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.servo_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.simulated.abs_plot.pdf, id=2259, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.simulated.abs_plot.pdf, id=2314, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.simulated.abs_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.simulated.abs_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.simulated.abs_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.simulated.abs_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.simulated.linear_plot.pdf, id=2260, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.simulated.linear_plot.pdf, id=2315, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.simulated.linear_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.simulated.linear_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.simulated.linear_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.simulated.linear_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.simulated.sin_plot.pdf, id=2261, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.simulated.sin_plot.pdf, id=2316, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.simulated.sin_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.simulated.sin_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.simulated.sin_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.simulated.sin_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.sleep_plot.pdf, id=2262, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.sleep_plot.pdf, id=2317, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.sleep_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.sleep_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.sleep_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.sleep_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.stock_plot.pdf, id=2263, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.stock_plot.pdf, id=2318, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.stock_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.stock_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.stock_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.stock_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
-<figs_reg/figs.supplemental.strike_plot.pdf, id=2264, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.strike_plot.pdf, id=2319, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.strike_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.strike_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.strike_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.strike_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.triazines_plot.pdf, id=2265, 750.97752pt x 170.94363pt>
+<figs_reg/figs.supplemental.triazines_plot.pdf, id=2320, 750.97752pt x 170.94363pt>
 File: figs_reg/figs.supplemental.triazines_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.triazines_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.triazines_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.triazines_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.52pt.
-<figs_reg/figs.supplemental.veteran_plot.pdf, id=2266, 744.5002pt x 170.94363pt>
+<figs_reg/figs.supplemental.veteran_plot.pdf, id=2321, 744.5002pt x 170.94363pt>
 File: figs_reg/figs.supplemental.veteran_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.veteran_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.veteran_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.veteran_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 103.41469pt.
-<figs_reg/figs.supplemental.vineyard_plot.pdf, id=2267, 749.7134pt x 170.94363pt>
+<figs_reg/figs.supplemental.vineyard_plot.pdf, id=2322, 749.7134pt x 170.94363pt>
 File: figs_reg/figs.supplemental.vineyard_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.vineyard_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.vineyard_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.vineyard_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 102.69476pt.
-<figs_reg/figs.supplemental.wisconsin_plot.pdf, id=2268, 735.71738pt x 170.94363pt>
+<figs_reg/figs.supplemental.wisconsin_plot.pdf, id=2323, 735.71738pt x 170.94363pt>
 File: figs_reg/figs.supplemental.wisconsin_plot.pdf Graphic file (type pdf)
 <use figs_reg/figs.supplemental.wisconsin_plot.pdf>
-Package pdftex.def Info: figs_reg/figs.supplemental.wisconsin_plot.pdf  used on input line 2034.
+Package pdftex.def Info: figs_reg/figs.supplemental.wisconsin_plot.pdf  used on input line 2098.
 (pdftex.def)             Requested size: 450.38504pt x 104.64845pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[66 <./figs_reg/figs.supplemental.auto93_plot.pdf> <./figs_reg/figs.supplemental.autohorse_plot.pdf>]
+ [69 <./figs_reg/figs.supplemental.auto93_plot.pdf> <./figs_reg/figs.supplemental.autohorse_plot.pdf> <./figs_reg/figs.supplemental.autompg_plot.pdf> <./figs_reg/figs.supplemental.autoprice_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [67 <./figs_reg/figs.supplemental.autompg_plot.pdf> <./figs_reg/figs.supplemental.autoprice_plot.pdf> <./figs_reg/figs.supplemental.baskball_plot.pdf> <./figs_reg/figs.supplemental.bodyfat_plot.pdf>]
+ [70 <./figs_reg/figs.supplemental.baskball_plot.pdf> <./figs_reg/figs.supplemental.bodyfat_plot.pdf> <./figs_reg/figs.supplemental.breasttumor_plot.pdf> <./figs_reg/figs.supplemental.cholesterol_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [68 <./figs_reg/figs.supplemental.breasttumor_plot.pdf> <./figs_reg/figs.supplemental.cholesterol_plot.pdf> <./figs_reg/figs.supplemental.cleveland_plot.pdf> <./figs_reg/figs.supplemental.cloud_plot.pdf>]
+ [71 <./figs_reg/figs.supplemental.cleveland_plot.pdf> <./figs_reg/figs.supplemental.cloud_plot.pdf> <./figs_reg/figs.supplemental.cpu_plot.pdf> <./figs_reg/figs.supplemental.echomonths_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [69 <./figs_reg/figs.supplemental.cpu_plot.pdf> <./figs_reg/figs.supplemental.echomonths_plot.pdf> <./figs_reg/figs.supplemental.elusage_plot.pdf> <./figs_reg/figs.supplemental.fishcatch_plot.pdf>]
+ [72 <./figs_reg/figs.supplemental.elusage_plot.pdf> <./figs_reg/figs.supplemental.fishcatch_plot.pdf> <./figs_reg/figs.supplemental.fruitfly_plot.pdf> <./figs_reg/figs.supplemental.housing_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [70 <./figs_reg/figs.supplemental.fruitfly_plot.pdf> <./figs_reg/figs.supplemental.housing_plot.pdf> <./figs_reg/figs.supplemental.lowbwt_plot.pdf> <./figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf> <./figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf>]
+ [73 <./figs_reg/figs.supplemental.lowbwt_plot.pdf> <./figs_reg/figs.supplemental.lymphoma.mkatayama_plot.pdf> <./figs_reg/figs.supplemental.lymphoma.tdh_plot.pdf> <./figs_reg/figs.supplemental.machine.cpu_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [71 <./figs_reg/figs.supplemental.machine.cpu_plot.pdf> <./figs_reg/figs.supplemental.mbagrade_plot.pdf> <./figs_reg/figs.supplemental.meta_plot.pdf> <./figs_reg/figs.supplemental.pbc_plot.pdf>]
+ [74 <./figs_reg/figs.supplemental.mbagrade_plot.pdf> <./figs_reg/figs.supplemental.meta_plot.pdf> <./figs_reg/figs.supplemental.pbc_plot.pdf> <./figs_reg/figs.supplemental.pharynx_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [72 <./figs_reg/figs.supplemental.pharynx_plot.pdf> <./figs_reg/figs.supplemental.pollution_plot.pdf> <./figs_reg/figs.supplemental.pwlinear_plot.pdf> <./figs_reg/figs.supplemental.pyrim_plot.pdf>]
+ [75 <./figs_reg/figs.supplemental.pollution_plot.pdf> <./figs_reg/figs.supplemental.pwlinear_plot.pdf> <./figs_reg/figs.supplemental.pyrim_plot.pdf> <./figs_reg/figs.supplemental.sensory_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [73 <./figs_reg/figs.supplemental.sensory_plot.pdf> <./figs_reg/figs.supplemental.servo_plot.pdf> <./figs_reg/figs.supplemental.simulated.abs_plot.pdf> <./figs_reg/figs.supplemental.simulated.linear_plot.pdf>]
+ [76 <./figs_reg/figs.supplemental.servo_plot.pdf> <./figs_reg/figs.supplemental.simulated.abs_plot.pdf> <./figs_reg/figs.supplemental.simulated.linear_plot.pdf> <./figs_reg/figs.supplemental.simulated.sin_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [74 <./figs_reg/figs.supplemental.simulated.sin_plot.pdf> <./figs_reg/figs.supplemental.sleep_plot.pdf> <./figs_reg/figs.supplemental.stock_plot.pdf> <./figs_reg/figs.supplemental.strike_plot.pdf>]
+ [77 <./figs_reg/figs.supplemental.sleep_plot.pdf> <./figs_reg/figs.supplemental.stock_plot.pdf> <./figs_reg/figs.supplemental.strike_plot.pdf> <./figs_reg/figs.supplemental.triazines_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2036.
+Package pdftex.def Info: logo.png  used on input line 2100.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [75 <./figs_reg/figs.supplemental.triazines_plot.pdf> <./figs_reg/figs.supplemental.veteran_plot.pdf> <./figs_reg/figs.supplemental.vineyard_plot.pdf> <./figs_reg/figs.supplemental.wisconsin_plot.pdf>]
+ [78 <./figs_reg/figs.supplemental.veteran_plot.pdf> <./figs_reg/figs.supplemental.vineyard_plot.pdf> <./figs_reg/figs.supplemental.wisconsin_plot.pdf>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2055.
+Package pdftex.def Info: logo.png  used on input line 2127.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [76
+ [79
 
 ]
-<figs/cnn_diagram.png, id=4480, 1202.4925pt x 308.15125pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2151.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [80]
+<figs/cnn_diagram.png, id=4538, 1202.4925pt x 308.15125pt>
 File: figs/cnn_diagram.png Graphic file (type png)
 <use figs/cnn_diagram.png>
-Package pdftex.def Info: figs/cnn_diagram.png  used on input line 2059.
+Package pdftex.def Info: figs/cnn_diagram.png  used on input line 2164.
 (pdftex.def)             Requested size: 474.09105pt x 121.49036pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2077.
+Package pdftex.def Info: logo.png  used on input line 2174.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [77 <./figs/cnn_diagram.png>]
+ [81]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2098.
+Package pdftex.def Info: logo.png  used on input line 2190.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [78]
+ [82 <./figs/cnn_diagram.png>]
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2128.
+Package pdftex.def Info: logo.png  used on input line 2211.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [79]
-<figs/synth-time.pdf, id=4607, 340.27126pt x 265.99374pt>
+ [83]
+<figs/synth-time.pdf, id=4667, 340.27126pt x 265.99374pt>
 File: figs/synth-time.pdf Graphic file (type pdf)
 <use figs/synth-time.pdf>
-Package pdftex.def Info: figs/synth-time.pdf  used on input line 2143.
+Package pdftex.def Info: figs/synth-time.pdf  used on input line 2248.
 (pdftex.def)             Requested size: 237.04552pt x 185.30142pt.
 
-Overfull \hbox (2.14622pt too wide) in paragraph at lines 2150--2154
+Overfull \hbox (2.14622pt too wide) in paragraph at lines 2255--2259
 []\OT1/ptm/m/n/12 Classical dy-namic pro-gram-ming ap-proaches (e.g., []Har-vey et al.[] [[]2023[]], []Lee[] [[]2010[]], []Jona-Lasinio
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2162.
+Package pdftex.def Info: logo.png  used on input line 2259.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[80 <./figs/synth-time.pdf>]
-<figs/synth-fscore.pdf, id=4683, 340.27126pt x 265.99374pt>
+[84]
+<figs/synth-fscore.pdf, id=4695, 340.27126pt x 265.99374pt>
 File: figs/synth-fscore.pdf Graphic file (type pdf)
 <use figs/synth-fscore.pdf>
-Package pdftex.def Info: figs/synth-fscore.pdf  used on input line 2176.
+Package pdftex.def Info: figs/synth-fscore.pdf  used on input line 2281.
 (pdftex.def)             Requested size: 237.04552pt x 185.30142pt.
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2192.
+Package pdftex.def Info: logo.png  used on input line 2296.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [81 <./figs/synth-fscore.pdf>] (./main.bbl [82
+ [85 <./figs/synth-time.pdf>]
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 2297.
+(pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
+ [86 <./figs/synth-fscore.pdf>] (./main.bbl [87
 
 ]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 120.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [83]
+ [88]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 172.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [84]
+ [89]
 Underfull \hbox (badness 1237) in paragraph at lines 214--221
 []\OT1/ptm/m/n/12 P.-Y. Hao.  In-ter-val re-gres-sion anal-y-sis us-ing sup-port vec-tor net-works.  \OT1/ptm/m/it/12 Fuzzy Sets and
  []
@@ -3264,62 +3308,62 @@ File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 227.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
-[85]
+[90]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 283.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [86]
+ [91]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 340.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [87]
+ [92]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 398.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [88]
+ [93]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 447.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [89]
+ [94]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 504.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [90]
+ [95]
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 560.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [91])
+ [96])
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 2198.
+Package pdftex.def Info: logo.png  used on input line 2303.
 (pdftex.def)             Requested size: 142.31258pt x 24.18501pt.
- [92] (./main.aux)
+ [97] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AFCB782AC8F0525965A816706B985D16;5841.
+(rerunfilecheck)             Checksum: ED786A3CCBFD0B892366F2CB896D2F34;6621.
  ) 
 Here is how much of TeX's memory you used:
- 26379 strings out of 474222
- 477852 string characters out of 5748733
- 1967975 words of memory out of 5000000
- 47654 multiletter control sequences out of 15000+600000
- 597958 words of font info for 122 fonts, out of 8000000 for 9000
+ 26420 strings out of 474222
+ 478556 string characters out of 5748733
+ 1962975 words of memory out of 5000000
+ 47679 multiletter control sequences out of 15000+600000
+ 597903 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,101p,770b,805s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (98 pages, 2111884 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (103 pages, 2467267 bytes).
 PDF statistics:
- 5009 PDF objects out of 5155 (max. 8388607)
- 2132 compressed objects within 22 object streams
- 401 named destinations out of 1000 (max. 500000)
- 591 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5083 PDF objects out of 5155 (max. 8388607)
+ 2196 compressed objects within 22 object streams
+ 416 named destinations out of 1000 (max. 500000)
+ 638 words of extra memory for PDF output out of 10000 (max. 10000000)
 
